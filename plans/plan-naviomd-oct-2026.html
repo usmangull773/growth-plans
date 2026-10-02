@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NavioMD | 30 Day Paid Media Plan | Usman Gull</title>
+<style>
+  :root{
+    --navy:#0b1f36; --card:#12355b; --blue:#0f4c81;
+    --gold:#c8a24a; --gold-l:#e3c77f;
+    --bg:#e9eff6; --white:#ffffff;
+    --red:#b3261e; --green:#1f6f43;
+    --ink:#14263b; --muted:#4a5d73; --line:#d3dde9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  strong{font-weight:700}
+  .hl{background:rgba(200,162,74,.22);padding:1px 4px;border-radius:3px;font-weight:700}
+
+  /* HERO */
+  .hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+  .topbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:14px;color:#a9bbd0;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:44px}
+  .topbar b{color:#fff;font-weight:600}
+  .prep{color:var(--gold-l);font-size:15px;font-weight:600;margin-bottom:10px}
+  .hero h1{font-size:clamp(40px,7vw,68px);line-height:1.02;letter-spacing:-1.5px;font-weight:800;margin-bottom:20px}
+  .outcome{font-size:clamp(18px,2.4vw,23px);max-width:760px;color:#dbe5f1;line-height:1.45;margin-bottom:28px}
+  .outcome span{color:var(--gold-l);font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+  .meta div{font-size:13.5px;color:#c4d3e4;border:1px solid rgba(255,255,255,.16);padding:6px 12px;border-radius:4px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .kpi{background:var(--card);border-radius:8px;padding:22px 22px 20px}
+  .kpi .n{font-size:44px;font-weight:800;color:var(--gold-l);line-height:1;margin-bottom:10px;letter-spacing:-1px}
+  .kpi p{font-size:14.5px;color:#cfdbe9;line-height:1.45}
+
+  /* SECTIONS */
+  section{padding:76px 0}
+  .light{background:var(--bg)}
+  .white{background:var(--white)}
+  .dark{background:var(--navy);color:#fff}
+  .sh{display:flex;align-items:baseline;gap:16px;margin-bottom:14px}
+  .sn{font-size:15px;font-weight:800;color:var(--blue);border:2px solid var(--blue);border-radius:4px;padding:2px 8px;line-height:1.3}
+  .dark .sn{color:var(--gold-l);border-color:var(--gold-l)}
+  h2{font-size:clamp(28px,4vw,38px);letter-spacing:-.6px;line-height:1.15;font-weight:800}
+  .intro{max-width:720px;font-size:17.5px;color:var(--muted);margin-bottom:40px}
+  .dark .intro{color:#c4d3e4}
+
+  /* FINDINGS */
+  .finding{background:#fff;border-radius:8px;box-shadow:0 6px 24px rgba(11,31,54,.08);padding:30px 30px 28px;margin-bottom:24px;border-left:6px solid var(--blue)}
+  .finding.med{border-left-color:var(--gold)}
+  .fhead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+  .finding h3{font-size:21px;line-height:1.3;max-width:720px}
+  .tag{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap}
+  .tag.high{background:var(--blue);color:#fff}
+  .tag.med{background:var(--gold);color:var(--navy)}
+  .finding > p{color:var(--muted);max-width:780px;margin-bottom:22px}
+  .finding > p strong{color:var(--ink)}
+
+  /* flow diagram */
+  .flow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:6px}
+  .node{flex:1;min-width:170px;border:1.5px solid var(--line);border-radius:6px;padding:14px;background:#f7f9fc}
+  .node .u{font-family:inherit;font-weight:700;font-size:14px;color:var(--blue);word-break:break-all}
+  .node p{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+  .node.risk{border-color:var(--red);background:#fbf1f0}
+  .node.risk .u{color:var(--red)}
+  .node.ok{border-color:var(--green);background:#eff6f2}
+  .node.ok .u{color:var(--green)}
+  .arrow{flex:0 0 34px;position:relative;min-width:34px}
+  .arrow:before{content:"";position:absolute;top:50%;left:6px;right:12px;height:2px;background:var(--muted)}
+  .arrow:after{content:"";position:absolute;top:calc(50% - 5px);right:4px;border-left:9px solid var(--muted);border-top:6px solid transparent;border-bottom:6px solid transparent}
+  .fnote{font-size:13.5px;color:var(--muted);margin-top:12px}
+
+  /* tables */
+  .tbl{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--navy);color:#fff;font-weight:600;font-size:13.5px}
+  .cmp th.bad{background:var(--red)} .cmp th.good{background:var(--green)}
+  .cmp td.bad{color:var(--red)} .cmp td.good{color:var(--green);font-weight:600}
+  td:first-child{font-weight:600}
+
+  /* TIMELINE */
+  .timeline{background:var(--navy);border-radius:10px;padding:28px;margin-bottom:44px;color:#fff;overflow-x:auto}
+  .tl{display:grid;grid-template-columns:180px repeat(4,1fr);row-gap:12px;column-gap:6px;min-width:600px;align-items:center}
+  .tl .wk{font-size:13px;color:#a9bbd0;font-weight:600;text-align:center;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .tl .lab{font-size:14px;color:#e2eaf3}
+  .bar{height:22px;background:var(--gold);border-radius:4px}
+  .bar.soft{background:var(--gold-l);opacity:.55}
+  .tlkey{font-size:13px;color:#a9bbd0;margin-top:18px}
+
+  .steps{display:grid;gap:18px}
+  .step{display:grid;grid-template-columns:56px 1fr;gap:18px;background:var(--bg);border-radius:8px;padding:22px 24px}
+  .step .num{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+  .step h4{font-size:18px;margin-bottom:4px}
+  .step p{color:var(--muted);font-size:15.5px}
+  .step .why{margin-top:8px;font-size:14px;color:var(--green);font-weight:600}
+
+  /* RESULTS */
+  .results{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .rc{background:var(--card);border-radius:10px;padding:26px 24px}
+  .rc .who{font-size:13.5px;color:#a9bbd0;margin-bottom:14px;line-height:1.4}
+  .rc .big{font-size:46px;font-weight:800;color:var(--gold-l);line-height:1;letter-spacing:-1px}
+  .rc .what{font-size:15px;color:#e2eaf3;margin:8px 0 20px}
+  .row{margin-bottom:12px}
+  .row .l{display:flex;justify-content:space-between;font-size:13px;color:#c4d3e4;margin-bottom:5px}
+  .track{height:12px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+  .fill{height:100%;background:var(--gold);border-radius:3px}
+  .fill.before{background:#5d7896}
+  .rc .sub{font-size:13.5px;color:#c4d3e4;border-top:1px solid rgba(255,255,255,.1);padding-top:14px;margin-top:16px}
+  .rc .sub b{color:var(--gold-l)}
+  .quote{margin-top:36px;border-left:4px solid var(--gold);padding:6px 0 6px 20px;color:#dbe5f1;font-size:17px;max-width:760px}
+  .quote span{display:block;font-size:13.5px;color:#a9bbd0;margin-top:6px}
+
+  /* NEXT */
+  .next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .nc{background:#fff;border-top:5px solid var(--gold);border-radius:8px;padding:26px 24px;box-shadow:0 6px 24px rgba(11,31,54,.06)}
+  .nc .when{font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px}
+  .nc h4{font-size:19px;margin-bottom:8px}
+  .nc p{color:var(--muted);font-size:15px}
+
+  /* CTA */
+  .cta{background:var(--gold);padding:56px 0}
+  .cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .cta h2{color:var(--navy)}
+  .cta p{color:var(--navy);font-size:17px;margin-top:6px;max-width:560px}
+  .btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 24px;border-radius:6px;font-weight:700;font-size:15.5px;text-decoration:none}
+  .btn.p{background:var(--navy);color:#fff}
+  .btn.s{border:2px solid var(--navy);color:var(--navy)}
+  .btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+
+  footer{background:var(--navy);color:#a9bbd0;padding:36px 0;font-size:14.5px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer b{color:#fff}
+  footer a{color:var(--gold-l);text-decoration:none}
+
+  @media (max-width:860px){
+    .kpis,.results,.next{grid-template-columns:1fr}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 18px}
+    section{padding:56px 0}
+    .finding{padding:22px 18px}
+    .step{grid-template-columns:1fr;gap:10px;padding:20px}
+    .timeline{padding:20px 16px}
+    .kpi .n{font-size:38px}
+    .btn{width:100%;text-align:center}
+    .btns{width:100%}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <div><b>Usman Gull</b>, Google Ads, Meta Ads and SEO Specialist</div>
+      <div>October 2, 2026</div>
+    </div>
+    <div class="prep">30 day plan prepared for</div>
+    <h1>NavioMD</h1>
+    <p class="outcome">One paid media system across five platforms, where every ad account learns from <span>paid, prescribed patients</span> instead of intake clicks.</p>
+    <div class="meta">
+      <div>Telehealth: GLP-1, wellness, women's health</div>
+      <div>Meta, Google, TikTok, Reddit, Pinterest</div>
+      <div>St. Petersburg, FL</div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="n">3</div><p>Domain hops between ad click and completed intake, each one a place where click IDs can drop.</p></div>
+      <div class="kpi"><div class="n">7</div><p>Rx products across three categories, each with its own policy rules on Meta and Google.</p></div>
+      <div class="kpi"><div class="n">48</div><p>States served, so geo, state eligibility and budget pacing all need to sit inside the account structure.</p></div>
+    </div>
+  </div>
+</header>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">01</span><h2>What we found</h2></div>
+    <p class="intro">This review uses only your public site, so it is a starting point, not an account audit. Even from the outside, the biggest lever is clear: <span class="hl">the signal your ad platforms optimize toward</span>. Get that right and the questions in your post (why CPA moved, which audience works, what to test next) get real answers.</p>
+
+    <div class="finding">
+      <div class="fhead"><h3>The path from ad click to intake crosses three domains</h3><span class="tag high">High impact</span></div>
+      <p>Product pages send patients through a <strong>/go redirect into app.naviomd.com</strong> for intake. Your server side GTM on edge.naviomd.com is a strong base, but unless gclid, fbclid, ttclid, rdt_cid and epik survive every hop, platforms see the click but not the patient. That is the most common cause of a sudden CPA jump that is not a real performance change.</p>
+      <div class="flow">
+        <div class="node"><div class="u">Ad click</div><p>Meta, Google, TikTok, Reddit, Pinterest add their click ID</p></div>
+        <div class="arrow"></div>
+        <div class="node"><div class="u">naviomd.com/product</div><p>Landing page, GTM fires</p></div>
+        <div class="arrow"></div>
+        <div class="node risk"><div class="u">/go?destination=</div><p>Redirect: click IDs and UTMs at risk here</p></div>
+        <div class="arrow"></div>
+        <div class="node ok"><div class="u">app.naviomd.com</div><p>Intake and payment: the event that matters</p></div>
+      </div>
+      <p class="fnote">Week 1 check: test one click per platform end to end and confirm the ID reaches the purchase event.</p>
+    </div>
+
+    <div class="finding">
+      <div class="fhead"><h3>Older product names still appear on some pages</h3><span class="tag high">High impact</span></div>
+      <p>The homepage menu reflects the current range. The About page menu still lists <strong>Ozempic and Mounjaro</strong>, which are no longer in the main navigation. Meta and Google review the whole destination, not just the landing page, so branded drug names you no longer offer are a common trigger for disapprovals and restricted delivery in this category.</p>
+      <div class="tbl">
+        <table class="cmp">
+          <thead><tr><th>Page</th><th class="bad">Shows</th><th class="good">Should match</th></tr></thead>
+          <tbody>
+            <tr><td>Homepage menu</td><td class="good">Compounded Tirzepatide, Zepbound, Glutathione, Sermorelin, NAD+, Biest, Progesterone</td><td class="good">Current range</td></tr>
+            <tr><td>About page menu</td><td class="bad">Ozempic, Mounjaro, Zepbound, Compounded Tirzepatide</td><td class="good">Same as homepage</td></tr>
+            <tr><td>Press page contact</td><td class="bad">media@navionmd.com</td><td class="good">media@naviomd.com</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fnote">In your favor: the LegitScript seal is already live, which Meta and Google both require for telehealth prescription ads.</p>
+    </div>
+
+    <div class="finding med">
+      <div class="fhead"><h3>Five platforms will each claim the same patient</h3><span class="tag med">Medium impact</span></div>
+      <p>Every pixel uses its own attribution window, so platform dashboards will add up to more patients than you actually have. Budget decisions need <strong>one source of truth: the paid order in your backend</strong>, sent back to each platform server side.</p>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Platform</th><th>Server side route</th><th>Event to optimize toward</th></tr></thead>
+          <tbody>
+            <tr><td>Meta</td><td>Conversions API with event deduplication</td><td>Purchase (first paid order)</td></tr>
+            <tr><td>Google Ads</td><td>Enhanced conversions plus offline import</td><td>Paid patient, intake as secondary</td></tr>
+            <tr><td>TikTok</td><td>Events API</td><td>CompletePayment</td></tr>
+            <tr><td>Reddit</td><td>Conversions API</td><td>Purchase</td></tr>
+            <tr><td>Pinterest</td><td>Conversions API</td><td>Checkout</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <div class="sh"><span class="sn">02</span><h2>The 30 day plan</h2></div>
+    <p class="intro">Tracking first, because every later decision depends on it. Daily monitoring runs from day one.</p>
+
+    <div class="timeline">
+      <div class="tl">
+        <div></div><div class="wk">Week 1</div><div class="wk">Week 2</div><div class="wk">Week 3</div><div class="wk">Week 4</div>
+        <div class="lab" style="grid-row:2;grid-column:1">Tracking and attribution</div><div class="bar" style="grid-row:2;grid-column:2 / span 2"></div>
+        <div class="lab" style="grid-row:3;grid-column:1">Policy and approvals</div><div class="bar" style="grid-row:3;grid-column:2 / span 3"></div>
+        <div class="lab" style="grid-row:4;grid-column:1">Structure and budget</div><div class="bar" style="grid-row:4;grid-column:3 / span 3"></div>
+        <div class="lab" style="grid-row:5;grid-column:1">Creative and audience tests</div><div class="bar" style="grid-row:5;grid-column:4 / span 2"></div>
+        <div class="lab" style="grid-row:6;grid-column:1">Daily monitoring</div><div class="bar soft" style="grid-row:6;grid-column:2 / span 4"></div>
+      </div>
+      <p class="tlkey">Solid bars are focus work. The lighter bar runs every day of the engagement.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h4>Verify every pixel, CAPI and click ID end to end</h4><p>Test clicks from each platform through the /go redirect to a paid order. Fix gaps with your developer using a written, step by step brief.</p><div class="why">Why: no budget decision is safe until the data is.</div></div></div>
+      <div class="step"><div class="num">2</div><div><h4>Point bidding at paid patients</h4><p>Set the paid order as the primary conversion on every platform, with intake start kept as a secondary signal for learning.</p><div class="why">Why: platforms optimize toward whatever you tell them counts.</div></div></div>
+      <div class="step"><div class="num">3</div><div><h4>Clear policy risk before it costs delivery</h4><p>Align product names across all pages, audit live ads against GLP-1 and telehealth rules, and work open disapprovals with platform support through to resolution.</p><div class="why">Why: in this category, delivery limits cost more than a bad bid.</div></div></div>
+      <div class="step"><div class="num">4</div><div><h4>Restructure by product and intent</h4><p>Separate weight loss, wellness and women's health so each has its own budget, creative and CPA target, then shift spend toward the cheapest paid patient.</p><div class="why">Why: blended campaigns hide which product is actually profitable.</div></div></div>
+      <div class="step"><div class="num">5</div><div><h4>Launch a written testing roadmap</h4><p>One variable per test, a minimum data threshold before calling a winner, and a weekly note explaining what changed and why.</p><div class="why">Why: you get decisions you can follow, not a generic report.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="sh"><span class="sn">03</span><h2>Comparable results</h2></div>
+    <p class="intro">Healthcare accounts where the fix started with tracking and the signal bidding learned from.</p>
+
+    <div class="results">
+      <div class="rc">
+        <div class="who">Cosmetic surgery clinic, USD, Google Search</div>
+        <div class="big">+140%</div>
+        <div class="what">confirmed bookings after re-pointing bidding at real bookings</div>
+        <div class="row"><div class="l"><span>July</span><span>5</span></div><div class="track"><div class="fill before" style="width:42%"></div></div></div>
+        <div class="row"><div class="l"><span>August</span><span>12</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="sub">Cost per conversion <b>$99.97 to $46.15</b>, on level ad spend</div>
+      </div>
+      <div class="rc">
+        <div class="who">London plastic surgery clinic, Search and Performance Max</div>
+        <div class="big">0 to 18</div>
+        <div class="what">Book Appointment conversions after launching booking flow tracking</div>
+        <div class="row"><div class="l"><span>July</span><span>0.00</span></div><div class="track"><div class="fill before" style="width:2%"></div></div></div>
+        <div class="row"><div class="l"><span>August</span><span>18.00</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="sub">Cost per conversion <b>£256.84 to £77.87</b>, a 69.7% reduction</div>
+      </div>
+      <div class="rc">
+        <div class="who">Behavioral health, regulated vertical</div>
+        <div class="big">488</div>
+        <div class="what">conversions in 30 days</div>
+        <div class="row"><div class="l"><span>30 days</span><span>488</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="sub">Lowest average CPC <b>$0.77</b></div>
+      </div>
+    </div>
+
+    <p class="quote">"Our go-to person for fixing any ads-related problem. He over-delivered and we are impressed with his performance."<span>Upwork client review</span></p>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">04</span><h2>What happens next</h2></div>
+    <p class="intro">Independent and hands on. I do the work myself, nothing is passed to a junior team.</p>
+    <div class="next">
+      <div class="nc"><div class="when">This week</div><h4>15 minute call</h4><p>You walk me through the funnel and current pain points. I tell you what I would check first and why.</p></div>
+      <div class="nc"><div class="when">Day 1</div><h4>Read only access</h4><p>Meta Business Manager, Google Ads, GA4, GTM, TikTok, Reddit and Pinterest. Nothing changes without your sign off.</p></div>
+      <div class="nc"><div class="when">Days 2 to 5</div><h4>Tracking and policy audit</h4><p>A written findings document: what is broken, what it is costing, and the fix order, explained so your team can follow every step.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <div>
+      <h2>Let's have a quick call</h2>
+      <p>15 minutes this week. You will leave with the first three things I would fix in your accounts.</p>
+    </div>
+    <div class="btns">
+      <a class="btn p" href="mailto:sales@usmangullpro.com?subject=NavioMD%2030%20day%20plan">Book a call</a>
+      <a class="btn s" href="https://usmangullpro.com">View portfolio</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><b>Usman Gull</b><br>Google Ads and SEO Specialist</div>
+    <div><a href="mailto:sales@usmangullpro.com">sales@usmangullpro.com</a><br><a href="https://usmangullpro.com">usmangullpro.com</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
