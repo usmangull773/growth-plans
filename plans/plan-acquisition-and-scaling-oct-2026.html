@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 Day Plan, Acquisition and Scaling</title>
+<style>
+  :root{
+    --navy:#0b1f36; --card:#12355b; --blue:#0f4c81; --gold:#c8a24a; --gold-l:#e3c77f;
+    --bg:#e9eff6; --white:#ffffff; --red:#b3261e; --green:#1f6f43; --ink:#1a2433; --muted:#5a6878;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;font-size:16px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  section{padding:64px 0}
+  h1,h2,h3{line-height:1.25}
+  strong{font-weight:700}
+  .hl{color:var(--gold);font-weight:700}
+  .hl-dark{background:#f6ecd2;color:var(--ink);padding:0 4px;font-weight:700}
+
+  /* HERO */
+  .hero{background:var(--navy);color:#fff;border-bottom:5px solid var(--gold);padding:28px 0 56px}
+  .topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b9c6d6;padding-bottom:20px;border-bottom:1px solid #1f3a5c;margin-bottom:44px}
+  .topbar b{color:#fff;font-weight:600}
+  .eyebrow{color:var(--gold-l);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+  .hero h1{font-size:44px;margin-bottom:16px}
+  .hero .lead{font-size:20px;color:#dbe4ee;max-width:760px;margin-bottom:22px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+  .meta span{border:1px solid #2b4c72;border-radius:999px;padding:5px 14px;font-size:13px;color:#cdd8e5}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .kpi{background:var(--card);border-radius:10px;padding:22px}
+  .kpi .num{font-size:38px;font-weight:800;color:var(--gold-l);line-height:1.1}
+  .kpi .lbl{font-size:14px;color:#c4d0de;margin-top:8px}
+
+  /* SECTION HEADINGS */
+  .sec-head{margin-bottom:28px}
+  .sec-num{display:inline-block;color:var(--blue);font-weight:800;font-size:14px;letter-spacing:.1em;margin-bottom:6px}
+  .sec-head h2{font-size:30px}
+  .sec-head p{color:var(--muted);max-width:760px;margin-top:10px;font-size:17px}
+  .dark .sec-num{color:var(--gold-l)}
+  .dark .sec-head h2{color:#fff}
+  .dark .sec-head p{color:#c4d0de}
+
+  /* FINDINGS */
+  .light{background:var(--bg)}
+  .whitebg{background:var(--white)}
+  .finding{background:#fff;border-radius:10px;box-shadow:0 2px 14px rgba(11,31,54,.08);padding:26px;margin-bottom:22px;border-left:5px solid var(--blue)}
+  .finding.med{border-left-color:var(--gold)}
+  .f-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+  .finding h3{font-size:20px}
+  .tag{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:4px;white-space:nowrap;color:#fff;background:var(--blue)}
+  .tag.med{background:var(--gold);color:var(--navy)}
+  .finding p{color:#33404f;margin-bottom:16px}
+
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  .tbl-wrap{overflow-x:auto}
+  .cmp th{padding:10px 12px;text-align:left;color:#fff;font-size:13px}
+  .cmp th.r{background:var(--red)} .cmp th.g{background:var(--green)}
+  .cmp td{padding:10px 12px;border-bottom:1px solid #e3e8ee;vertical-align:top;width:50%}
+  .cmp td.r{background:#fbeeed} .cmp td.g{background:#eaf4ee}
+  .data thead th{background:var(--navy);color:#fff;padding:10px 12px;text-align:left;font-size:13px}
+  .data td{padding:9px 12px;border-bottom:1px solid #e3e8ee}
+  .data tr:nth-child(even) td{background:#f5f8fb}
+  .data td:first-child{font-weight:700;color:var(--blue);white-space:nowrap}
+
+  .diagram{display:grid;grid-template-columns:1fr 60px 1fr;align-items:center;gap:8px}
+  .src{display:grid;gap:10px}
+  .src div{border:1px solid #cfd9e4;border-radius:8px;padding:10px 12px;font-size:14px;background:#f5f8fb}
+  .src b{display:block;color:var(--navy)}
+  .arrow{text-align:center;color:var(--gold);font-size:30px;font-weight:800}
+  .target{background:var(--navy);color:#fff;border-radius:10px;padding:18px;font-size:14px}
+  .target b{color:var(--gold-l);display:block;font-size:16px;margin-bottom:6px}
+
+  /* TIMELINE */
+  .timeline{background:var(--navy);border-radius:12px;padding:24px;margin-bottom:34px;color:#fff}
+  .tl-grid{display:grid;grid-template-columns:180px repeat(4,1fr);row-gap:12px;column-gap:6px;align-items:center}
+  .tl-h{font-size:12px;color:#9fb0c4;text-transform:uppercase;letter-spacing:.08em;text-align:center}
+  .tl-l{font-size:14px;color:#dbe4ee}
+  .bar{background:var(--gold);height:22px;border-radius:4px}
+  .steps{display:grid;gap:16px}
+  .step{display:grid;grid-template-columns:52px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:20px}
+  .step .n{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+  .step h3{font-size:18px;margin-bottom:4px}
+  .step .wk{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.08em}
+  .step p{color:#33404f;font-size:15px}
+  .step .why{color:var(--muted);font-size:14px;margin-top:6px}
+
+  /* RESULTS */
+  .dark{background:var(--navy);color:#fff}
+  .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .res{background:var(--card);border-radius:10px;padding:22px}
+  .res .ctx{font-size:12px;color:var(--gold-l);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+  .res .big{font-size:36px;font-weight:800;color:var(--gold-l);margin:8px 0 2px;line-height:1.1}
+  .res .what{font-size:15px;color:#dbe4ee;margin-bottom:16px}
+  .rb{margin-bottom:10px}
+  .rb .rl{display:flex;justify-content:space-between;font-size:13px;color:#b9c6d6;margin-bottom:4px}
+  .rb .track{background:#0b2a4a;border-radius:4px;height:14px}
+  .rb .fill{height:14px;border-radius:4px;background:#5b7898}
+  .rb .fill.gold{background:var(--gold)}
+  .res .lever{font-size:13px;color:#b9c6d6;border-top:1px solid #23466f;padding-top:12px;margin-top:14px}
+
+  /* NEXT */
+  .next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .nx{background:#fff;border-top:4px solid var(--gold);border-radius:10px;padding:22px;box-shadow:0 2px 14px rgba(11,31,54,.06)}
+  .nx .k{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.08em;text-transform:uppercase}
+  .nx h3{font-size:18px;margin:6px 0 8px}
+  .nx p{font-size:15px;color:#33404f}
+
+  /* CTA + FOOTER */
+  .cta{background:var(--gold);padding:44px 0;text-align:center;color:var(--navy)}
+  .cta h2{font-size:30px;margin-bottom:8px}
+  .cta p{font-size:17px}
+  footer{background:var(--navy);color:#c4d0de;padding:26px 0;font-size:14px;text-align:center}
+  footer b{color:#fff}
+
+  @media (max-width:820px){
+    .kpis,.res-grid,.next-grid{grid-template-columns:1fr}
+    .hero h1{font-size:34px}
+    .diagram{grid-template-columns:1fr}
+    .arrow{transform:rotate(90deg)}
+    .tl-grid{grid-template-columns:110px repeat(4,1fr)}
+    .tl-l{font-size:12px}
+  }
+  @media (max-width:420px){
+    .wrap{padding:0 16px}
+    section{padding:48px 0}
+    .hero h1{font-size:28px}
+    .hero .lead{font-size:17px}
+    .sec-head h2{font-size:24px}
+    .finding{padding:20px}
+    .f-top{flex-direction:column}
+    .step{grid-template-columns:1fr;gap:10px}
+    .timeline{padding:16px}
+    .tl-grid{grid-template-columns:86px repeat(4,1fr);column-gap:4px}
+    .tl-l{font-size:11px}
+    .kpi .num,.res .big{font-size:30px}
+  }
+</style>
+</head>
+<body>
+
+<!-- 1. HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><span><b>Usman Gull</b>, Google Ads and SEO Specialist</span><span>Prepared 6 October 2026</span></div>
+    <div class="eyebrow">30 day plan prepared for</div>
+    <h1>Acquisition &amp; Scaling</h1>
+    <p class="lead">Every ad set judged on the calls it books and the clients it closes, so budget moves toward <span class="hl">the lowest cost per closed client</span>, not the cheapest lead.</p>
+    <div class="meta"><span>Meta and Google</span><span>Call-based funnels</span><span>Hyros attribution</span><span>AdvisorOS, InovaOS, LaunchOS</span><span>Setter and closer pods</span></div>
+    <div class="kpis">
+      <div class="kpi"><div class="num">10 to 15</div><div class="lbl">ad accounts checked every day for pacing, CPMs, CTR, CPL and booked calls</div></div>
+      <div class="kpi"><div class="num">7</div><div class="lbl">funnel steps tracked per ad set, from ad to opt-in, VSL, application, booking, show and close</div></div>
+      <div class="kpi"><div class="num">3</div><div class="lbl">data sources reconciled into one sheet: Ads Manager, Hyros and the CRM</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- 2. WHAT WE FOUND -->
+<section class="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>What we found</h2>
+      <p>In a booked-call business the ad platform only sees the top of the funnel. <span class="hl-dark">The cheapest lead is often the most expensive client</span>, because the drop-off happens after the opt-in, where Meta cannot see it.</p>
+      <p>The engine is already built across AdvisorOS, InovaOS and LaunchOS: VSL funnels, setter and closer pods, show-up optimisation, Hyros attribution and Looker Studio reporting. What it needs from paid media is a buyer who reads the numbers back from the sales side every day. <span class="hl-dark">The person changing the ads should be the person reading what they closed</span>, so a cheap lead that never shows gets caught in days, not at month end.</p>
+    </div>
+
+    <div class="finding">
+      <div class="f-top"><h3>The cheapest CPL ad set can be the costliest per held call</h3><span class="tag">High impact</span></div>
+      <p>An ad set that wins on cost per lead but books and shows less than the rest is usually buying a different audience: lower intent, wrong market, or people attracted by a hook that does not match the offer. Meta keeps feeding it budget because it is optimising for the opt-in. <strong>The fix is to judge it on cost per held call and cost per closed client</strong>, then cut, re-target or rebuild it based on which step it leaks at. For offers sold to financial advisers or technical consultants, the application answers and setter notes usually show the reason within the first week of data.</p>
+      <div class="tbl-wrap">
+      <table class="cmp">
+        <thead><tr><th class="r">Judged on cost per lead</th><th class="g">Judged on cost per closed client</th></tr></thead>
+        <tbody>
+          <tr><td class="r">Cheap ad set gets more budget</td><td class="g">Budget follows held calls and closed revenue</td></tr>
+          <tr><td class="r">Meta optimises toward form fills</td><td class="g">Booked and held call events sent back through CAPI</td></tr>
+          <tr><td class="r">Low-intent leads fill the calendar</td><td class="g">Show rate and close rate checked per ad set</td></tr>
+          <tr><td class="r">Sales team time spent on no-shows</td><td class="g">Losers cut on held-call cost within days</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="f-top"><h3>The leak needs to be found by funnel step, not by platform</h3><span class="tag">High impact</span></div>
+      <p>Each step has its own conversion rate, and each ad set has its own pattern. Reading them side by side shows <strong>exactly which step is leaking</strong>, so the action is specific: change the audience, the creative, the page, the application or the booking flow.</p>
+      <div class="tbl-wrap">
+      <table class="data">
+        <thead><tr><th>Step</th><th>What gets checked</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>Ad</td><td>CPM, CTR, hook rate, spend pacing</td><td>Ads Manager</td></tr>
+          <tr><td>Opt-in</td><td>Landing page conversion rate, cost per lead</td><td>Ads Manager, Hyros</td></tr>
+          <tr><td>VSL or webinar</td><td>Watch or attend rate by ad set</td><td>Funnel platform</td></tr>
+          <tr><td>Application</td><td>Completion rate, qualification answers</td><td>CRM</td></tr>
+          <tr><td>Booking</td><td>Booked calls per lead, cost per booked call</td><td>Hyros, CRM</td></tr>
+          <tr><td>Show</td><td>Show rate, cost per held call</td><td>CRM</td></tr>
+          <tr><td>Close</td><td>Close rate, cash collected, cost per closed client</td><td>CRM, Hyros</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="finding med">
+      <div class="f-top"><h3>Meta, Hyros and the CRM will never show the same number</h3><span class="tag med">Medium impact</span></div>
+      <p>Meta counts view-through and modelled conversions, Hyros applies its own attribution windows and first or last click, and the CRM only counts what sales logged. Matching all three on ad ID, UTM and email shows <strong>where the platform is over-reporting</strong> and which ads truly produce revenue. The same joined table can feed your Looker Studio views, so the dashboard and the buying decisions run off one source.</p>
+      <div class="diagram">
+        <div class="src">
+          <div><b>Ads Manager</b>Platform-reported leads, includes modelled and view-through</div>
+          <div><b>Hyros</b>First-click and last-click attribution by ad</div>
+          <div><b>CRM</b>Booked, held and closed, as logged by sales</div>
+        </div>
+        <div class="arrow">&#8250;</div>
+        <div class="target"><b>One reconciliation sheet</b>Joined on ad ID, UTM and email. Pivots for spend, booked calls, held calls and closed revenue per ad, with first-click and last-click side by side.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 30 DAY PLAN -->
+<section class="whitebg">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>The 30 day plan</h2>
+      <p>Clean data first, then decisions. Every cut and every scale move is backed by the reconciled numbers.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-grid">
+        <div></div><div class="tl-h">Week 1</div><div class="tl-h">Week 2</div><div class="tl-h">Week 3</div><div class="tl-h">Week 4</div>
+        <div class="tl-l">Tracking QA</div><div class="bar" style="grid-column:2/3"></div>
+        <div class="tl-l">Reconciliation sheet</div><div class="bar" style="grid-column:2/4"></div>
+        <div class="tl-l">Funnel leak review</div><div class="bar" style="grid-column:3/4"></div>
+        <div class="tl-l">Optimise to calls</div><div class="bar" style="grid-column:3/5"></div>
+        <div class="tl-l">Creative testing</div><div class="bar" style="grid-column:4/6"></div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><span class="wk">Week 1</span><h3>Tracking QA on every account</h3><p>Check pixels, CAPI event match quality, UTMs on every live ad and offline conversion uploads. Confirm Hyros is receiving the ad ID for each lead.</p><p class="why">Reason: if a signal is broken, every decision after it is wrong.</p></div></div>
+      <div class="step"><div class="n">2</div><div><span class="wk">Weeks 1 to 2</span><h3>Build the spend-to-revenue reconciliation</h3><p>One sheet per account joining Ads Manager, Hyros and CRM data, with lookups and pivots for cost per booked call, cost per held call and cost per closed client, first click and last click.</p><p class="why">Reason: it shows which ads produce clients, not just leads.</p></div></div>
+      <div class="step"><div class="n">3</div><div><span class="wk">Week 2</span><h3>Funnel leak review per ad set</h3><p>Compare step rates for every ad set against the account average and flag the step that drops off. The cheapest CPL ad set gets read the same way: book rate, show rate, close rate, lead source and qualification answers.</p><p class="why">Reason: the leaking step tells you whether to cut, re-target or rebuild.</p></div></div>
+      <div class="step"><div class="n">4</div><div><span class="wk">Weeks 2 to 4</span><h3>Point optimisation at booked and held calls</h3><p>Send booked call and held call events back to Meta through CAPI and to Google as offline conversions, then test campaigns optimising for those events against the lead event.</p><p class="why">Reason: the algorithm finds more of whatever event it is fed.</p></div></div>
+      <div class="step"><div class="n">5</div><div><span class="wk">Weeks 3 to 4</span><h3>Creative tests with clear kill rules</h3><p>Weekly creative launches, losers cut on cost per held call, winners scaled in steps. Short written updates: what changed, why, and what was done.</p><p class="why">Reason: fast cuts protect budget for the ads that close.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. COMPARABLE RESULTS -->
+<section class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>Comparable results</h2>
+      <p>Accounts where bidding was moved from cheap conversions to confirmed bookings and quality calls.</p>
+    </div>
+    <div class="res-grid">
+      <div class="res">
+        <div class="ctx">Cosmetic surgery clinic, USD</div>
+        <div class="big">+140%</div>
+        <div class="what">Confirmed bookings, 5 to 12 on level ad spend</div>
+        <div class="rb"><div class="rl"><span>Before</span><span>5</span></div><div class="track"><div class="fill" style="width:41.7%"></div></div></div>
+        <div class="rb"><div class="rl"><span>After</span><span>12</span></div><div class="track"><div class="fill gold" style="width:100%"></div></div></div>
+        <div class="lever">Micro conversions reclassified so bidding optimised toward confirmed bookings, offline conversion uploads re-established.</div>
+      </div>
+      <div class="res">
+        <div class="ctx">Cosmetic surgery clinic, USD</div>
+        <div class="big">53.8% lower</div>
+        <div class="what">Cost per conversion, $99.97 to $46.15</div>
+        <div class="rb"><div class="rl"><span>Before</span><span>$99.97</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="rb"><div class="rl"><span>After</span><span>$46.15</span></div><div class="track"><div class="fill gold" style="width:46.2%"></div></div></div>
+        <div class="lever">Conversion rate rose from 1.50% to 6.54%, with call conversion tracking set to a minimum duration.</div>
+      </div>
+      <div class="res">
+        <div class="ctx">UK sleep clinic</div>
+        <div class="big">49</div>
+        <div class="what">Calls over 1 minute, more than double the prior month's 23</div>
+        <div class="rb"><div class="rl"><span>Before</span><span>23</span></div><div class="track"><div class="fill" style="width:46.9%"></div></div></div>
+        <div class="rb"><div class="rl"><span>After</span><span>49</span></div><div class="track"><div class="fill gold" style="width:100%"></div></div></div>
+        <div class="lever">Search terms tightened to cut unqualified queries, cost per lead down 33% to &pound;36.67 on flat spend.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHAT HAPPENS NEXT -->
+<section class="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>What happens next</h2>
+    </div>
+    <div class="next-grid">
+      <div class="nx"><span class="k">Step 1</span><h3>A short call</h3><p>15 minutes to walk through this plan, your current reporting setup and how you want daily updates delivered.</p></div>
+      <div class="nx"><span class="k">Step 2</span><h3>Account access</h3><p>Ads Manager and Google Ads access, a Hyros user and read access to the CRM, so the data can be matched from day one.</p></div>
+      <div class="nx"><span class="k">Step 3</span><h3>First week</h3><p>Tracking QA across every account and a written list of anything broken, with the fix and the date it was fixed.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CTA -->
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<!-- 7. FOOTER -->
+<footer><div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div></footer>
+
+</body>
+</html>
