@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DCatalog 30 Day Google Ads Plan</title>
+<style>
+:root{
+  --navy:#0b1f36; --card:#12355b; --blue:#0f4c81; --gold:#c8a24a; --gold-l:#e3c77f;
+  --bg:#e9eff6; --white:#ffffff; --red:#b3261e; --green:#1f6f43;
+  --ink:#16202c; --muted:#5a6878; --line:#d5dee9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h1,h2,h3{line-height:1.25}
+strong{font-weight:700}
+.gold{color:var(--gold-l)}
+.hl{background:rgba(200,162,74,.22);padding:0 4px;border-radius:3px;font-weight:700}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:0 0 56px}
+.topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#b9c6d6}
+.label{margin-top:44px;color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.hero h1{font-size:46px;margin:8px 0 14px}
+.hero .lead{font-size:20px;max-width:760px;color:#dbe4ee}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:14px;color:#b9c6d6}
+.meta span b{color:#fff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.kpi{background:var(--card);border-radius:10px;padding:22px}
+.kpi .n{font-size:34px;font-weight:800;color:var(--gold-l);line-height:1.1}
+.kpi .t{font-size:14px;color:#c9d5e3;margin-top:8px}
+
+/* section heads */
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
+.sh .num{font-size:15px;font-weight:800;color:var(--blue);letter-spacing:.08em}
+.sh h2{font-size:30px}
+.intro{max-width:780px;color:#2c3a4a;margin-bottom:32px}
+.dark .sh .num{color:var(--gold-l)}
+.dark .sh h2{color:#fff}
+.dark .intro{color:#c9d5e3}
+
+/* findings */
+.find{background:var(--white);border-radius:10px;box-shadow:0 6px 20px rgba(11,31,54,.08);padding:26px;margin-bottom:22px;border-left:6px solid var(--blue)}
+.find.med{border-left-color:var(--gold)}
+.fh{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+.fh h3{font-size:20px}
+.tag{flex-shrink:0;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;color:#fff;background:var(--blue)}
+.tag.medium{background:var(--gold);color:var(--navy)}
+.find p{color:#2c3a4a;margin-bottom:14px}
+.find p:last-child{margin-bottom:0}
+
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:10px 12px;vertical-align:top}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 14px}
+.cmp .col{border-radius:8px;padding:16px;border:1px solid var(--line)}
+.cmp .bad{background:#fbeceb;border-color:#efc9c6}
+.cmp .good{background:#e8f3ec;border-color:#c3dfcd}
+.cmp h4{font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.cmp .bad h4{color:var(--red)}
+.cmp .good h4{color:var(--green)}
+.cmp ul{list-style:none}
+.cmp li{font-size:14px;padding:5px 0;border-bottom:1px dashed rgba(0,0,0,.08)}
+.cmp li:last-child{border-bottom:0}
+.cmp .foot{margin-top:10px;font-size:13px;font-weight:700}
+.cmp .bad .foot{color:var(--red)}
+.cmp .good .foot{color:var(--green)}
+
+.flow{display:grid;grid-template-columns:1fr 40px 1fr;gap:10px;align-items:center;margin:6px 0 14px}
+.urls{display:grid;gap:10px}
+.url{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:#f6f9fc;font-size:14px}
+.url code{font-family:Consolas,Menlo,monospace;font-size:13px;color:var(--blue);font-weight:700;word-break:break-all}
+.url .d{color:var(--muted);font-size:13px;margin-top:3px}
+.arrow{text-align:center;font-size:26px;color:var(--gold);font-weight:800}
+.dest{border:2px solid var(--green);border-radius:8px;padding:14px;background:#e8f3ec;font-size:14px}
+.dest code{font-family:Consolas,Menlo,monospace;font-size:13px;color:var(--green);font-weight:700;word-break:break-all}
+.dest .d{color:#24543a;font-size:13px;margin-top:4px}
+
+.dt{border-radius:8px;overflow:hidden;border:1px solid var(--line);margin:6px 0 14px}
+.dt th{background:var(--navy);color:#fff;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.dt tr:nth-child(even) td{background:#f6f9fc}
+.dt td:first-child{font-weight:700;white-space:nowrap}
+
+/* plan */
+.white{background:var(--white)}
+.timeline{background:var(--navy);border-radius:12px;padding:24px;color:#fff;margin-bottom:34px}
+.tl-head,.tl-row{display:grid;grid-template-columns:210px repeat(4,1fr);gap:6px;align-items:center}
+.tl-head div{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#9fb1c6;text-align:center;padding-bottom:10px}
+.tl-head div:first-child{text-align:left}
+.tl-row{padding:7px 0;border-top:1px solid rgba(255,255,255,.08)}
+.tl-row .nm{font-size:14px;color:#dbe4ee}
+.bar{height:16px;border-radius:4px;background:var(--gold)}
+.bar.soft{background:rgba(200,162,74,.45)}
+.s1{grid-column:2/6}.s2{grid-column:3/6}.s3{grid-column:4/6}.s4{grid-column:5/6}.s12{grid-column:2/4}
+.tl-note{font-size:13px;color:#9fb1c6;margin-top:12px}
+
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:54px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:20px}
+.step .no{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step h3{font-size:18px;margin-bottom:4px}
+.step .wk{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.06em;text-transform:uppercase}
+.step p{font-size:15px;color:#2c3a4a}
+.step .why{margin-top:6px;font-size:14px;color:var(--muted)}
+.step .why b{color:var(--ink)}
+
+/* results */
+.dark{background:var(--navy);color:#fff}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rc{background:var(--card);border-radius:10px;padding:22px}
+.rc .ind{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#9fb1c6}
+.rc .big{font-size:40px;font-weight:800;color:var(--gold-l);line-height:1.1;margin:10px 0 2px}
+.rc .cap{font-size:14px;color:#dbe4ee;margin-bottom:16px}
+.br{margin-bottom:10px}
+.br .lb{display:flex;justify-content:space-between;font-size:13px;color:#c9d5e3;margin-bottom:4px}
+.br .tr{height:12px;background:rgba(255,255,255,.08);border-radius:4px}
+.br .fl{height:12px;border-radius:4px;background:rgba(200,162,74,.4)}
+.br .fl.af{background:var(--gold)}
+.rc .lev{font-size:13px;color:#b9c6d6;border-top:1px solid rgba(255,255,255,.1);padding-top:12px;margin-top:14px}
+.rc .lev b{color:var(--gold-l)}
+.rnote{font-size:13px;color:#9fb1c6;margin-top:18px}
+
+/* next */
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nc{background:var(--white);border-radius:10px;border-top:5px solid var(--gold);padding:24px;box-shadow:0 6px 20px rgba(11,31,54,.06)}
+.nc .k{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.08em;text-transform:uppercase}
+.nc h3{font-size:19px;margin:6px 0 8px}
+.nc p{font-size:15px;color:#2c3a4a}
+
+.cta{background:var(--gold);color:var(--navy);padding:48px 0;text-align:center}
+.cta h2{font-size:30px}
+.cta p{font-size:17px;margin-top:6px}
+footer{background:var(--navy);color:#b9c6d6;padding:26px 0;font-size:14px;text-align:center}
+footer b{color:#fff}
+
+@media (max-width:820px){
+  .kpis,.rgrid,.ngrid{grid-template-columns:1fr}
+  .cmp{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg)}
+  .hero h1{font-size:36px}
+  .tl-head,.tl-row{grid-template-columns:120px repeat(4,1fr)}
+  .tl-row .nm{font-size:12px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 16px}
+  section{padding:48px 0}
+  .hero h1{font-size:31px}
+  .hero .lead{font-size:17px}
+  .sh h2{font-size:24px}
+  .find{padding:20px}
+  .fh{flex-direction:column}
+  .step{grid-template-columns:1fr;gap:10px}
+  .timeline{padding:16px}
+  .tl-head,.tl-row{grid-template-columns:92px repeat(4,1fr);gap:4px}
+  .dt th,.dt td{padding:8px}
+  .dt td:first-child{white-space:normal}
+  .dt{overflow-x:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><span>Google Ads 30 day plan</span><span>October 2026</span></div>
+    <div class="label">30 day plan prepared for</div>
+    <h1>DCatalog</h1>
+    <p class="lead">Your $10K a month should be buying <span class="gold"><strong>demo calls with manufacturers and distributors ready for catalog automation</strong></span>, not sign-ups from people looking for a free flipbook maker.</p>
+    <div class="meta">
+      <span><b>Account:</b> Search, Performance Max, Demand Gen</span>
+      <span><b>Goal:</b> qualified demos, cost per qualified lead</span>
+      <span><b>Tracking:</b> GTM, GA4, Enhanced Conversions, Zoho import</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="n">$29 vs $7,000</div><div class="t">Entry flipbook plan per month versus the annual starting price of Catalog Automation. The same ads can attract both buyers.</div></div>
+      <div class="kpi"><div class="n">2 demo pages</div><div class="t">Two different demo pages with two different messages. Only one filters by price before the form.</div></div>
+      <div class="kpi"><div class="n">3 campaign types</div><div class="t">Search, Performance Max and Demand Gen, each needing its own guardrail against low intent traffic.</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- 01 FINDINGS -->
+<section>
+  <div class="wrap">
+    <div class="sh"><span class="num">01</span><h2>What we found</h2></div>
+    <p class="intro">This review is based on your public site, pricing and job brief. The account itself still needs to be checked, but the pattern is clear. DCatalog sells two products at very different price points, and <span class="hl">Google cannot tell them apart unless the account tells it</span>. Every finding below comes back to that.</p>
+
+    <div class="find">
+      <div class="fh"><h3>One account, two very different buyers</h3><span class="tag">High impact</span></div>
+      <p>The Select plan starts at $29 a month. Catalog Automation starts at $7,000 a year. Flipbook keywords bring in the first group, along with students and people who want a free tool. Automation and B2B catalog keywords bring in the second. When both count as a lead, <strong>bidding drifts toward whichever is cheaper to get</strong>, which is almost always the free flipbook search.</p>
+      <div class="cmp">
+        <div class="col bad">
+          <h4>Low value intent</h4>
+          <ul>
+            <li>free flipbook maker</li>
+            <li>pdf to flipbook free / online</li>
+            <li>flipbook for school project</li>
+            <li>free catalog template download</li>
+            <li>how to make a flipbook</li>
+          </ul>
+          <div class="foot">Fits a $29 plan at best</div>
+        </div>
+        <div class="col good">
+          <h4>Demo worthy intent</h4>
+          <ul>
+            <li>catalog automation software</li>
+            <li>generate catalog from PIM / ERP</li>
+            <li>distributor and dealer catalog platform</li>
+            <li>price list and line sheet software</li>
+            <li>B2B digital catalog with quote requests</li>
+          </ul>
+          <div class="foot">Fits a $7,000+ annual contract</div>
+        </div>
+      </div>
+      <p>The fix is a search term review sorted by these two groups, a shared negative list applied to Search and Performance Max, and budget weighted toward the groups that produce qualified leads in Zoho.</p>
+    </div>
+
+    <div class="find">
+      <div class="fh"><h3>Two demo pages, two different messages</h3><span class="tag">High impact</span></div>
+      <p>Your site runs two demo routes. The Catalog Automation page sends visitors to a demo page that shows <strong>"Pricing starts at $7,000 / Annually"</strong> above the form. That one line filters out people who are not ready for that budget. The general Request a Demo page has no price signal, and its search snippet promotes the 7 day free trial with no credit card.</p>
+      <div class="flow">
+        <div class="urls">
+          <div class="url"><code>dcatalog.com/request-a-demo/</code><div class="d">General demo. Search snippet talks about the free trial. No price signal.</div></div>
+          <div class="url"><code>Homepage and flipbook pages</code><div class="d">Lead with "Try for free" and the 7 day trial.</div></div>
+        </div>
+        <div class="arrow">&rarr;</div>
+        <div class="dest"><code>dcatalog.com/book-a-demo/?creation=1</code><div class="d">Recommended destination for automation, PIM, distributor and price list ad groups. The price on the page does the qualifying before Sales has to.</div></div>
+      </div>
+      <p>Worth a quick check as well: the page code includes a "Request Consultation" pop-up that returns "Contact form not found". If any button opens it, some demo intent is being lost.</p>
+    </div>
+
+    <div class="find med">
+      <div class="fh"><h3>Performance Max and Demand Gen need guardrails</h3><span class="tag medium">Medium impact</span></div>
+      <p>Both campaign types find the cheapest conversion available. In a SaaS account that has a free trial, that usually means <strong>trial sign-ups and brand searches that would have come in anyway</strong>. These are the controls that keep them pointed at demos.</p>
+      <div class="dt">
+        <table>
+          <thead><tr><th>Campaign</th><th>Common leak</th><th>Guardrail</th></tr></thead>
+          <tbody>
+            <tr><td>Performance Max</td><td>Takes brand traffic and free flipbook queries</td><td>Brand exclusion, account level negatives, B2B search themes, existing customer list excluded</td></tr>
+            <tr><td>Demand Gen</td><td>Cheap form fills from broad audiences</td><td>Audiences seeded from Zoho qualified leads, trial users and current customers excluded</td></tr>
+            <tr><td>Search</td><td>"Free", "student" and how-to queries on broad match</td><td>Weekly search term review, ad groups split by intent, price qualifier tested in ad copy</td></tr>
+            <tr><td>Account</td><td>Auto-applied recommendations changing keywords and bids</td><td>Turned off in week one, as you asked</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Conversion goals and bidding stay exactly as they are. Any change there comes to you as a written recommendation first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 PLAN -->
+<section class="white">
+  <div class="wrap">
+    <div class="sh"><span class="num">02</span><h2>The 30 day plan</h2></div>
+    <p class="intro">This follows the paid 30 day start you described. By day 30 you have <span class="hl">a prioritized change list, four Friday reports, and a cleaner account</span> to judge the work on.</p>
+
+    <div class="timeline">
+      <div class="tl-head"><div>Workstream</div><div>Week 1</div><div>Week 2</div><div>Week 3</div><div>Week 4</div></div>
+      <div class="tl-row"><div class="nm">Search terms and negatives</div><div class="bar s1"></div></div>
+      <div class="tl-row"><div class="nm">Account and Zoho lead audit</div><div class="bar s12"></div></div>
+      <div class="tl-row"><div class="nm">Intent split and budget</div><div class="bar s2"></div></div>
+      <div class="tl-row"><div class="nm">Ad copy and page tests</div><div class="bar soft s2"></div></div>
+      <div class="tl-row"><div class="nm">PMax and Demand Gen guardrails</div><div class="bar s3"></div></div>
+      <div class="tl-row"><div class="nm">Prioritized change list</div><div class="bar s4"></div></div>
+      <div class="tl-note">A short report goes out every Friday: spend, demo requests, qualified leads, cost per qualified lead, and what changed that week.</div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="no">1</div><div><div class="wk">Week 1</div><h3>Search term audit and a shared negative list</h3><p>Pull 90 days of search terms from Search and Performance Max. Tag every term as automation, B2B catalog, flipbook, free or student, competitor, or brand. Build one shared negative list from the free, student and one-off groups and apply it across the account. Turn off auto-applied recommendations.</p><p class="why"><b>Why:</b> this is the fastest way to stop paying for clicks that cannot become a qualified demo.</p></div></div>
+      <div class="step"><div class="no">2</div><div><div class="wk">Week 1 to 2</div><h3>Match campaigns to Zoho outcomes</h3><p>Use the Zoho import to see qualified leads by campaign, ad group and keyword, not just demo requests. Rank each one by cost per qualified lead.</p><p class="why"><b>Why:</b> a pricier demo that qualifies costs less than a cheap demo that never turns into a deal. Budget should follow cost per qualified lead.</p></div></div>
+      <div class="step"><div class="no">3</div><div><div class="wk">Week 2</div><h3>Split Search by intent and move budget</h3><p>Separate catalog automation, B2B and distributor catalogs, flipbook (Elite tier), and brand into their own campaigns or ad groups with their own budgets. Shift spend toward the groups with the lowest cost per qualified lead.</p><p class="why"><b>Why:</b> once each intent has its own budget, flipbook clicks can no longer take money from automation demos.</p></div></div>
+      <div class="step"><div class="no">4</div><div><div class="wk">Week 2 to 4</div><h3>Ad copy that qualifies, and the right demo page</h3><p>Test automation ads that name the buyer (manufacturers, distributors) and the system (PIM, ERP, CSV), with one variant that says "plans from $7,000 a year". Send those ad groups to the priced demo page. Suggest landing page changes based on what the data shows.</p><p class="why"><b>Why:</b> ads and pages that state the price filter out low budget clicks before you pay for them.</p></div></div>
+      <div class="step"><div class="no">5</div><div><div class="wk">Week 3 to 4</div><h3>Guardrails on Performance Max and Demand Gen, then the change list</h3><p>Add brand exclusions, B2B search themes and customer list exclusions to Performance Max. Seed Demand Gen audiences from qualified Zoho leads. In week 4, deliver the prioritized change list, with any conversion or bidding proposals listed separately for your approval.</p><p class="why"><b>Why:</b> automated campaigns perform well once they are told which leads count. Without that, they go after volume.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 RESULTS -->
+<section class="dark">
+  <div class="wrap">
+    <div class="sh"><span class="num">03</span><h2>Comparable results</h2></div>
+    <p class="intro">These are high value booking accounts where cheap enquiries and real buyers needed to be separated. The fixes were the same ones planned here: search term control, bidding pointed at confirmed outcomes, and tracking that counts what matters.</p>
+    <div class="rgrid">
+      <div class="rc">
+        <div class="ind">Cosmetic surgery clinic, USD</div>
+        <div class="big">+140%</div>
+        <div class="cap">confirmed bookings, on level ad spend</div>
+        <div class="br"><div class="lb"><span>Bookings before</span><span>5</span></div><div class="tr"><div class="fl" style="width:42%"></div></div></div>
+        <div class="br"><div class="lb"><span>Bookings after</span><span>12</span></div><div class="tr"><div class="fl af" style="width:100%"></div></div></div>
+        <div class="br"><div class="lb"><span>Cost per conversion before</span><span>$99.97</span></div><div class="tr"><div class="fl" style="width:100%"></div></div></div>
+        <div class="br"><div class="lb"><span>Cost per conversion after</span><span>$46.15</span></div><div class="tr"><div class="fl af" style="width:46%"></div></div></div>
+        <div class="lev"><b>Lever:</b> reclassified micro conversions so bidding optimized toward confirmed bookings, not cheap form fills.</div>
+      </div>
+      <div class="rc">
+        <div class="ind">Sleep clinic, UK</div>
+        <div class="big">33%</div>
+        <div class="cap">lower cost per lead, conversions up 50%, flat spend</div>
+        <div class="br"><div class="lb"><span>Cost per lead before</span><span>&pound;54.71</span></div><div class="tr"><div class="fl" style="width:100%"></div></div></div>
+        <div class="br"><div class="lb"><span>Cost per lead after</span><span>&pound;36.67</span></div><div class="tr"><div class="fl af" style="width:67%"></div></div></div>
+        <div class="br"><div class="lb"><span>Conversions before</span><span>60</span></div><div class="tr"><div class="fl" style="width:67%"></div></div></div>
+        <div class="br"><div class="lb"><span>Conversions after</span><span>90</span></div><div class="tr"><div class="fl af" style="width:100%"></div></div></div>
+        <div class="lev"><b>Lever:</b> tightened search terms to cut unqualified queries and moved budget to the strongest ad groups.</div>
+      </div>
+      <div class="rc">
+        <div class="ind">Plastic surgery clinic, London</div>
+        <div class="big">69.7%</div>
+        <div class="cap">reduction in cost per conversion, on nearly flat spend</div>
+        <div class="br"><div class="lb"><span>Cost per conversion before</span><span>&pound;256.84</span></div><div class="tr"><div class="fl" style="width:100%"></div></div></div>
+        <div class="br"><div class="lb"><span>Cost per conversion after</span><span>&pound;77.87</span></div><div class="tr"><div class="fl af" style="width:30%"></div></div></div>
+        <div class="br"><div class="lb"><span>Conversions before</span><span>5.00</span></div><div class="tr"><div class="fl" style="width:29%"></div></div></div>
+        <div class="br"><div class="lb"><span>Conversions after</span><span>17.19</span></div><div class="tr"><div class="fl af" style="width:100%"></div></div></div>
+        <div class="lev"><b>Lever:</b> booking flow tracking that captured real enquiries, plus a Brand campaign rebuilt to cut wasted spend in half.</div>
+      </div>
+    </div>
+    <p class="rnote">Figures are month over month from live accounts, August 2026. Overall: $15.5M in ad spend managed across 977 campaigns.</p>
+  </div>
+</section>
+
+<!-- 04 NEXT -->
+<section>
+  <div class="wrap">
+    <div class="sh"><span class="num">04</span><h2>What happens next</h2></div>
+    <p class="intro">Three steps, and <span class="hl">the first Friday report arrives at the end of week one</span>.</p>
+    <div class="ngrid">
+      <div class="nc"><div class="k">Step 1</div><h3>A 15 minute call</h3><p>We confirm what counts as a qualified lead in Zoho, which product lines matter most this quarter, and anything that is off limits in the account.</p></div>
+      <div class="nc"><div class="k">Step 2</div><h3>Access</h3><p>Standard access to Google Ads, read access to GA4, and a qualified lead export or view from Zoho. Your tracking setup stays as it is.</p></div>
+      <div class="nc"><div class="k">Step 3</div><h3>Week one work</h3><p>Search term audit, shared negative list, auto-applied recommendations turned off, and the first Friday report with what changed and why.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
