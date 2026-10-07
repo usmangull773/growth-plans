@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adspace 30 Day Plan</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--accent:#0f4c81;--gold:#c8a24a;--gold-l:#e3c77f;--bg:#e9eff6;--white:#ffffff;--red:#b3261e;--green:#1f6f43;--ink:#14212f;--muted:#4a5a6b;--line:#d3dde8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+strong{font-weight:700}
+.hl{color:var(--gold);font-weight:700}
+.hl-ink{background:#f6ecd2;padding:0 4px;font-weight:700}
+.hero{background:var(--navy);color:#fff;border-bottom:5px solid var(--gold);padding:22px 0 46px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#a9bbd0;border-bottom:1px solid #1e3a5c;padding-bottom:14px;margin-bottom:38px}
+.label{color:var(--gold-l);text-transform:uppercase;letter-spacing:.14em;font-size:13px;font-weight:700}
+.hero h1{font-size:44px;line-height:1.1;margin:10px 0 14px;letter-spacing:-.01em}
+.hero .lead{font-size:20px;color:#d6e1ee;max-width:760px}
+.hero .lead .hl{color:var(--gold-l)}
+.meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 34px;font-size:14px;color:#a9bbd0}
+.meta b{color:#fff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:20px}
+.kpi .n{font-size:34px;font-weight:800;color:var(--gold-l);line-height:1.1}
+.kpi .t{font-size:14px;color:#c9d6e5;margin-top:6px}
+section{padding:64px 0}
+.s-light{background:var(--bg)}
+.s-white{background:var(--white)}
+.s-dark{background:var(--navy);color:#fff}
+.sec-head{margin-bottom:28px}
+.num{display:inline-block;color:var(--accent);font-weight:800;font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+.s-dark .num{color:var(--gold-l)}
+h2{font-size:32px;line-height:1.2;margin-top:6px}
+.intro{font-size:18px;color:var(--muted);max-width:820px;margin-top:12px}
+.s-dark .intro{color:#c9d6e5}
+.finding{background:#fff;border-radius:10px;box-shadow:0 2px 14px rgba(11,31,54,.08);border-left:6px solid var(--accent);padding:26px;margin-bottom:22px}
+.finding.med{border-left-color:var(--gold)}
+.f-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.finding h3{font-size:21px;line-height:1.3;max-width:760px}
+.tag{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.tag.high{background:var(--accent);color:#fff}
+.tag.medium{background:var(--gold);color:var(--navy)}
+.finding p{color:var(--muted);margin:8px 0 16px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:var(--navy);color:#fff;font-weight:600}
+.cmp th.bad{background:var(--red)}
+.cmp th.good{background:var(--green)}
+.cmp td.bad{color:#7c1d17}
+.cmp td.good{color:#164f30}
+.tscroll{overflow-x:auto}
+.diagram{display:grid;grid-template-columns:1fr 60px 1fr;gap:12px;align-items:center}
+.d-col{display:flex;flex-direction:column;gap:8px}
+.d-box{border-radius:6px;padding:9px 12px;font-size:14px}
+.d-bad{background:#fbeceb;border:1px solid #e7b8b4;color:#7c1d17}
+.d-good{background:#e8f3ec;border:1px solid #a9d1b8;color:#164f30;padding:14px}
+.d-good b{display:block;font-size:15px}
+.d-arrow{text-align:center;font-size:30px;color:var(--gold);font-weight:800}
+.d-cap{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.timeline{background:var(--navy);color:#fff;border-radius:12px;padding:24px;margin-bottom:34px}
+.tl-title{font-weight:700;margin-bottom:16px;color:var(--gold-l)}
+.tl-grid{display:grid;grid-template-columns:200px repeat(4,1fr);gap:8px 6px;align-items:center;font-size:14px}
+.tl-h{color:#a9bbd0;font-size:12px;text-transform:uppercase;letter-spacing:.08em;text-align:center}
+.tl-name{color:#d6e1ee}
+.bar{height:16px;background:var(--gold);border-radius:4px}
+.bar.soft{background:#8f7a44}
+.steps{display:grid;gap:18px}
+.step{display:grid;grid-template-columns:56px 1fr;gap:18px;background:var(--bg);border-radius:10px;padding:22px}
+.step .sn{width:48px;height:48px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:19px;margin-bottom:4px}
+.step .why{color:var(--accent);font-weight:600;font-size:15px;margin-bottom:8px}
+.step ul{padding-left:18px;color:var(--muted)}
+.step li{margin:4px 0}
+.mini{margin-top:12px;background:#fff;border-radius:8px;overflow:hidden}
+.mini td,.mini th{font-size:14px;padding:8px 10px}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rc{background:var(--card);border-radius:12px;padding:24px}
+.rc .rk{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#a9bbd0}
+.rc .big{font-size:40px;font-weight:800;color:var(--gold-l);line-height:1.1;margin:8px 0 4px}
+.rc .sub{color:#d6e1ee;font-size:15px;margin-bottom:18px}
+.rbar{margin:10px 0}
+.rbar .lb{display:flex;justify-content:space-between;font-size:13px;color:#c9d6e5;margin-bottom:4px}
+.rbar .tr{height:12px;background:#0b2a48;border-radius:4px;overflow:hidden}
+.rbar .fl{height:100%;background:var(--gold)}
+.rbar .fl.dim{background:#5d6f84}
+.rnote{font-size:13px;color:#a9bbd0;margin-top:14px}
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nc{background:#fff;border-top:5px solid var(--gold);border-radius:10px;padding:24px;box-shadow:0 2px 14px rgba(11,31,54,.06)}
+.nc .when{font-size:12px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.1em}
+.nc h3{font-size:19px;margin:6px 0 8px}
+.nc p,.nc li{color:var(--muted);font-size:15px}
+.nc ul{padding-left:18px;margin-top:6px}
+.cta{background:var(--gold);color:var(--navy);padding:46px 0;text-align:center}
+.cta h2{font-size:30px}
+.cta p{font-size:18px;margin-top:8px}
+footer{background:var(--navy);color:#c9d6e5;padding:26px 0;text-align:center;font-size:14px}
+footer b{color:#fff}
+@media (max-width:820px){
+ .kpis,.res,.next{grid-template-columns:1fr}
+ .hero h1{font-size:34px}
+ h2{font-size:26px}
+ .tl-grid{grid-template-columns:120px repeat(4,1fr);font-size:13px}
+ .diagram{grid-template-columns:1fr}
+ .d-arrow{transform:rotate(90deg)}
+}
+@media (max-width:420px){
+ .wrap{padding:0 16px}
+ section{padding:46px 0}
+ .hero h1{font-size:29px}
+ .hero .lead{font-size:17px}
+ .finding,.step,.nc,.rc{padding:18px}
+ .step{grid-template-columns:1fr;gap:10px}
+ .tl-grid{grid-template-columns:92px repeat(4,1fr);font-size:12px}
+ table{font-size:13px}
+ th,td{padding:8px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="topbar"><span>Senior Paid Media Manager, DTC Ecommerce</span><span>Prepared October 2026</span></div>
+  <div class="label">30 day plan prepared for</div>
+  <h1>Adspace&reg;, Austin TX</h1>
+  <p class="lead">How I would own a DTC account on Meta and Google from day one, and grow it on <span class="hl">new-customer CAC and blended MER</span>, not platform ROAS alone.</p>
+  <div class="meta">
+   <span>Role: <b>Senior Paid Media Manager</b></span>
+   <span>Reports to: <b>Head of Paid Media</b></span>
+   <span>Hours: <b>20 to 30 per week, US business hours</b></span>
+  </div>
+  <div class="kpis">
+   <div class="kpi"><div class="n">Day 7</div><div class="t">Metric dictionary and tracking signed off with your team before a single budget change</div></div>
+   <div class="kpi"><div class="n">3 lanes</div><div class="t">Every account built as Scale, Test and Retain, on Meta and Google</div></div>
+   <div class="kpi"><div class="n">Written</div><div class="t">Scale, hold, reduce and test rules, so every budget move has a reason a client can read</div></div>
+  </div>
+ </div>
+</header>
+
+<section class="s-light">
+ <div class="wrap">
+  <div class="sec-head">
+   <span class="num">01 &middot; What we found</span>
+   <h2>What a senior operator on your team has to solve</h2>
+   <p class="intro">Your own DTC Meta guidance says the job is to acquire valuable customers at an economically sustainable cost, <span class="hl-ink">not to maximise platform ROAS in isolation</span>. Three things decide whether an account manager delivers that or just reports it.</p>
+  </div>
+
+  <div class="finding">
+   <div class="f-top"><h3>1. Platform ROAS and store revenue tell two different stories</h3><span class="tag high">High impact</span></div>
+   <p>Meta and Google both claim credit for the same orders, and returning customers make acquisition look stronger than it is. If budget follows platform ROAS, spend drifts toward people who were going to buy anyway. <strong>The fix is to steer on new-customer CAC and blended MER from Shopify data</strong>, with platform numbers used for diagnosis.</p>
+   <div class="tscroll"><table class="cmp">
+    <thead><tr><th class="bad">Steering on platform view</th><th class="good">Steering on business view</th></tr></thead>
+    <tbody>
+     <tr><td class="bad">Meta ROAS plus Google ROAS adds up to more revenue than the store booked</td><td class="good">Blended MER: total net revenue divided by total paid spend</td></tr>
+     <tr><td class="bad">Retargeting and brand search look like the best campaigns</td><td class="good">New-customer CAC from first-time Shopify orders, reported per channel</td></tr>
+     <tr><td class="bad">Budget scaled on a good 3 day ROAS window</td><td class="good">Budget scaled only when marginal CAC holds under the agreed ceiling</td></tr>
+     <tr><td class="bad">Client asks why revenue did not move with ROAS</td><td class="good">One metric dictionary, so client, Head of Paid Media and buyer read the same number</td></tr>
+    </tbody>
+   </table></div>
+  </div>
+
+  <div class="finding">
+   <div class="f-top"><h3>2. Fragmented structures stop new accounts from learning</h3><span class="tag high">High impact</span></div>
+   <p>Brands that arrive with many small ad sets and overlapping campaigns split conversion signal so thin that nothing exits learning. <strong>Consolidating into three clear lanes per platform</strong> gives the algorithms enough volume and gives the client a structure they can understand in one slide.</p>
+   <div class="diagram">
+    <div class="d-col">
+     <div class="d-cap">Typical inherited account</div>
+     <div class="d-box d-bad">12 to 20 ad sets, each under 50 purchases a week</div>
+     <div class="d-box d-bad">Interest stacks overlapping each other</div>
+     <div class="d-box d-bad">Retargeting and prospecting sharing budget</div>
+     <div class="d-box d-bad">One PMax with every SKU, no margin split</div>
+    </div>
+    <div class="d-arrow">&rarr;</div>
+    <div class="d-col">
+     <div class="d-cap">Three lane structure</div>
+     <div class="d-box d-good"><b>Scale</b>Advantage+ Sales on Meta, PMax split by margin tier on Google</div>
+     <div class="d-box d-good"><b>Test</b>One CBO creative test campaign with fixed budget and rules</div>
+     <div class="d-box d-good"><b>Retain</b>Catalog retargeting and existing-customer cap, sized to audience</div>
+    </div>
+   </div>
+  </div>
+
+  <div class="finding med">
+   <div class="f-top"><h3>3. Clients judge the manager by the weekly readout</h3><span class="tag medium">Medium impact</span></div>
+   <p>The role presents results directly to clients. A good readout answers four questions in under five minutes, and <strong>ties every recommendation back to CAC, MER and contribution margin</strong>. It plugs into whatever reporting stack Adspace already runs.</p>
+   <div class="tscroll"><table>
+    <thead><tr><th>Metric</th><th>Question it answers</th><th>Source</th></tr></thead>
+    <tbody>
+     <tr><td><strong>Blended MER</strong></td><td>Is paid media growing the business overall?</td><td>Shopify net revenue, all ad spend</td></tr>
+     <tr><td><strong>New-customer CAC</strong></td><td>What does one new buyer cost us now?</td><td>Shopify first-time orders</td></tr>
+     <tr><td>Contribution per new customer</td><td>Is the first order profitable after variable costs?</td><td>Agreed cost model</td></tr>
+     <tr><td>Platform CPA and ROAS</td><td>Which campaign, ad or SKU is doing the work?</td><td>Meta and Google, with set attribution windows</td></tr>
+     <tr><td>Creative test log</td><td>What did we learn and what do we film next?</td><td>Shared test sheet</td></tr>
+    </tbody>
+   </table></div>
+  </div>
+ </div>
+</section>
+
+<section class="s-white">
+ <div class="wrap">
+  <div class="sec-head">
+   <span class="num">02 &middot; The 30 day plan</span>
+   <h2>Structure, launch and scale a new DTC account</h2>
+   <p class="intro">Budget splits below use a $50K a month account as the example. The percentages carry to any spend level.</p>
+  </div>
+
+  <div class="timeline">
+   <div class="tl-title">Workstreams by week</div>
+   <div class="tl-grid">
+    <div></div><div class="tl-h">Week 1</div><div class="tl-h">Week 2</div><div class="tl-h">Week 3</div><div class="tl-h">Week 4</div>
+    <div class="tl-name">Audit and tracking</div><div class="bar"></div><div class="bar soft"></div><div></div><div></div>
+    <div class="tl-name">Metric dictionary</div><div class="bar"></div><div></div><div></div><div></div>
+    <div class="tl-name">Restructure and launch</div><div class="bar soft"></div><div class="bar"></div><div></div><div></div>
+    <div class="tl-name">Creative test cycles</div><div></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    <div class="tl-name">Scale on guardrails</div><div></div><div></div><div class="bar"></div><div class="bar"></div>
+    <div class="tl-name">Client readout</div><div class="bar soft"></div><div class="bar soft"></div><div class="bar soft"></div><div class="bar"></div>
+   </div>
+  </div>
+
+  <div class="steps">
+   <div class="step">
+    <div class="sn">1</div>
+    <div>
+     <h3>Days 1 to 7: audit, tracking and the metric dictionary</h3>
+     <div class="why">Why: no budget decision is safe until the numbers agree.</div>
+     <ul>
+      <li>Check Meta pixel and Conversions API dedup, event match quality, and the Shopify purchase value sent to both platforms.</li>
+      <li>Check Google Ads conversion source (Shopify or GA4, never both as primary), enhanced conversions and Merchant Center feed health.</li>
+      <li>Agree definitions with the Head of Paid Media: net revenue, first-time customer, CAC spend, margin, attribution windows.</li>
+      <li>Set the 30 day baseline: MER, new-customer CAC, AOV, and the CAC ceiling the brand can afford.</li>
+     </ul>
+    </div>
+   </div>
+
+   <div class="step">
+    <div class="sn">2</div>
+    <div>
+     <h3>Days 5 to 14: rebuild into three lanes and launch</h3>
+     <div class="why">Why: consolidated structures exit learning faster and are easy to explain.</div>
+     <div class="mini tscroll"><table>
+      <thead><tr><th>Platform and lane</th><th>Setup</th><th>Share</th><th>On $50K</th></tr></thead>
+      <tbody>
+       <tr><td>Meta, Scale</td><td>Advantage+ Sales, broad, proven ads only</td><td>40%</td><td>$20,000</td></tr>
+       <tr><td>Meta, Test</td><td>CBO test campaign, 3 to 5 new concepts a week</td><td>15%</td><td>$7,500</td></tr>
+       <tr><td>Meta, Retain</td><td>Catalog retargeting, existing-customer cap</td><td>5%</td><td>$2,500</td></tr>
+       <tr><td>Google, Scale</td><td>PMax split by margin tier, plus Standard Shopping on hero SKUs</td><td>25%</td><td>$12,500</td></tr>
+       <tr><td>Google, Search</td><td>Brand defence and high intent non-brand</td><td>10%</td><td>$5,000</td></tr>
+       <tr><td>Google, Test</td><td>Demand Gen or YouTube with winning Meta video</td><td>5%</td><td>$2,500</td></tr>
+      </tbody>
+     </table></div>
+    </div>
+   </div>
+
+   <div class="step">
+    <div class="sn">3</div>
+    <div>
+     <h3>Days 8 to 30: creative testing with a written log</h3>
+     <div class="why">Why: creative is the biggest lever on Meta, and every test should leave a lesson.</div>
+     <ul>
+      <li>Test concepts before variations: new angle, persona or offer first, then hooks, then formats.</li>
+      <li>Each test logs the hypothesis, the variable, spend, the success metric chosen before launch, and the result.</li>
+      <li>Kill rule: an ad that spends 1.5x the CAC ceiling with no purchase is paused. Graduate rule: 3 days at or under target CAC moves it to Scale.</li>
+      <li>Fatigue is read across frequency, CTR trend, hook rate and CPA together, never frequency alone. The creative team gets a weekly brief on what to make next.</li>
+     </ul>
+    </div>
+   </div>
+
+   <div class="step">
+    <div class="sn">4</div>
+    <div>
+     <h3>Days 15 to 30: scale, hold, reduce rules</h3>
+     <div class="why">Why: rules keep CAC stable while spend grows, and make every change easy to defend to the client.</div>
+     <ul>
+      <li><strong>Scale:</strong> raise budget 15 to 20% every 72 hours while 3 day new-customer CAC stays under the ceiling and MER holds.</li>
+      <li><strong>Hold:</strong> CAC within 10% over target, or the campaign is still in learning.</li>
+      <li><strong>Reduce:</strong> MER below the floor for 2 days in a row, or CAC 20%+ over the ceiling.</li>
+      <li><strong>Test:</strong> 15 to 20% of spend always goes to new creative and new Google surfaces.</li>
+     </ul>
+    </div>
+   </div>
+
+   <div class="step">
+    <div class="sn">5</div>
+    <div>
+     <h3>Day 30: what success looks like</h3>
+     <div class="why">Why: the client should be able to judge the first month in one page.</div>
+     <ul>
+      <li>Tracking verified, and Shopify, Meta and Google revenue reconciled within an agreed tolerance.</li>
+      <li>New-customer CAC at or under the agreed ceiling, with MER holding at or above baseline.</li>
+      <li>At least 2 winning concepts moved into Scale, and a 30 day test log the creative team can work from.</li>
+      <li>A month two plan with a spend target and the rules that will govern it.</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="s-dark">
+ <div class="wrap">
+  <div class="sec-head">
+   <span class="num">03 &middot; Comparable results</span>
+   <h2>Work I have already done at scale</h2>
+   <p class="intro">Verified figures from my own accounts.</p>
+  </div>
+  <div class="res">
+   <div class="rc">
+    <div class="rk">Ecommerce, 12 years</div>
+    <div class="big">$15.5M</div>
+    <div class="sub">ad spend managed across 977 campaigns</div>
+    <div class="rbar"><div class="lb"><span>Ad spend managed</span><span>$15.5M</span></div><div class="tr"><div class="fl" style="width:100%"></div></div></div>
+    <div class="rbar"><div class="lb"><span>Verified revenue, 2022 alone</span><span>$5.6M</span></div><div class="tr"><div class="fl" style="width:36%"></div></div></div>
+    <p class="rnote">Shopify Partner experience, GA4 and GTM certified.</p>
+   </div>
+   <div class="rc">
+    <div class="rk">Return on ad spend</div>
+    <div class="big">9.2x</div>
+    <div class="sub">peak ROAS, plus 7.42x on a single high-value ad group</div>
+    <div class="rbar"><div class="lb"><span>Peak ROAS</span><span>9.2x</span></div><div class="tr"><div class="fl" style="width:100%"></div></div></div>
+    <div class="rbar"><div class="lb"><span>Ad group ROAS</span><span>7.42x</span></div><div class="tr"><div class="fl" style="width:81%"></div></div></div>
+    <p class="rnote">$18,973.20 conversion value from that ad group in one month.</p>
+   </div>
+   <div class="rc">
+    <div class="rk">Cost per conversion, USD account</div>
+    <div class="big">53.8%</div>
+    <div class="sub">lower cost per conversion after rebuilding tracking and bidding toward confirmed outcomes</div>
+    <div class="rbar"><div class="lb"><span>Before</span><span>$99.97</span></div><div class="tr"><div class="fl dim" style="width:100%"></div></div></div>
+    <div class="rbar"><div class="lb"><span>After</span><span>$46.15</span></div><div class="tr"><div class="fl" style="width:46%"></div></div></div>
+    <p class="rnote">Conversion rate 1.50% to 6.54% in the same month.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="s-light">
+ <div class="wrap">
+  <div class="sec-head">
+   <span class="num">04 &middot; What happens next</span>
+   <h2>Three steps to a live account</h2>
+  </div>
+  <div class="next">
+   <div class="nc">
+    <div class="when">Step 1, this week</div>
+    <h3>A 20 minute call</h3>
+    <p>With you or the Head of Paid Media. We cover the first account, its CAC ceiling and how you like client readouts run.</p>
+   </div>
+   <div class="nc">
+    <div class="when">Step 2, day 1</div>
+    <h3>Access</h3>
+    <ul><li>Meta Business Manager partner access</li><li>Google Ads and Merchant Center</li><li>Shopify reports and GA4</li><li>Your reporting and attribution tools</li></ul>
+   </div>
+   <div class="nc">
+    <div class="when">Step 3, days 1 to 7</div>
+    <h3>First week output</h3>
+    <ul><li>Tracking audit with fixes listed by priority</li><li>Draft metric dictionary for sign-off</li><li>Three lane restructure plan with budgets</li><li>First creative brief for the creative team</li></ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="cta">
+ <div class="wrap">
+  <h2>Let's have a quick call</h2>
+  <p>Reply to my message with a time that suits you.</p>
+ </div>
+</div>
+
+<footer>
+ <div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
