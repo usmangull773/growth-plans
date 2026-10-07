@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recovery Plan, K-Beauty DTC</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--gold-l:#e3c77f;--bg:#e9eff6;--white:#fff;--red:#b3261e;--green:#1f6f43;--ink:#1a2433;--muted:#5a6778;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+h2{font-size:26px;line-height:1.25;margin-bottom:14px}
+h3{font-size:18px;line-height:1.3;margin-bottom:8px}
+p{margin-bottom:12px}
+b,strong{font-weight:700}
+.num{display:inline-block;color:var(--blue);font-weight:800;font-size:14px;letter-spacing:2px;margin-bottom:6px}
+.hl{background:#f6ecd2;padding:0 4px;border-radius:3px;font-weight:700}
+/* hero */
+.hero{background:var(--navy);color:#fff;border-bottom:5px solid var(--gold);padding:28px 0 48px}
+.top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b9c6d6;margin-bottom:36px}
+.label{color:var(--gold-l);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+.hero h1{font-size:34px;line-height:1.2;margin-bottom:14px}
+.hero .out{font-size:19px;color:#dfe7f1;max-width:760px;margin-bottom:18px}
+.hero .out b{color:var(--gold-l)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:#b9c6d6;margin-bottom:30px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:18px}
+.kpi .v{font-size:32px;font-weight:800;color:var(--gold-l);line-height:1.1}
+.kpi .t{font-size:14px;color:#dfe7f1;margin-top:6px}
+.kpi .s{font-size:12px;color:#9fb0c4;margin-top:6px}
+/* findings */
+.find{background:#fff;border-radius:10px;box-shadow:0 4px 18px rgba(11,31,54,.08);padding:24px;margin-top:22px;border-left:6px solid var(--blue)}
+.find.med{border-left-color:var(--gold)}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:10px;color:#fff;background:var(--blue)}
+.tag.med{background:var(--gold);color:var(--navy)}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;margin-top:12px}
+.tbl th{background:var(--navy);color:#fff;text-align:left;padding:9px 10px;font-weight:600}
+.tbl td{padding:9px 10px;border-bottom:1px solid #e3e8ef;vertical-align:top}
+.scroll{overflow-x:auto}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.cmp div{border-radius:8px;padding:14px;font-size:14px}
+.cmp .bad{background:#fbeceb;border:1px solid #efc4c1}
+.cmp .good{background:#e8f3ec;border:1px solid #b9dcc6}
+.cmp h4{font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.cmp .bad h4{color:var(--red)} .cmp .good h4{color:var(--green)}
+.cmp ul{padding-left:18px} .cmp li{margin-bottom:6px}
+.red{color:var(--red);font-weight:700}.green{color:var(--green);font-weight:700}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+/* plan */
+.white{background:#fff}
+.tl{background:var(--navy);border-radius:10px;padding:22px;margin:22px 0 26px;color:#fff}
+.tl h3{color:var(--gold-l);font-size:15px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;margin-bottom:10px;font-size:13px}
+.track{background:var(--card);height:22px;border-radius:4px;position:relative}
+.bar{position:absolute;top:0;height:22px;background:var(--gold);border-radius:4px;color:var(--navy);font-size:11px;font-weight:800;padding:3px 8px;white-space:nowrap;overflow:hidden}
+.axis{display:grid;grid-template-columns:150px 1fr;gap:12px;font-size:11px;color:#9fb0c4}
+.axis div:last-child{display:flex;justify-content:space-between}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:20px;margin-bottom:14px}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step .when{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:1px;text-transform:uppercase}
+.step ul{padding-left:18px;margin:6px 0 8px}.step li{margin-bottom:5px;font-size:15px}
+.why{font-size:14px;color:var(--muted);border-top:1px solid #d5dde8;padding-top:8px}
+.straight{border:2px solid var(--gold);border-radius:10px;padding:20px;margin-top:22px;background:#fffaf0}
+/* results */
+.dark{background:var(--navy);color:#fff}
+.dark h2{color:#fff}.dark .num{color:var(--gold-l)}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.rc{background:var(--card);border-radius:10px;padding:20px}
+.rc .who{font-size:12px;color:#9fb0c4;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rc .big{font-size:30px;font-weight:800;color:var(--gold-l);line-height:1.1;margin-bottom:6px}
+.rc p{font-size:14px;color:#dfe7f1}
+.br{margin:10px 0}
+.br .l{font-size:12px;color:#b9c6d6;display:flex;justify-content:space-between}
+.br .t{background:#0b1f36;height:12px;border-radius:3px;margin-top:4px}
+.br .f{background:var(--gold);height:12px;border-radius:3px}
+/* next */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.nc{background:#fff;border-top:5px solid var(--gold);border-radius:10px;padding:20px;box-shadow:0 4px 18px rgba(11,31,54,.06)}
+.nc .s{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.nc ul{padding-left:18px;font-size:15px}
+.cta{background:var(--gold);color:var(--navy);text-align:center;padding:44px 0}
+.cta h2{margin-bottom:8px}
+footer{background:var(--navy);color:#b9c6d6;text-align:center;padding:26px 0;font-size:14px}
+footer b{color:#fff}
+@media (max-width:760px){
+ .kpis,.res,.next{grid-template-columns:1fr}
+ .cmp{grid-template-columns:1fr}
+ .hero h1{font-size:27px}
+ h2{font-size:22px}
+ .row,.axis{grid-template-columns:96px 1fr}
+ .step{grid-template-columns:1fr;gap:10px}
+ section{padding:40px 0}
+ .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="top"><span>Account recovery plan</span><span>8 October 2026</span></div>
+  <div class="label">30 day plan prepared for</div>
+  <h1>Korean Skincare DTC, Greece and Cyprus</h1>
+  <p class="out">Bring back the Standard Shopping engine that produced 89 of your 100 monthly Google conversions, then <b>make Google bid on orders that actually get paid for</b>, not on clicks or refused parcels.</p>
+  <div class="meta"><span>Scope: Google Ads, Merchant Center, Shopify tracking</span><span>Markets: Greece and Cyprus</span><span>Built from the figures in your brief</span></div>
+  <div class="kpis">
+   <div class="kpi"><div class="v">~€15.80</div><div class="t">Google cost per order at your 2.3x to 2.5x ROAS</div><div class="s">€38 AOV divided by ROAS. Your ceiling is €7.43.</div></div>
+   <div class="kpi"><div class="v">5.11x</div><div class="t">Break-even ROAS implied by your €7.43 CPA ceiling</div><div class="s">Your brief says 3.77x. Those two figures cannot both be right.</div></div>
+   <div class="kpi"><div class="v">8.4%</div><div class="t">Of all orders refused at the door</div><div class="s">73% COD x 11.5% refusals. Google currently counts all of them as sales.</div></div>
+  </div>
+ </div>
+</header>
+
+<section>
+ <div class="wrap">
+  <div class="num">01</div>
+  <h2>What we found</h2>
+  <p>This is built only from the numbers you published. The account itself has not been opened yet, so every point below is a hypothesis with a named check attached. Even so, the pattern is clear: <span class="hl">the restructure moved spend from high intent Shopping traffic to cheap broad traffic, and the bidding signal was already pointed at the wrong target before that happened.</span></p>
+
+  <div class="find">
+   <span class="tag">High impact</span>
+   <h3>1. Performance Max took the auctions Standard Shopping used to win</h3>
+   <p>Standard Shopping now underspends its budget. That means it is losing auctions it used to win on the same products. A new PMax campaign with <b>broad audience signals and a relaxed tROAS</b> bids more freely on the same feed, and its extra reach goes to Display, YouTube, Discover and app placements. With 90% of your traffic on mobile, app inventory is the first place to check for the +128% clicks.</p>
+   <div class="cmp">
+    <div class="bad"><h4>After the restructure</h4><ul><li>Clicks up 128%</li><li>Orders at zero for 48 hours</li><li>Standard Shopping not spending its budget</li><li>554 of 1,543 feed products not eligible (35.9%)</li></ul></div>
+    <div class="good"><h4>What worked before</h4><ul><li>6 to 7 orders a day</li><li>Standard Shopping: 89 of 100 monthly conversions</li><li>High intent product searches</li><li>Spend focused on items people already search for</li></ul></div>
+   </div>
+   <p class="note">Check first: Shopify orders by channel for the last 14 days. If direct, organic and email orders also fell to zero, the fault is in checkout or the site, not ads. Then a full mobile test order on COD and on card.</p>
+  </div>
+
+  <div class="find">
+   <span class="tag">High impact</span>
+   <h3>2. Your break-even numbers disagree, and tROAS is set from one of them</h3>
+   <p>At a €38 AOV, a €7.43 CPA ceiling means a <b>break-even ROAS of 5.11x</b>, not 3.77x. A 3.77x target allows about €10.08 per order. The account has been running at 2.3x to 2.5x, which is roughly €15.20 to €16.52 per order. Before anyone sets a tROAS, we need to agree on one number.</p>
+   <div class="scroll"><table class="tbl">
+    <tr><th>Figure</th><th>From your brief</th><th>What it implies</th></tr>
+    <tr><td>AOV / CPA ceiling</td><td>€38 / €7.43</td><td>Break-even ROAS 5.11x</td></tr>
+    <tr><td>Stated break-even</td><td>3.77x</td><td>Max CPA about €10.08</td></tr>
+    <tr><td>Current Google ROAS</td><td>2.3x to 2.5x</td><td>CPA about €15.20 to €16.52</td></tr>
+    <tr><td>Gross profit per order</td><td>€8.40 at "30% margin"</td><td>30% of €38 is €11.40, so €8.40 is about 22%. Fees and shipping need to be listed.</td></tr>
+    <tr><td>Google spend (estimate)</td><td>~100 conversions at 2.4x</td><td>About €1,580 a month against €1,680 total gross profit</td></tr>
+    <tr><td>Two orders per customer</td><td>"drops to 1.61x"</td><td>Halving 3.77x gives about 1.89x. Still a big lever.</td></tr>
+   </table></div>
+  </div>
+
+  <div class="find med">
+   <span class="tag med">Medium impact, compounding</span>
+   <h3>3. Google learns from orders that never get paid</h3>
+   <p>The purchase tag fires when the order is placed, so <b>a refused COD parcel counts the same as a paid order</b>. About 1 in 12 of your orders is refused at the door, and the courier fee, return cost and wasted stock never reach Google. Relaxing tROAS on top of that told the algorithm to chase even more of this traffic.</p>
+   <div class="cmp">
+    <div class="bad"><h4>Signal now</h4><ul><li>Full €38 value on every order</li><li>Refused orders stay counted</li><li>Bidding rewards low intent COD buyers</li></ul></div>
+    <div class="good"><h4>Signal after fix</h4><ul><li>Value = expected profit per order</li><li>Refused orders retracted through conversion adjustments</li><li>Bidding rewards orders that are collected</li></ul></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="white">
+ <div class="wrap">
+  <div class="num">02</div>
+  <h2>The 30 day plan</h2>
+  <p>The first two hours stop the loss. The first 72 hours produce the written diagnosis you asked for. The rest fixes the signal and the profit maths so the recovery holds.</p>
+
+  <div class="tl">
+   <h3>Timeline</h3>
+   <div class="row"><span>Stop the burn</span><div class="track"><div class="bar" style="left:0;width:7%">2h</div></div></div>
+   <div class="row"><span>Diagnosis + fixes</span><div class="track"><div class="bar" style="left:0;width:12%">72h</div></div></div>
+   <div class="row"><span>COD signal</span><div class="track"><div class="bar" style="left:8%;width:30%">Week 1 to 2</div></div></div>
+   <div class="row"><span>Shopping rebuild</span><div class="track"><div class="bar" style="left:20%;width:38%">Week 1 to 3</div></div></div>
+   <div class="row"><span>Checkout + retention</span><div class="track"><div class="bar" style="left:50%;width:50%">Week 3 to 4</div></div></div>
+   <div class="axis"><div></div><div><span>Day 1</span><span>Wk 1</span><span>Wk 2</span><span>Wk 3</span><span>Wk 4</span></div></div>
+  </div>
+
+  <div class="step"><div class="n">1</div><div>
+   <div class="when">Hours 0 to 2</div><h3>Stop the burn without switching everything off</h3>
+   <ul>
+    <li>Confirm ads vs site: orders by channel in Shopify, plus a live mobile test order on COD and on card.</li>
+    <li>Use change history to put Standard Shopping budgets and bids back to their pre-restructure levels.</li>
+    <li>Exclude your top 25 to 30 sellers from PMax so Standard Shopping gets those auctions back. Cut PMax budget to a holding level.</li>
+    <li>Add account-level placement exclusions for mobile apps and junk placements, and negatives for the worst search terms in the last 14 days.</li>
+   </ul>
+   <div class="why">Why: this brings back the traffic that was producing orders two weeks ago, and keeps PMax data in the account instead of deleting it.</div>
+  </div></div>
+
+  <div class="step"><div class="n">2</div><div>
+   <div class="when">Day 1 to 3</div><h3>Written diagnosis, backed by account data</h3>
+   <ul>
+    <li>Conversion goals: purchase as the only primary action, no duplicate GA4 import, no micro conversions in bidding.</li>
+    <li>PMax channel and placement report, search term insights, auction insights for Shopping before and after the change.</li>
+    <li>Merchant Center: fix disapprovals on the top sellers first, then the rest of the 554. Find out why the feed has 1,543 items against about 600 active SKUs.</li>
+   </ul>
+   <div class="why">Why: you get a document that names the cause from the data, not a sixth opinion.</div>
+  </div></div>
+
+  <div class="step"><div class="n">3</div><div>
+   <div class="when">Week 1 to 2</div><h3>Fix the cash on delivery signal</h3>
+   <ul>
+    <li>Send order value as expected profit, with COD orders discounted for the refusal rate.</li>
+    <li>Turn on enhanced conversions with order ID, then upload retractions for refused parcels from the courier report.</li>
+    <li>Off the ads side: SMS or call confirmation on COD orders before dispatch, and a small incentive to prepay by card.</li>
+   </ul>
+   <div class="why">Why: once refused orders stop counting as wins, the algorithm stops buying more of them.</div>
+  </div></div>
+
+  <div class="step"><div class="n">4</div><div>
+   <div class="when">Week 1 to 3</div><h3>Rebuild Shopping around what sells</h3>
+   <ul>
+    <li>Standard Shopping for the hero SKUs, split by margin. Targets come from the corrected break-even number.</li>
+    <li>PMax limited to the remaining catalogue, or paused, until the signal is clean.</li>
+    <li>Brand search protected and kept separate so it doesn't flatter the blended numbers.</li>
+   </ul>
+   <div class="why">Why: spend follows products that already convert, at a target the business can afford.</div>
+  </div></div>
+
+  <div class="step"><div class="n">5</div><div>
+   <div class="when">Week 3 to 4</div><h3>Work on the bigger levers: checkout and second orders</h3>
+   <ul>
+    <li>Checkout: show shipping and COD fees before the last step, offer locker delivery, set up abandoned checkout email and SMS. 263 of 468 checkouts are not completing.</li>
+    <li>Retention: post-purchase and replenishment flows timed to product use, so the 8% repeat rate starts moving.</li>
+    <li>Weekly report on agreed KPIs: orders, Google CPA, collected revenue, refusal rate, blended ROAS against break-even.</li>
+   </ul>
+   <div class="why">Why: at today's margin, the traffic you already pay for gets profitable through these, not through more ad spend.</div>
+  </div></div>
+
+  <div class="straight">
+   <h3>Straight answer on your two week target</h3>
+   <p><b>5 orders a day:</b> realistic if the drop came from the restructure, because the account was doing 6 to 7 before it.</p>
+   <p><b>Google CPA at or below €7.43 on every Google order within two weeks:</b> not realistic. That needs about 5.1x ROAS, and the account has never run above 2.5x. What is realistic: brand plus the best sellers near the ceiling, the rest cut back, and a lower total spend until checkout, COD and repeat purchases move. If the data says spend less in month one, that will be the recommendation.</p>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <div class="num">03</div>
+  <h2>Comparable results</h2>
+  <p style="color:#dfe7f1">Same kind of problem: bidding was pointed at the wrong signal, and fixing the signal brought back real outcomes.</p>
+  <div class="res">
+   <div class="rc">
+    <div class="who">eCommerce, 12 years</div>
+    <div class="big">$15.5M</div>
+    <p>ad spend managed across 12 years in eCommerce, over 977 total campaigns.</p>
+    <div class="br"><div class="l"><span>Verified revenue in 2022</span><span>$5.6M</span></div><div class="t"><div class="f" style="width:100%"></div></div></div>
+   </div>
+   <div class="rc">
+    <div class="who">Cosmetic surgery clinic</div>
+    <div class="big">$99.97 to $46.15</div>
+    <p>cost per conversion, a 53.8% reduction, after micro conversions were reclassified so bidding optimised toward confirmed bookings.</p>
+    <div class="br"><div class="l"><span>Before</span><span>$99.97</span></div><div class="t"><div class="f" style="width:100%"></div></div></div>
+    <div class="br"><div class="l"><span>After</span><span>$46.15</span></div><div class="t"><div class="f" style="width:46%"></div></div></div>
+   </div>
+   <div class="rc">
+    <div class="who">London plastic surgery clinic</div>
+    <div class="big">0 to 18</div>
+    <p>Book Appointment conversions in a month after booking flow tracking went live. Cost per conversion fell from £256.84 to £77.87.</p>
+    <div class="br"><div class="l"><span>Before</span><span>£256.84</span></div><div class="t"><div class="f" style="width:100%"></div></div></div>
+    <div class="br"><div class="l"><span>After</span><span>£77.87</span></div><div class="t"><div class="f" style="width:30%"></div></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="num">04</div>
+  <h2>What happens next</h2>
+  <div class="next">
+   <div class="nc"><div class="s">Step 1</div><h3>Short call</h3><p>15 minutes. Agree on one break-even figure and the pre-restructure date to restore to.</p></div>
+   <div class="nc"><div class="s">Step 2</div><h3>Access</h3><ul><li>Google Ads (admin)</li><li>Merchant Center</li><li>Shopify staff account</li><li>GA4 and GTM</li><li>Courier COD and refusal report</li></ul></div>
+   <div class="nc"><div class="s">Step 3</div><h3>First 72 hours</h3><p>Hours 0 to 2: stop the loss. By hour 72: written diagnosis, every change logged, and order velocity tracked daily.</p></div>
+  </div>
+ </div>
+</section>
+
+<div class="cta"><div class="wrap"><h2>Let's have a quick call</h2><p>Reply to my message with a time that suits you.</p></div></div>
+
+<footer><div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div></footer>
+
+</body>
+</html>
