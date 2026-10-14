@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oak &amp; Rove 30 Day Plan</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--gold-l:#e3c77f;--bg:#e9eff6;--white:#ffffff;--red:#b3261e;--green:#1f6f43;--text:#1b2733;--muted:#5a6b7d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:28px;line-height:1.25;margin-bottom:12px}
+h3{font-size:18px;line-height:1.35;margin-bottom:8px}
+p{margin-bottom:12px}
+.num{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--blue);margin-bottom:6px}
+.dark .num{color:var(--gold-l)}
+.hl{background:rgba(200,162,74,.22);padding:0 4px;border-radius:3px;font-weight:600}
+.dark .hl{background:rgba(227,199,127,.18);color:var(--gold-l)}
+.intro{max-width:760px;color:var(--muted);margin-bottom:28px}
+.dark .intro{color:#c9d6e4}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#9fb3c8;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:16px;margin-bottom:40px}
+.label{color:var(--gold-l);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.hero h1{font-size:44px;line-height:1.1;margin-bottom:16px}
+.hero .lead{font-size:20px;max-width:780px;color:#dbe5ef;margin-bottom:20px}
+.hero .lead b{color:var(--gold-l)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:#9fb3c8;margin-bottom:36px}
+.meta span b{color:#fff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:20px}
+.kpi .v{font-size:32px;font-weight:800;color:var(--gold);line-height:1.1;margin-bottom:6px}
+.kpi .d{font-size:14px;color:#c9d6e4}
+
+/* findings */
+.find{background:var(--white);border-radius:10px;box-shadow:0 2px 14px rgba(11,31,54,.08);padding:26px;margin-bottom:22px;border-left:6px solid var(--blue)}
+.find.med{border-left-color:var(--gold)}
+.find-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.tag{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.tag.high{background:var(--blue);color:#fff}
+.tag.medium{background:var(--gold);color:var(--navy)}
+.tbl-wrap{overflow-x:auto;margin-top:16px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:520px}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600}
+td{padding:10px 12px;border-bottom:1px solid #dde5ee;vertical-align:top}
+tr:nth-child(even) td{background:#f5f8fb}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.cmp>div{border-radius:8px;padding:16px;font-size:14px}
+.cmp .bad{background:#fbeceb;border-top:4px solid var(--red)}
+.cmp .good{background:#e8f3ec;border-top:4px solid var(--green)}
+.cmp h4{font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.cmp .bad h4{color:var(--red)}
+.cmp .good h4{color:var(--green)}
+.cmp ul{padding-left:18px}
+.cmp li{margin-bottom:6px}
+
+/* plan */
+.white{background:var(--white)}
+.timeline{background:var(--navy);border-radius:12px;padding:24px;color:#fff;margin-bottom:30px;overflow-x:auto}
+.tl{min-width:600px}
+.tl-row{display:grid;grid-template-columns:200px repeat(4,1fr);align-items:center;gap:6px;margin-bottom:10px}
+.tl-row.head{font-size:12px;color:#9fb3c8;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.tl-row .name{font-size:14px;color:#dbe5ef}
+.bar{height:16px;background:var(--gold);border-radius:4px}
+.bar.lt{background:rgba(200,162,74,.4)}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:20px}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step .why{font-size:14px;color:var(--muted);margin:0}
+.step .wk{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.08em;text-transform:uppercase}
+
+/* results */
+.dark{background:var(--navy);color:#fff}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rc{background:var(--card);border-radius:10px;padding:22px}
+.rc .big{font-size:34px;font-weight:800;color:var(--gold);line-height:1.1;margin:6px 0}
+.rc .cap{font-size:14px;color:#c9d6e4;margin-bottom:16px}
+.rc .lbl{font-size:12px;color:#9fb3c8;letter-spacing:.06em;text-transform:uppercase}
+.brow{margin-bottom:12px}
+.brow .t{display:flex;justify-content:space-between;font-size:13px;color:#dbe5ef;margin-bottom:4px}
+.track{background:rgba(255,255,255,.08);border-radius:4px;height:12px}
+.fill{background:var(--gold);height:12px;border-radius:4px}
+.fill.lt{background:rgba(200,162,74,.4)}
+
+/* next */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nc{background:var(--white);border-top:5px solid var(--gold);border-radius:10px;padding:22px;box-shadow:0 2px 14px rgba(11,31,54,.06)}
+.nc p{font-size:15px;color:var(--muted);margin:0}
+
+/* cta + footer */
+.cta{background:var(--gold);color:var(--navy);padding:48px 0;text-align:center}
+.cta h2{margin-bottom:6px}
+.cta p{font-size:17px;margin:0}
+footer{background:var(--navy);color:#9fb3c8;padding:28px 0;font-size:14px;text-align:center}
+footer b{color:#fff}
+
+@media (max-width:820px){
+  .kpis,.res,.next{grid-template-columns:1fr}
+  .cmp{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+}
+@media (max-width:420px){
+  .wrap{padding:0 16px}
+  section{padding:48px 0}
+  .hero h1{font-size:28px}
+  .hero .lead{font-size:17px}
+  h2{font-size:23px}
+  .step{grid-template-columns:1fr}
+  .find{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><span>Google Ads plan: Shopping, Search, Performance Max</span><span>October 14, 2026</span></div>
+    <div class="label">30 day plan prepared for</div>
+    <h1>Oak &amp; Rove</h1>
+    <p class="lead">Separate the sales Google is <b>creating</b> from the sales it is only <b>collecting</b>, then put the $10k to $20k monthly budget behind <b>new customer contribution profit</b> before peak season.</p>
+    <div class="meta">
+      <span><b>Category:</b> Premium men's work and travel bags</span>
+      <span><b>Platform:</b> Shopify</span>
+      <span><b>Market:</b> United States</span>
+      <span><b>Window:</b> Q4 peak</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">$299 / $400</div><div class="d">Sale prices on the two hero bags, Alto and Kennedy, which carry most of the spend</div></div>
+      <div class="kpi"><div class="v">6 titles</div><div class="d">Press quoted on the homepage (GQ, Wired and four others), a strong source of branded and product-name search</div></div>
+      <div class="kpi"><div class="v">Feb 24 to 28</div><div class="d">Estimated delivery shown today on both hero bags, while a sale promotes them</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- 01 FINDINGS -->
+<section>
+  <div class="wrap">
+    <span class="num">01</span>
+    <h2>What we found</h2>
+    <p class="intro">From the public site and the brief, three things decide whether Google is producing <span class="hl">incremental profitable demand</span> or reporting sales that would have happened anyway. Each is checkable in the first two days of account access.</p>
+
+    <div class="find">
+      <div class="find-head"><h3>Product-name searches can look like non-brand acquisition</h3><span class="tag high">High impact</span></div>
+      <p>"Alto briefcase" and "Kennedy weekender" are searched by people who already read the GQ or Wired review. Unless those names sit in the brand bucket, Shopping and PMax will report them as cold traffic and <span class="hl">platform ROAS will overstate true acquisition</span>.</p>
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>Query type</th><th>Example</th><th>Where it should run</th><th>How it is judged</th></tr>
+          <tr><td>Pure brand</td><td>oak and rove, oak rove bag</td><td>Brand Search, capped CPC</td><td>Excluded from acquisition numbers</td></tr>
+          <tr><td>Product-aware</td><td>alto briefcase, kennedy weekender</td><td>Brand Search; PMax brand exclusion list; Shopping negatives</td><td>Counted as brand, not new demand</td></tr>
+          <tr><td>True non-brand</td><td>leather weekender bag men, briefcase for 16 inch laptop</td><td>Non-brand Search and Standard Shopping</td><td>New customer cost and contribution profit</td></tr>
+          <tr><td>Competitor</td><td>other premium bag brands</td><td>Separate capped campaign</td><td>New customer cost only</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="find">
+      <div class="find-head"><h3>Stock status and ad spend may be out of step</h3><span class="tag high">High impact</span></div>
+      <p>Both hero bag pages currently say <span class="hl">"Item Currently Out of Stock. Estimated Delivery: Feb. 24-28"</span>, next to a sale banner. Shopping and PMax spend follows the feed, so this needs to match before Black Friday.</p>
+      <div class="cmp">
+        <div class="bad"><h4>What a shopper sees now</h4>
+          <ul>
+            <li>Sale banner: $50 off Alto, $125 off Kennedy</li>
+            <li>Same page: out of stock, February delivery</li>
+            <li>Same page: "Orders Ship 24 - 48 Hours"</li>
+          </ul>
+        </div>
+        <div class="good"><h4>What the account should do</h4>
+          <ul>
+            <li>Feed availability set to preorder or backorder with an availability date, matching the page</li>
+            <li>Bids on hero bags set for preorder conversion rate, not in-stock rate</li>
+            <li>Budget shifted to in-stock items until restock lands</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="find med">
+      <div class="find-head"><h3>One blended ROAS target hides very different margins</h3><span class="tag medium">Medium impact</span></div>
+      <p>Discount depth ranges from 0% to almost 24% across four products. A single ROAS target will <span class="hl">overfund the deepest discount</span> and underfund products that bring in a first order at full price.</p>
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>Product</th><th>List</th><th>Sale</th><th>Discount</th><th>Bidding implication</th></tr>
+          <tr><td>Kennedy Weekender</td><td>$525</td><td>$400</td><td>23.8%</td><td>Highest break-even ROAS, needs its own target</td></tr>
+          <tr><td>Alto Briefcase</td><td>$349</td><td>$299</td><td>14.3%</td><td>Bestseller, main non-brand Shopping driver</td></tr>
+          <tr><td>Dopp Kit</td><td>$95</td><td>$95</td><td>0%</td><td>Low order value, judge on new customer and repeat</td></tr>
+          <tr><td>Card Holder</td><td>$55</td><td>$55</td><td>0%</td><td>Bundle and gift traffic, not a standalone ad</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 PLAN -->
+<section class="white">
+  <div class="wrap">
+    <span class="num">02</span>
+    <h2>The 30 day plan</h2>
+    <p class="intro">Measurement first, structure second, scale last. Nothing scales until brand and non-brand are reported separately.</p>
+
+    <div class="timeline">
+      <div class="tl">
+        <div class="tl-row head"><span></span><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div>
+        <div class="tl-row"><span class="name">Brand split and tracking</span><div class="bar"></div><div class="bar lt"></div><span></span><span></span></div>
+        <div class="tl-row"><span class="name">Merchant Center and feed</span><div class="bar"></div><div class="bar"></div><span></span><span></span></div>
+        <div class="tl-row"><span class="name">Shopping, Search, PMax rebuild</span><span></span><div class="bar"></div><div class="bar"></div><span></span></div>
+        <div class="tl-row"><span class="name">Peak season scaling</span><span></span><span></span><div class="bar lt"></div><div class="bar"></div></div>
+        <div class="tl-row"><span class="name">Incrementality test</span><span></span><span></span><div class="bar lt"></div><div class="bar"></div></div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><span class="wk">Week 1</span><h3>Build the brand list and split reporting</h3><p class="why">Brand, product names and misspellings go into one shared list, applied as PMax brand exclusions and Shopping negatives, so non-brand numbers finally mean non-brand.</p></div></div>
+      <div class="step"><div class="n">2</div><div><span class="wk">Week 1</span><h3>Check that purchase value matches what you keep</h3><p class="why">Confirm the purchase conversion sends value after discount, turn on new customer reporting, and reconcile Google against Shopify orders, because bidding can only aim at the number it is given.</p></div></div>
+      <div class="step"><div class="n">3</div><div><span class="wk">Week 1 to 2</span><h3>Fix the feed: stock, preorder dates and margin labels</h3><p class="why">Availability matches the page, and custom labels by margin tier and new customer value let each product carry its own target instead of one blended ROAS.</p></div></div>
+      <div class="step"><div class="n">4</div><div><span class="wk">Week 2 to 3</span><h3>Give each campaign type one job</h3><p class="why">Standard Shopping for query-level non-brand control, PMax for non-brand reach with brand excluded, Search split into brand (capped) and category non-brand, so spend can be traced to new demand.</p></div></div>
+      <div class="step"><div class="n">5</div><div><span class="wk">Week 3 to 4</span><h3>Scale on contribution profit, then test incrementality</h3><p class="why">Budget rises only where non-brand contribution profit holds. A brand-search geo holdout shows how much branded spend is incremental before Q4 budgets increase.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 RESULTS -->
+<section class="dark">
+  <div class="wrap">
+    <span class="num">03</span>
+    <h2>Comparable results</h2>
+    <p class="intro">eCommerce scale, plus one example of moving bidding off easy signals and onto the outcome the business actually banks.</p>
+    <div class="res">
+      <div class="rc">
+        <div class="lbl">eCommerce ad spend managed</div>
+        <div class="big">$15.5M</div>
+        <div class="cap">Across 12 years of eCommerce accounts</div>
+        <div class="brow"><div class="t"><span>Total campaigns run</span><span>977</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+      </div>
+      <div class="rc">
+        <div class="lbl">Verified revenue</div>
+        <div class="big">$5.6M</div>
+        <div class="cap">Verified revenue in 2022</div>
+        <div class="brow"><div class="t"><span>Peak return on ad spend</span><span>9.2x</span></div><div class="track"><div class="fill" style="width:92%"></div></div></div>
+      </div>
+      <div class="rc">
+        <div class="lbl">Bidding moved to real outcomes</div>
+        <div class="big">+140%</div>
+        <div class="cap">Confirmed bookings, after micro conversions were reclassified so bidding aimed at real sales</div>
+        <div class="brow"><div class="t"><span>Cost per conversion, before</span><span>$99.97</span></div><div class="track"><div class="fill lt" style="width:100%"></div></div></div>
+        <div class="brow"><div class="t"><span>Cost per conversion, after</span><span>$46.15</span></div><div class="track"><div class="fill" style="width:46%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 NEXT -->
+<section>
+  <div class="wrap">
+    <span class="num">04</span>
+    <h2>What happens next</h2>
+    <p class="intro">I manage the account myself from day one. No team, no handoff.</p>
+    <div class="next">
+      <div class="nc"><h3>1. Short call</h3><p>15 minutes on margins by product, restock timing and what counts as a new customer for you.</p></div>
+      <div class="nc"><h3>2. Read-only access</h3><p>Google Ads, Merchant Center and GA4. Within 48 hours you get a written brand vs non-brand split of the last 90 days.</p></div>
+      <div class="nc"><h3>3. Week one actions</h3><p>Brand list, conversion value check and feed availability fix, with a weekly report on non-brand new customer profit from then on.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
