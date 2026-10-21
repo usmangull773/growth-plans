@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miami Sedation &amp; Cosmetic Dentistry | 30 Day Patient Growth Plan | Usman Gull</title>
+<style>
+  :root{
+    --navy:#0b1f36; --card:#12355b; --blue:#0f4c81;
+    --gold:#c8a24a; --gold-l:#e3c77f;
+    --bg:#e9eff6; --white:#ffffff;
+    --red:#b3261e; --green:#1f6f43;
+    --ink:#14263b; --muted:#4a5d73; --line:#d3dde9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  strong{font-weight:700}
+  .hl{background:rgba(200,162,74,.22);padding:1px 4px;border-radius:3px;font-weight:700}
+  .hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+  .topbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:14px;color:#a9bbd0;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:44px}
+  .topbar b{color:#fff;font-weight:600}
+  .prep{color:var(--gold-l);font-size:15px;font-weight:600;margin-bottom:10px}
+  .hero h1{font-size:clamp(40px,7vw,68px);line-height:1.02;letter-spacing:-1.5px;font-weight:800;margin-bottom:20px}
+  .outcome{font-size:clamp(18px,2.4vw,23px);max-width:760px;color:#dbe5f1;line-height:1.45;margin-bottom:28px}
+  .outcome span{color:var(--gold-l);font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+  .meta div{font-size:13.5px;color:#c4d3e4;border:1px solid rgba(255,255,255,.16);padding:6px 12px;border-radius:4px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .kpi{background:var(--card);border-radius:8px;padding:22px 22px 20px}
+  .kpi .n{font-size:44px;font-weight:800;color:var(--gold-l);line-height:1;margin-bottom:10px;letter-spacing:-1px}
+  .kpi p{font-size:14.5px;color:#cfdbe9;line-height:1.45}
+  section{padding:76px 0}
+  .light{background:var(--bg)}
+  .white{background:var(--white)}
+  .dark{background:var(--navy);color:#fff}
+  .sh{display:flex;align-items:baseline;gap:16px;margin-bottom:14px}
+  .sn{font-size:15px;font-weight:800;color:var(--blue);border:2px solid var(--blue);border-radius:4px;padding:2px 8px;line-height:1.3}
+  .dark .sn{color:var(--gold-l);border-color:var(--gold-l)}
+  h2{font-size:clamp(28px,4vw,38px);letter-spacing:-.6px;line-height:1.15;font-weight:800}
+  .intro{max-width:720px;font-size:17.5px;color:var(--muted);margin-bottom:40px}
+  .dark .intro{color:#c4d3e4}
+  .finding{background:#fff;border-radius:8px;box-shadow:0 6px 24px rgba(11,31,54,.08);padding:30px 30px 28px;margin-bottom:24px;border-left:6px solid var(--blue)}
+  .finding.med{border-left-color:var(--gold)}
+  .fhead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+  .finding h3{font-size:21px;line-height:1.3;max-width:720px}
+  .tag{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap}
+  .tag.high{background:var(--blue);color:#fff}
+  .tag.med{background:var(--gold);color:var(--navy)}
+  .finding > p{color:var(--muted);max-width:780px;margin-bottom:22px}
+  .finding > p strong{color:var(--ink)}
+  .flow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:6px}
+  .node{flex:1;min-width:170px;border:1.5px solid var(--line);border-radius:6px;padding:14px;background:#f7f9fc}
+  .node .u{font-weight:700;font-size:14px;color:var(--blue);word-break:break-all}
+  .node p{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+  .node.risk{border-color:var(--red);background:#fbf1f0}
+  .node.risk .u{color:var(--red)}
+  .node.ok{border-color:var(--green);background:#eff6f2}
+  .node.ok .u{color:var(--green)}
+  .arrow{flex:0 0 34px;position:relative;min-width:34px}
+  .arrow:before{content:"";position:absolute;top:50%;left:6px;right:12px;height:2px;background:var(--muted)}
+  .arrow:after{content:"";position:absolute;top:calc(50% - 5px);right:4px;border-left:9px solid var(--muted);border-top:6px solid transparent;border-bottom:6px solid transparent}
+  .fnote{font-size:13.5px;color:var(--muted);margin-top:12px}
+  .tbl{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--navy);color:#fff;font-weight:600;font-size:13.5px}
+  .cmp th.bad{background:var(--red)} .cmp th.good{background:var(--green)}
+  .cmp td.bad{color:var(--red)} .cmp td.good{color:var(--green);font-weight:600}
+  td:first-child{font-weight:600}
+  tr.you td{background:#fbf6e8}
+  .timeline{background:var(--navy);border-radius:10px;padding:28px;margin-bottom:44px;color:#fff;overflow-x:auto}
+  .tl{display:grid;grid-template-columns:180px repeat(4,1fr);row-gap:12px;column-gap:6px;min-width:600px;align-items:center}
+  .tl .wk{font-size:13px;color:#a9bbd0;font-weight:600;text-align:center;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .tl .lab{font-size:14px;color:#e2eaf3}
+  .bar{height:22px;background:var(--gold);border-radius:4px}
+  .bar.soft{background:var(--gold-l);opacity:.55}
+  .tlkey{font-size:13px;color:#a9bbd0;margin-top:18px}
+  .steps{display:grid;gap:18px}
+  .step{display:grid;grid-template-columns:56px 1fr;gap:18px;background:var(--bg);border-radius:8px;padding:22px 24px}
+  .step .num{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+  .step h4{font-size:18px;margin-bottom:4px}
+  .step p{color:var(--muted);font-size:15.5px}
+  .step .why{margin-top:8px;font-size:14px;color:var(--green);font-weight:600}
+  .results{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .rc{background:var(--card);border-radius:10px;padding:26px 24px}
+  .rc .who{font-size:13.5px;color:#a9bbd0;margin-bottom:14px;line-height:1.4}
+  .rc .big{font-size:46px;font-weight:800;color:var(--gold-l);line-height:1;letter-spacing:-1px}
+  .rc .what{font-size:15px;color:#e2eaf3;margin:8px 0 20px}
+  .row{margin-bottom:12px}
+  .row .l{display:flex;justify-content:space-between;font-size:13px;color:#c4d3e4;margin-bottom:5px}
+  .track{height:12px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+  .fill{height:100%;background:var(--gold);border-radius:3px}
+  .fill.before{background:#5d7896}
+  .rc .sub{font-size:13.5px;color:#c4d3e4;border-top:1px solid rgba(255,255,255,.1);padding-top:14px;margin-top:16px}
+  .rc .sub b{color:var(--gold-l)}
+  .quote{margin-top:36px;border-left:4px solid var(--gold);padding:6px 0 6px 20px;color:#dbe5f1;font-size:17px;max-width:760px}
+  .quote span{display:block;font-size:13.5px;color:#a9bbd0;margin-top:6px}
+  .next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .nc{background:#fff;border-top:5px solid var(--gold);border-radius:8px;padding:26px 24px;box-shadow:0 6px 24px rgba(11,31,54,.06)}
+  .nc .when{font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px}
+  .nc h4{font-size:19px;margin-bottom:8px}
+  .nc p{color:var(--muted);font-size:15px}
+  .cta{background:var(--gold);padding:56px 0}
+  .cta h2{color:var(--navy)}
+  .cta p{color:var(--navy);font-size:17px;margin-top:6px;max-width:560px}
+  footer{background:var(--navy);color:#a9bbd0;padding:36px 0;font-size:14.5px}
+  footer b{color:#fff}
+  @media (max-width:860px){.kpis,.results,.next{grid-template-columns:1fr}}
+  @media (max-width:520px){
+    .wrap{padding:0 18px}
+    section{padding:56px 0}
+    .finding{padding:22px 18px}
+    .step{grid-template-columns:1fr;gap:10px;padding:20px}
+    .timeline{padding:20px 16px}
+    .kpi .n{font-size:38px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <div><b>Usman Gull</b>, Google Ads, Meta Ads and SEO Specialist</div>
+      <div>October 22, 2026</div>
+    </div>
+    <div class="prep">30 day plan prepared for</div>
+    <h1>Miami Sedation &amp; Cosmetic Dentistry</h1>
+    <p class="outcome">Nervous patients choose the practice that reassures them first. The next step is <span>turning 513 five-star reviews and your sedation expertise into booked consultations from nervous patients searching right now</span>, with every booking reported back so the budget learns what works.</p>
+    <div class="meta">
+      <div>Sedation, implants and cosmetic dentistry</div>
+      <div>Coral Way, Miami</div>
+      <div>Google Ads, Meta, SEO, booking</div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="n">0 vs 10</div><p>Your Google ads shown in the last 30 days, against the nearest sedation competitor, Miami Dental Sedation Spa.</p></div>
+      <div class="kpi"><div class="n">513</div><p>Google reviews at 4.9 shown on your site, with named patients describing how calm they felt despite dental anxiety.</p></div>
+      <div class="kpi"><div class="n">0</div><p>Prices or new-patient offers shown for implants, All-on-4 or veneers. Searchers comparing practices have nothing to act on.</p></div>
+    </div>
+  </div>
+</header>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">01</span><h2>What we found</h2></div>
+    <p class="intro">This review uses only public information: your website, Google Ads Transparency Center and Meta Ad Library. It is a starting point, not an account audit. Your base is stronger than most practices we review: 513 Google reviews at 4.9, named testimonials from anxious patients, two dentists including Dr. Ramon Bana with 35+ years of practice, a real sedation focus, same-day CEREC crowns and All-on-4, and a rebuilt site with a working llms.txt. <span class="hl">The gap is visibility and booking, not reputation.</span></p>
+
+    <div class="finding">
+      <div class="fhead"><h3>No paid search or social presence while sedation and cosmetic competitors run 10 to 56 Google ads</h3><span class="tag high">High impact</span></div>
+      <p>Ad counts are not spend, but they show how actively each practice is competing. Every practice below appears in the same Miami cosmetic dentist results. <strong>Miami Dental Sedation Spa, a direct sedation competitor, ran 10 Google ads</strong> in the last 30 days and the leaders ran 55 to 56. Patients searching for sedation, implants or All-on-4 see their ads first, and none of yours.</p>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Practice</th><th>Google ads, last 30 days</th><th>Active Meta ads</th></tr></thead>
+          <tbody>
+            <tr><td>Miami Designer Smiles</td><td>56</td><td>None found</td></tr>
+            <tr><td>Dental Design Smile</td><td>55</td><td>~44</td></tr>
+            <tr><td>Miami Dental Sedation Spa</td><td>10</td><td>Not checked</td></tr>
+            <tr><td>Smile Design MIA</td><td>8</td><td>~2</td></tr>
+            <tr><td>Miami Center for Cosmetic &amp; Implant Dentistry</td><td>5</td><td>Not checked</td></tr>
+            <tr><td>Smile Design Miami</td><td>4</td><td>Not checked</td></tr>
+            <tr><td>My Smile Miami</td><td>0</td><td>0</td></tr>
+            <tr><td>Dr. Patty Miami Cosmetic Dentistry</td><td>0</td><td>0</td></tr>
+            <tr class="you"><td>Miami Sedation &amp; Cosmetic Dentistry (you)</td><td>0</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fnote">Sources: Google Ads Transparency Center (US, last 30 days) and Meta Ad Library (US, active ads), checked October 22, 2026.</p>
+    </div>
+
+    <div class="finding">
+      <div class="fhead"><h3>"Online scheduling" is promised, but booking is a request form</h3><span class="tag high">High impact</span></div>
+      <p>Your contact page promises <strong>easy online scheduling</strong>. From the outside, the "Book Appointment" button leads to a request form that asks for a preferred day and time, with no online scheduler. A nervous patient who finally decides to book has to wait for a call back, and nothing visible suggests a booked consultation is reported back to Google or Meta.</p>
+      <div class="flow">
+        <div class="node"><div class="u">Google search</div><p>"sedation dentist Miami"</p></div>
+        <div class="arrow"></div>
+        <div class="node"><div class="u">drramonbana.com</div><p>Strong reviews and sedation focus</p></div>
+        <div class="arrow"></div>
+        <div class="node risk"><div class="u">Book Appointment</div><p>Request form, while "online scheduling" is promised</p></div>
+        <div class="arrow"></div>
+        <div class="node risk"><div class="u">Wait for a call back</div><p>An anxious patient may lose nerve or book elsewhere</p></div>
+        <div class="arrow"></div>
+        <div class="node risk"><div class="u">Booked consultation</div><p>Not reported to Google or Meta</p></div>
+      </div>
+      <p class="fnote">Week 1 check: one test request through each route, timed from submit to first reply, and confirmed as a conversion in Google Ads, GA4 and Meta.</p>
+    </div>
+
+    <div class="finding med">
+      <div class="fhead"><h3>Proof, financing and offers are hard to act on</h3><span class="tag med">Medium impact</span></div>
+      <p>From the outside, the "Featured Patients" section shows cards titled "Patient 1", "Patient 2" and "Patient 3" with team marketing copy instead of patient stories. The financing page names <strong>three trusted flexible financing companies</strong>, but the Cherry tab and the Cherry payment plan page have no content. No Spanish content was found for a Coral Way practice, and paid clicks for implants or All-on-4 would land on pages with no price or offer.</p>
+      <div class="tbl">
+        <table class="cmp">
+          <thead><tr><th>Check</th><th class="bad">Today</th><th class="good">Target in 30 days</th></tr></thead>
+          <tbody>
+            <tr><td>Featured Patients</td><td class="bad">"Patient 1/2/3" placeholders with team copy</td><td class="good">Real patient stories, like Riley S. on dental anxiety</td></tr>
+            <tr><td>Financing</td><td class="bad">Empty Cherry page, "three" lenders with two shown</td><td class="good">Finance page with monthly payment examples</td></tr>
+            <tr><td>Spanish content</td><td class="bad">None found on Coral Way</td><td class="good">Spanish landing pages for sedation and implants</td></tr>
+            <tr><td>Implant and All-on-4 offer</td><td class="bad">No price or offer shown</td><td class="good">"From" price and free consultation offer</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fnote">Source: public review of drramonbana.com, October 22, 2026.</p>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <div class="sh"><span class="sn">02</span><h2>The 30 day plan</h2></div>
+    <p class="intro">This is a growth setup, not a lead list. <span class="hl">Your reviews and sedation expertise in front of Miami searchers, real online booking with instant confirmation, and every confirmed booking fed back to Google and Meta</span> so the budget keeps learning. Each step ends with one named action and a date to check it.</p>
+
+    <div class="timeline">
+      <div class="tl">
+        <div></div><div class="wk">Week 1</div><div class="wk">Week 2</div><div class="wk">Week 3</div><div class="wk">Week 4</div>
+        <div class="lab" style="grid-row:2;grid-column:1">Google Search for sedation, implants and All-on-4</div><div class="bar" style="grid-row:2;grid-column:3 / span 3"></div>
+        <div class="lab" style="grid-row:3;grid-column:1">BookedSmile online booking</div><div class="bar" style="grid-row:3;grid-column:2 / span 2"></div>
+        <div class="lab" style="grid-row:4;grid-column:1">Landing pages in English and Spanish</div><div class="bar" style="grid-row:4;grid-column:2 / span 3"></div>
+        <div class="lab" style="grid-row:5;grid-column:1">Meta retargeting for nervous patients</div><div class="bar" style="grid-row:5;grid-column:4 / span 2"></div>
+        <div class="lab" style="grid-row:6;grid-column:1">Weekly patient report</div><div class="bar soft" style="grid-row:6;grid-column:2 / span 4"></div>
+      </div>
+      <p class="tlkey">Solid bars are focus work. The lighter bar runs every week.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h4>Move online booking to BookedSmile so every confirmed booking reports back to Google Ads, GA4 and Meta</h4><p>Replace the request form with real online booking in three clicks, so the "easy online scheduling" promise becomes true, nervous patients get instant confirmation, and each confirmed consultation is counted as a conversion.</p><div class="why">Why: bidding should learn from booked patients, not from clicks or form fills alone.</div></div></div>
+      <div class="step"><div class="num">2</div><div><h4>Google Search for sedation, implants and All-on-4</h4><p>Separate campaigns for sedation dentistry, dental implants and All-on-4 or Teeth-In-A-Day, with your 4.9 rating from 513 reviews, 35+ years of practice and same-day CEREC in the ad copy. Each gets its own cost per booked consultation target.</p><div class="why">Why: these are high-value, high-intent searches, the nearest sedation competitor runs 10 ads and you run none.</div></div></div>
+      <div class="step"><div class="num">3</div><div><h4>Landing pages in English and Spanish</h4><p>Dedicated sedation and All-on-4 pages with a "from" price, a free consultation offer, monthly financing examples and real patient stories above the fold, each with a Spanish version for Spanish-speaking searchers around Coral Way.</p><div class="why">Why: a nervous patient needs reassurance and a clear next step on the first screen.</div></div></div>
+      <div class="step"><div class="num">4</div><div><h4>Meta retargeting for nervous patients</h4><p>Short video and review ads shown to people who visited your sedation, implant or All-on-4 pages but did not book, with anxiety-focused testimonials like Riley S. and a direct path to booking.</p><div class="why">Why: anxious and implant patients take weeks to decide, and the practice that keeps reassuring them gets the booking.</div></div></div>
+      <div class="step"><div class="num">5</div><div><h4>One weekly patient report</h4><p>Searches, clicks, booked consultations and attended consultations, by treatment and by channel. Where a number cannot be measured yet, the report says so.</p><div class="why">Why: you get decisions, not a longer dashboard.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">03</span><h2>BookedSmile: booking that reports back</h2></div>
+    <p class="intro">BookedSmile is our own booking platform for dental practices. Patients book in three clicks, and every confirmed booking is sent server-side to Google Ads, GA4 and Meta, so your campaigns learn from real patients.</p>
+    <p class="intro">Confirmations and reminders go out by email and WhatsApp, and every patient gets an automatic Google review request after the visit. <span class="hl">We set it up for you in a day and run your campaigns on top of it.</span></p>
+    <div class="finding">
+      <div class="tbl">
+        <table class="cmp">
+          <thead><tr><th>Step</th><th class="bad">Your booking today</th><th class="good">With BookedSmile</th></tr></thead>
+          <tbody>
+            <tr><td>How patients book</td><td class="bad">Request form and call back</td><td class="good">3-click online booking</td></tr>
+            <tr><td>Nervous patients</td><td class="bad">Wait for a call</td><td class="good">Instant confirmation by email and WhatsApp</td></tr>
+            <tr><td>Reporting</td><td class="bad">Booking not reported to Google Ads or Meta (as seen from the outside)</td><td class="good">Every confirmed booking sent to Google Ads, GA4 and Meta</td></tr>
+            <tr><td>What bidding learns from</td><td class="bad">Clicks</td><td class="good">Booked patients</td></tr>
+            <tr><td>Confirmations</td><td class="bad">Manual confirmations</td><td class="good">Email and WhatsApp confirmations and reminders</td></tr>
+            <tr><td>Reviews</td><td class="bad">Review requests by hand</td><td class="good">Automatic Google review request</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="sh"><span class="sn">04</span><h2>Comparable results</h2></div>
+    <p class="intro">Healthcare accounts where growth came from tracking real bookings, then moving budget to what converts.</p>
+    <div class="results">
+      <div class="rc">
+        <div class="who">Cosmetic surgery clinic, USD, Google Search</div>
+        <div class="big">+140%</div>
+        <div class="what">confirmed bookings</div>
+        <div class="row"><div class="l"><span>July</span><span>5</span></div><div class="track"><div class="fill before" style="width:42%"></div></div></div>
+        <div class="row"><div class="l"><span>August</span><span>12</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="sub">Cost per conversion <b>$99.97 to $46.15</b>, on level ad spend</div>
+      </div>
+      <div class="rc">
+        <div class="who">Cosmetic surgery clinic, Breast Augmentation ad group</div>
+        <div class="big">7.42x</div>
+        <div class="what">return on ad spend</div>
+        <div class="row"><div class="l"><span>Conversion value</span><span>$18,973.20</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="sub"><b>49.48</b> conversions in one month</div>
+      </div>
+      <div class="rc">
+        <div class="who">OB-GYN practice, USD</div>
+        <div class="big">$6.45</div>
+        <div class="what">lowest cost per lead</div>
+        <div class="row"><div class="l"><span>Peak conversion rate</span><span>37.5%</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="sub">Peak conversion rate <b>37.5%</b></div>
+      </div>
+    </div>
+    <p class="quote">"Our go-to person for fixing any ads-related problem. He over-delivered and we are impressed with his performance."<span>Client review</span></p>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">05</span><h2>What happens next</h2></div>
+    <p class="intro">Independent and hands on. I do the work myself, nothing is passed to a junior team.</p>
+    <div class="next">
+      <div class="nc"><div class="when">This week</div><h4>15 minute call</h4><p>You walk me through how a sedation or All-on-4 request becomes a patient today. I show you the first three changes I would make and why.</p></div>
+      <div class="nc"><div class="when">Day 1</div><h4>Read only access</h4><p>Google Business Profile, GA4, any ad accounts and your form submissions. Nothing changes without your sign off.</p></div>
+      <div class="nc"><div class="when">Days 2 to 5</div><h4>Written growth audit</h4><p>Where patients find you, where they stall before booking, what it is costing and the fix order, written so your team can follow every step.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><b>Usman Gull</b><br>Google Ads and SEO Specialist</div>
+  </div>
+</footer>
+
+</body>
+</html>
