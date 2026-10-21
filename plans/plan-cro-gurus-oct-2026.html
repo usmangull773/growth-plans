@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 Day Google Ads Plan, CRO Gurus</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#e9eff6;color:#0b1f36;line-height:1.6;font-size:16px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  strong{color:#0b1f36}
+  .gold{color:#c8a24a;font-weight:700}
+  .on-dark .gold,.hero .gold{color:#e3c77f}
+
+  /* HERO */
+  .hero{background:#0b1f36;color:#fff;border-bottom:6px solid #c8a24a;padding:28px 0 56px}
+  .topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b9c7d8;border-bottom:1px solid #1d3d63;padding-bottom:16px;margin-bottom:44px}
+  .label{display:inline-block;color:#e3c77f;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+  .hero h1{font-size:44px;line-height:1.1;margin-bottom:16px}
+  .hero .lead{font-size:20px;color:#dbe4ef;max-width:760px;margin-bottom:24px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:#b9c7d8;margin-bottom:36px}
+  .meta b{color:#fff;font-weight:600}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .kpi{background:#12355b;border-radius:10px;padding:22px}
+  .kpi .num{font-size:36px;font-weight:800;color:#e3c77f;line-height:1.1}
+  .kpi .txt{font-size:14px;color:#dbe4ef;margin-top:6px}
+
+  /* SECTIONS */
+  section{padding:64px 0}
+  .white{background:#fff}
+  .navy{background:#0b1f36;color:#fff}
+  .sec-num{display:inline-block;background:#0f4c81;color:#fff;font-weight:700;font-size:13px;padding:4px 10px;border-radius:4px;margin-bottom:12px;letter-spacing:.06em}
+  .navy .sec-num{background:#c8a24a;color:#0b1f36}
+  h2{font-size:30px;line-height:1.2;margin-bottom:14px}
+  .intro{font-size:17px;max-width:780px;margin-bottom:32px;color:#2b4563}
+  .navy .intro{color:#dbe4ef}
+
+  /* FINDINGS */
+  .finding{background:#fff;border-radius:10px;box-shadow:0 2px 14px rgba(11,31,54,.08);padding:26px;margin-bottom:22px;border-left:6px solid #0f4c81}
+  .finding.med{border-left-color:#c8a24a}
+  .f-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+  .f-head h3{font-size:20px;line-height:1.3}
+  .tag{flex-shrink:0;font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;color:#fff;background:#0f4c81;text-transform:uppercase;letter-spacing:.05em}
+  .tag.med{background:#c8a24a;color:#0b1f36}
+  .finding p{color:#2b4563;margin-bottom:16px}
+  .cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .cmp div{border-radius:8px;padding:14px 16px;font-size:14px}
+  .bad{background:#fbeceb;border:1px solid #e8b9b5}
+  .good{background:#e7f2ec;border:1px solid #b5d6c3}
+  .bad b{color:#b3261e}
+  .good b{color:#1f6f43}
+  .cmp ul{margin:8px 0 0 18px}
+  .tbl{width:100%;border-collapse:collapse;font-size:14px;overflow:hidden;border-radius:8px}
+  .tbl th{background:#0b1f36;color:#fff;text-align:left;padding:10px 12px;font-weight:600}
+  .tbl td{padding:10px 12px;border-bottom:1px solid #e3e9f1;vertical-align:top}
+  .tbl tr:nth-child(even) td{background:#f5f8fb}
+  .tbl-wrap{overflow-x:auto}
+
+  /* TIMELINE */
+  .timeline{background:#0b1f36;border-radius:12px;padding:26px;margin-bottom:36px;color:#fff}
+  .timeline h3{font-size:17px;margin-bottom:18px;color:#e3c77f}
+  .t-row{display:grid;grid-template-columns:190px 1fr;gap:14px;align-items:center;margin-bottom:12px;font-size:14px}
+  .t-track{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:26px}
+  .t-track span{background:#12355b;border-radius:4px}
+  .t-track span.on{background:#c8a24a}
+  .t-weeks{display:grid;grid-template-columns:190px 1fr;gap:14px;font-size:12px;color:#b9c7d8;margin-bottom:10px}
+  .t-weeks div:last-child{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;text-align:center}
+  .steps{display:grid;gap:16px}
+  .step{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#e9eff6;border-radius:10px;padding:20px}
+  .step .n{width:48px;height:48px;border-radius:50%;background:#0f4c81;color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
+  .step h4{font-size:18px;margin-bottom:4px}
+  .step p{color:#2b4563;font-size:15px}
+  .step .why{font-size:14px;color:#0f4c81;margin-top:6px;font-weight:600}
+
+  /* RESULTS */
+  .results{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .r-card{background:#12355b;border-radius:12px;padding:24px}
+  .r-tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#b9c7d8;margin-bottom:8px}
+  .r-big{font-size:38px;font-weight:800;color:#e3c77f;line-height:1.1}
+  .r-sub{font-size:14px;color:#dbe4ef;margin:6px 0 18px}
+  .bar-l{font-size:13px;color:#b9c7d8;display:flex;justify-content:space-between;margin-bottom:4px}
+  .bar{height:14px;background:#0b1f36;border-radius:7px;margin-bottom:12px;overflow:hidden}
+  .bar span{display:block;height:100%;border-radius:7px}
+  .bar .before{background:#5d7694}
+  .bar .after{background:#c8a24a}
+  .r-note{font-size:13px;color:#b9c7d8;border-top:1px solid #1d3d63;padding-top:12px;margin-top:6px}
+  .extra{margin-top:22px;background:#12355b;border-radius:12px;padding:20px 24px;font-size:15px;color:#dbe4ef}
+
+  /* NEXT */
+  .next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .n-card{background:#fff;border-top:5px solid #c8a24a;border-radius:10px;padding:24px;box-shadow:0 2px 14px rgba(11,31,54,.06)}
+  .n-card .when{font-size:12px;font-weight:700;color:#0f4c81;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+  .n-card h4{font-size:19px;margin-bottom:8px}
+  .n-card p{font-size:15px;color:#2b4563}
+
+  .cta{background:#c8a24a;padding:44px 0;text-align:center}
+  .cta h2{color:#0b1f36;margin-bottom:6px}
+  .cta p{color:#0b1f36;font-size:17px}
+  footer{background:#0b1f36;color:#b9c7d8;padding:26px 0;font-size:14px;text-align:center}
+  footer b{color:#fff}
+
+  @media (max-width:820px){
+    .kpis,.results,.next{grid-template-columns:1fr}
+    .hero h1{font-size:34px}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 16px}
+    .hero h1{font-size:28px}
+    .hero .lead{font-size:17px}
+    h2{font-size:24px}
+    section{padding:48px 0}
+    .cmp{grid-template-columns:1fr}
+    .t-row,.t-weeks{grid-template-columns:1fr;gap:6px}
+    .t-weeks div:first-child{display:none}
+    .step{grid-template-columns:1fr}
+    .f-head{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><span>Google Ads audit and optimization plan</span><span>October 2026</span></div>
+    <span class="label">30 day plan prepared for</span>
+    <h1>CRO Gurus</h1>
+    <p class="lead">An account that is already running, made <span class="gold">profitable to scale</span> by fixing the signal, cutting the waste, and growing only what pays back.</p>
+    <div class="meta">
+      <span><b>Scope:</b> audit, optimization, scaling</span>
+      <span><b>Duration:</b> 30 days</span>
+      <span><b>Reporting:</b> weekly written update</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="num">Week 1</div><div class="txt">Every conversion action verified against GA4 and the backend before any bid changes</div></div>
+      <div class="kpi"><div class="num">3</div><div class="txt">Leak points checked first: search terms, placements, and feed or landing page mismatch</div></div>
+      <div class="kpi"><div class="num">1 rule</div><div class="txt">Budget only scales on campaigns that hold target CPA or ROAS for 7 straight days</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="sec-num">01</span>
+    <h2>What we found</h2>
+    <p class="intro">Your brief describes an account with campaigns live, spend going out, and a sense that <span class="gold">results are capped below what the account can do</span>. In almost every account like this, the cap comes from three places. Each one is checked in the first week, and each has a clear fix.</p>
+
+    <div class="finding">
+      <div class="f-head"><h3>1. Bidding may be optimizing toward the wrong signal</h3><span class="tag">High impact</span></div>
+      <p>Smart Bidding is only as good as the conversion it is told to chase. When page views, add to carts or form starts are set as primary conversions, Google finds more of those, not more customers. <strong>This is the first thing we verify, because every other change depends on it.</strong></p>
+      <div class="cmp">
+        <div class="bad"><b>What holds performance back</b>
+          <ul><li>Micro actions counted as primary conversions</li><li>Duplicate tags inflating results</li><li>No offline or backend match, so ROAS is a guess</li></ul></div>
+        <div class="good"><b>What works</b>
+          <ul><li>One primary action per goal: purchase or qualified lead</li><li>Google Ads, GA4 and backend numbers reconciled</li><li>Micro actions kept as secondary, for insight only</li></ul></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="f-head"><h3>2. Wasted spend usually sits in three predictable places</h3><span class="tag">High impact</span></div>
+      <p>You asked for better keyword targeting and less waste. <strong>Waste is rarely spread evenly.</strong> It concentrates in a short list of search terms and placements, and cutting those frees budget for the campaigns that already work.</p>
+      <div class="tbl-wrap">
+      <table class="tbl">
+        <tr><th>Leak point</th><th>Where we look</th><th>The fix</th></tr>
+        <tr><td>Irrelevant search terms</td><td>90 day search term report, broad and phrase match</td><td>Shared negative lists, match type tightening</td></tr>
+        <tr><td>Low intent placements</td><td>Performance Max and Display placement reports</td><td>Account level exclusions, brand and placement controls</td></tr>
+        <tr><td>Ad to page mismatch</td><td>Ad groups with high CTR but low conversion rate</td><td>Rewritten ads and closer landing page match</td></tr>
+      </table>
+      </div>
+    </div>
+
+    <div class="finding med">
+      <div class="f-head"><h3>3. Scaling needs a rule, not a guess</h3><span class="tag med">Medium impact</span></div>
+      <p>Raising budgets too fast resets learning and pushes cost per conversion up. Scaling works when it follows a clear threshold, so <strong>only proven campaigns get more money</strong>.</p>
+      <div class="tbl-wrap">
+      <table class="tbl">
+        <tr><th>Campaign status</th><th>Action</th></tr>
+        <tr><td>Holding target CPA or ROAS for 7 days</td><td>Raise budget 15 to 20 percent, then hold</td></tr>
+        <tr><td>Close to target</td><td>Test ads and bid strategy before adding budget</td></tr>
+        <tr><td>Well off target after cleanup</td><td>Restructure or move budget to stronger campaigns</td></tr>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <span class="sec-num">02</span>
+    <h2>The 30 day plan</h2>
+    <p class="intro">Five steps, in an order where each one makes the next more effective. You get a short written update at the end of every week, with what changed, why, and what is next.</p>
+
+    <div class="timeline">
+      <h3>Timeline</h3>
+      <div class="t-weeks"><div></div><div><span>Wk 1</span><span>Wk 2</span><span>Wk 3</span><span>Wk 4</span></div></div>
+      <div class="t-row"><div>Tracking audit and fix</div><div class="t-track"><span class="on"></span><span></span><span></span><span></span></div></div>
+      <div class="t-row"><div>Waste cleanup and structure</div><div class="t-track"><span class="on"></span><span class="on"></span><span></span><span></span></div></div>
+      <div class="t-row"><div>Ad and bidding tests</div><div class="t-track"><span></span><span class="on"></span><span class="on"></span><span></span></div></div>
+      <div class="t-row"><div>Scale profitable campaigns</div><div class="t-track"><span></span><span></span><span class="on"></span><span class="on"></span></div></div>
+      <div class="t-row"><div>Report and next 60 days</div><div class="t-track"><span></span><span></span><span></span><span class="on"></span></div></div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h4>Full account and tracking audit</h4><p>Review structure, conversion actions, attribution, GA4 and GTM setup, and, for eCommerce, the Merchant Center feed. Fix anything that sends bidding the wrong signal.</p><div class="why">Why: every later decision relies on numbers you can trust.</div></div></div>
+      <div class="step"><div class="n">2</div><div><h4>Cut wasted spend and tighten targeting</h4><p>Search term mining, negative keyword lists, match type review, placement exclusions, and budget moved away from terms that spend without converting.</p><div class="why">Why: the fastest gain usually comes from stopping spend that never converts.</div></div></div>
+      <div class="step"><div class="n">3</div><div><h4>Test new ads and bid strategies</h4><p>New responsive search ads built around the strongest offers, plus a controlled bid strategy test with a set pass or fail target agreed with you up front.</p><div class="why">Why: tests with a clear target tell you what to keep, not just what changed.</div></div></div>
+      <div class="step"><div class="n">4</div><div><h4>Scale what is profitable</h4><p>Campaigns that hold target CPA or ROAS get staged budget increases. Weak campaigns get restructured or their budget moves to stronger ones.</p><div class="why">Why: growth only counts if cost per result holds as spend rises.</div></div></div>
+      <div class="step"><div class="n">5</div><div><h4>Clear reporting and a next 60 day roadmap</h4><p>A written summary of every change made, the result, and a prioritized list of the next opportunities, so the account can keep improving without constant direction.</p><div class="why">Why: you asked for someone who takes initiative and keeps you informed.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="navy on-dark">
+  <div class="wrap">
+    <span class="sec-num">03</span>
+    <h2>Comparable results</h2>
+    <p class="intro">You asked for examples of accounts improved and the results achieved. These are verified results from live accounts using the same approach: <span class="gold">fix the signal first, then cut waste, then scale</span>.</p>
+
+    <div class="results">
+      <div class="r-card">
+        <div class="r-tag">Cosmetic surgery clinic, USD</div>
+        <div class="r-big">-53.8%</div>
+        <div class="r-sub">Cost per conversion, on level ad spend</div>
+        <div class="bar-l"><span>Before</span><span>$99.97</span></div>
+        <div class="bar"><span class="before" style="width:100%"></span></div>
+        <div class="bar-l"><span>After</span><span>$46.15</span></div>
+        <div class="bar"><span class="after" style="width:46%"></span></div>
+        <div class="r-note">Micro conversions reclassified so bidding optimized toward confirmed bookings. Confirmed bookings up 140%.</div>
+      </div>
+      <div class="r-card">
+        <div class="r-tag">Same account, conversion rate</div>
+        <div class="r-big">6.54%</div>
+        <div class="r-sub">Conversion rate, up from 1.50%</div>
+        <div class="bar-l"><span>Before</span><span>1.50%</span></div>
+        <div class="bar"><span class="before" style="width:23%"></span></div>
+        <div class="bar-l"><span>After</span><span>6.54%</span></div>
+        <div class="bar"><span class="after" style="width:100%"></span></div>
+        <div class="r-note">Conversions grew from 30.50 to 69.48, up 127.8%. Top ad group reached 7.42x return on ad spend.</div>
+      </div>
+      <div class="r-card">
+        <div class="r-tag">London plastic surgery clinic</div>
+        <div class="r-big">-70%</div>
+        <div class="r-sub">Cost per conversion in a single month</div>
+        <div class="bar-l"><span>Before</span><span>£256.84</span></div>
+        <div class="bar"><span class="before" style="width:100%"></span></div>
+        <div class="bar-l"><span>After</span><span>£77.87</span></div>
+        <div class="bar"><span class="after" style="width:30%"></span></div>
+        <div class="r-note">Booking flow tracking launched and Brand campaign rebuilt. Conversions rose from 5 to over 17 on nearly flat spend.</div>
+      </div>
+    </div>
+    <div class="extra"><span class="gold">eCommerce:</span> $15.5M in ad spend managed across 977 campaigns, with a 9.2x peak return on ad spend.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="sec-num">04</span>
+    <h2>What happens next</h2>
+    <p class="intro">Getting started is simple and takes very little of your time.</p>
+    <div class="next">
+      <div class="n-card"><div class="when">Step 1</div><h4>A short call</h4><p>15 minutes on your goals, target CPA or ROAS, margins, and which campaigns matter most to you.</p></div>
+      <div class="n-card"><div class="when">Step 2</div><h4>Account access</h4><p>Standard access to Google Ads, plus GA4, Google Tag Manager and Merchant Center where they apply. No changes go live before the audit is shared.</p></div>
+      <div class="n-card"><div class="when">Step 3</div><h4>First week actions</h4><p>Tracking verified, the first waste cuts made, and a written audit summary with the priority list for weeks 2 to 4.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
