@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sample: Dental Implants Manchester | Deansgate Dental Studio (concept)</title>
+<style>
+  :root{
+    --teal:#0d3b42; --teal-2:#145059; --teal-3:#e3eeee;
+    --warm:#c98a5b; --warm-l:#f3e3d4;
+    --bg:#f8f5f0; --white:#ffffff;
+    --ink:#1b2a2e; --muted:#566a6e; --line:#dfe6e5;
+    --notice:#fff4c2; --notice-ink:#5a4700;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+  svg{display:block}
+  .notice{background:var(--notice);color:var(--notice-ink);border-bottom:2px solid #e3c94a;font-size:14px;font-weight:700;text-align:center;padding:10px 16px}
+  .urgent{background:var(--teal);color:#d8e9e9;font-size:13.5px;text-align:center;padding:7px 16px}
+  .urgent b{color:var(--warm-l)}
+  header.site{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+  .hdr{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.2px;color:var(--teal)}
+  .mark{width:30px;height:30px;border-radius:50%;background:var(--teal);position:relative;flex:0 0 30px}
+  .mark:after{content:"";position:absolute;inset:8px;border-radius:50%;border:2px solid var(--warm)}
+  .brand small{display:block;font-weight:500;font-size:12px;color:var(--muted);letter-spacing:0}
+  .hdr-r{display:flex;align-items:center;gap:14px}
+  .phone{font-size:14px;color:var(--muted);text-align:right;line-height:1.3}
+  .phone b{display:block;color:var(--teal);font-size:16px}
+  .btn{display:inline-block;background:var(--warm);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:8px;font-size:15.5px;border:0;cursor:pointer;text-align:center}
+  .btn:hover{background:#b8784a}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.5)}
+  .btn.sm{padding:10px 16px;font-size:14px}
+  .hero{background:linear-gradient(160deg,var(--teal) 0%,var(--teal-2) 100%);color:#fff;padding:56px 0 0}
+  .hero-g{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:start}
+  .eyebrow{font-size:13px;font-weight:700;color:var(--warm-l);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:12px}
+  .hero h1{font-size:clamp(32px,5.4vw,52px);line-height:1.08;letter-spacing:-1px;font-weight:800;margin-bottom:16px}
+  .lede{font-size:18px;color:#cfe2e2;max-width:560px;margin-bottom:18px}
+  .rating{display:flex;align-items:center;gap:10px;font-size:15px;color:#e8f2f2;margin-bottom:26px;flex-wrap:wrap}
+  .stars{display:flex;gap:2px}
+  .stars svg{width:18px;height:18px;fill:var(--warm)}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);background:rgba(255,255,255,.07);border-top:1px solid rgba(255,255,255,.12)}
+  .stat{padding:20px 18px;border-right:1px solid rgba(255,255,255,.1)}
+  .stat:last-child{border-right:0}
+  .stat .n{font-size:26px;font-weight:800;color:var(--warm-l);line-height:1.1}
+  .stat p{font-size:13.5px;color:#c4dada;margin-top:4px}
+  .formcard{background:var(--white);color:var(--ink);border-radius:14px;padding:26px 24px;box-shadow:0 18px 40px rgba(0,0,0,.22);scroll-margin-top:90px}
+  .formcard h2{font-size:21px;line-height:1.25;margin-bottom:4px;color:var(--teal)}
+  .formcard .sub{font-size:14px;color:var(--muted);margin-bottom:16px}
+  .offer{display:inline-block;font-size:12px;font-weight:700;color:var(--teal);background:var(--warm-l);border-radius:4px;padding:3px 8px;margin-bottom:10px}
+  label{display:block;font-size:13.5px;font-weight:600;margin-bottom:4px;color:var(--ink)}
+  input[type=text],input[type=tel],input[type=email],select{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;font:inherit;font-size:15px;background:#fbfcfc;margin-bottom:12px;color:var(--ink)}
+  input:focus,select:focus{outline:2px solid var(--warm);border-color:var(--warm)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);font-weight:400;margin:4px 0 16px}
+  .consent input{margin-top:4px;flex:0 0 auto}
+  .formcard .btn{width:100%}
+  .msg{margin-top:14px;background:var(--teal-3);border-left:4px solid var(--teal);padding:12px 14px;border-radius:6px;font-size:14px;color:var(--teal)}
+  .fine{font-size:12.5px;color:var(--muted);margin-top:10px;text-align:center}
+  section{padding:68px 0}
+  section.alt{background:var(--white)}
+  .sh{max-width:680px;margin-bottom:34px}
+  .sh .eyebrow{color:var(--warm)}
+  h2.t{font-size:clamp(26px,3.6vw,36px);line-height:1.15;letter-spacing:-.5px;color:var(--teal);margin-bottom:10px}
+  .sh p{color:var(--muted);font-size:17px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px 22px}
+  section.alt .card{background:var(--bg)}
+  .ico{width:44px;height:44px;border-radius:10px;background:var(--teal-3);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .ico svg{width:24px;height:24px;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:17.5px;margin-bottom:6px;color:var(--ink)}
+  .card p{font-size:15px;color:var(--muted)}
+  .opt{display:flex;flex-direction:column}
+  .opt .price{font-size:13px;color:var(--muted);margin:6px 0 12px}
+  .opt .price b{display:block;font-size:28px;color:var(--teal);letter-spacing:-.5px;line-height:1.15}
+  .opt p{margin-bottom:16px}
+  .opt .btn{margin-top:auto;align-self:flex-start}
+  .opt.feature{border:2px solid var(--warm)}
+  .pill{display:inline-block;font-size:11.5px;font-weight:700;background:var(--warm);color:#fff;border-radius:4px;padding:2px 8px;margin-bottom:10px;align-self:flex-start}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+  .step{position:relative;padding:26px 22px 22px;background:var(--white);border-radius:12px;border-top:4px solid var(--teal)}
+  .step .num{width:36px;height:36px;border-radius:50%;background:var(--warm);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .step h3{font-size:17.5px;margin-bottom:6px}
+  .step p{font-size:15px;color:var(--muted)}
+  .rec{border:2px dashed var(--warm);background:#fffaf5}
+  .rec .tagline{font-size:12px;font-weight:700;color:#9a5d2f;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+  .rec .note{font-size:13px;color:#9a5d2f;margin-top:10px;font-style:italic}
+  .feelist{list-style:none}
+  .feelist li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .feelist li:last-child{border-bottom:0}
+  .feelist b{color:var(--teal);white-space:nowrap}
+  .review{background:var(--teal);color:#fff;border-radius:14px;padding:32px 30px;max-width:780px}
+  .review .stars{margin-bottom:14px}
+  .review blockquote{font-size:19px;line-height:1.5;color:#eef6f6;margin-bottom:14px}
+  .review cite{font-style:normal;font-size:14px;color:var(--warm-l);font-weight:600}
+  .rev-row{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;align-items:stretch}
+  .scorecard{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+  .scorecard .big{font-size:54px;font-weight:800;color:var(--teal);line-height:1}
+  .scorecard .stars{justify-content:center;margin:10px 0}
+  .scorecard p{color:var(--muted);font-size:15px}
+  .loc{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .mapblock{border-radius:12px;background:
+    linear-gradient(90deg,transparent 48%,#d6e3e2 48%,#d6e3e2 52%,transparent 52%),
+    linear-gradient(0deg,transparent 30%,#d6e3e2 30%,#d6e3e2 34%,transparent 34%),
+    linear-gradient(0deg,transparent 70%,#e6eeed 70%,#e6eeed 73%,transparent 73%),
+    var(--teal-3);min-height:240px;position:relative;border:1px solid var(--line)}
+  .pin{position:absolute;left:50%;top:32%;width:26px;height:26px;background:var(--warm);border-radius:50% 50% 50% 0;transform:translate(-50%,-100%) rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.2)}
+  .pin:after{content:"";position:absolute;inset:8px;background:#fff;border-radius:50%}
+  .maplab{position:absolute;left:12px;bottom:12px;background:var(--white);border-radius:6px;padding:6px 10px;font-size:13px;font-weight:600;color:var(--teal)}
+  .hours{width:100%;border-collapse:collapse;font-size:15px}
+  .hours td{padding:9px 0;border-bottom:1px solid var(--line)}
+  .hours td:last-child{text-align:right;font-weight:700;color:var(--teal)}
+  .addr{font-size:15.5px;color:var(--ink);margin-bottom:14px}
+  .addr b{color:var(--teal)}
+  details{background:var(--white);border:1px solid var(--line);border-radius:10px;margin-bottom:12px;padding:0 20px}
+  summary{cursor:pointer;font-weight:700;padding:18px 28px 18px 0;list-style:none;position:relative;font-size:16.5px}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";position:absolute;right:0;top:14px;font-size:24px;color:var(--warm);font-weight:400}
+  details[open] summary:after{content:"\2212"}
+  details p{color:var(--muted);padding-bottom:18px;font-size:15.5px}
+  .faq{max-width:800px}
+  .final{background:var(--teal);color:#fff;padding:60px 0;text-align:center}
+  .final h2{font-size:clamp(26px,4vw,36px);letter-spacing:-.5px;margin-bottom:10px}
+  .final p{color:#cfe2e2;max-width:600px;margin:0 auto 24px;font-size:17px}
+  footer{background:#082a30;color:#9fbcbc;font-size:13.5px;padding:28px 0 32px;text-align:center}
+  footer b{color:#fff}
+  .mbar{display:none}
+  @media (max-width:900px){
+    .hero-g{grid-template-columns:1fr}
+    .grid3,.steps,.loc,.rev-row{grid-template-columns:1fr}
+    .grid4{grid-template-columns:1fr 1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    .stat:nth-child(2){border-right:0}
+    .stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)}
+  }
+  @media (max-width:640px){
+    .phone,.hdr-r .btn{display:none}
+    .hero{padding-top:36px}
+    .grid4{grid-template-columns:1fr}
+    .two{grid-template-columns:1fr}
+    section{padding:52px 0}
+    .review{padding:26px 20px}
+    .review blockquote{font-size:17px}
+    body{padding-bottom:70px}
+    .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--white);border-top:1px solid var(--line);padding:9px 10px;box-shadow:0 -6px 18px rgba(0,0,0,.08)}
+    .mbar .call{display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px solid var(--teal);border-radius:8px;color:var(--teal);font-weight:700;font-size:14px;line-height:1.2;text-align:center}
+    .mbar .call small{font-weight:500;font-size:12px}
+    .mbar .btn{padding:12px 10px}
+  }
+  @media (max-width:380px){
+    .wrap{padding:0 16px}
+    .brand{font-size:15.5px}
+    .formcard{padding:22px 16px}
+    .stat{padding:16px 12px}
+    .stat .n{font-size:22px}
+  }
+</style>
+</head>
+<body>
+
+<div class="notice">Concept landing page prepared by Usman Gull for Deansgate Dental Studio. Sample only, not a live page.</div>
+<div class="urgent">Evening and weekend appointments: <b>open until 10pm Monday to Friday</b>, and 9am to 5pm Saturday and Sunday</div>
+
+<header class="site">
+  <div class="wrap hdr">
+    <div class="brand"><span class="mark" aria-hidden="true"></span><span>Deansgate Dental Studio<small>Dental implants, Manchester</small></span></div>
+    <div class="hdr-r">
+      <div class="phone">Call the studio<b>0161 912 6200</b></div>
+      <a class="btn sm" href="#book">Book a consultation</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" aria-label="Introduction">
+  <div class="wrap hero-g">
+    <div>
+      <div class="eyebrow">Deansgate, Manchester city centre</div>
+      <h1>Dental implants in Manchester, with clear prices from £2500</h1>
+      <p class="lede">Replace one missing tooth, several, or a full arch at an independent studio in South Tower, Deansgate. Every fee is published up front, and sedation is available for nervous patients.</p>
+      <div class="rating">
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+        </div>
+        <span><b>4.9</b> from 1,059 Google reviews</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="#book">Book your implant consultation</a>
+        <a class="btn ghost" href="#options">See implant prices</a>
+      </div>
+    </div>
+
+    <div class="formcard" id="book">
+      <span class="offer">Suggested offer: free implant consultation</span>
+      <h2>Book your implant consultation</h2>
+      <p class="sub">Tell us a little about your situation and the team will get back to you to arrange a time.</p>
+      <form onsubmit="event.preventDefault();document.getElementById('msg').hidden=false;">
+        <label for="f-name">Full name</label>
+        <input id="f-name" type="text" autocomplete="name" required>
+        <div class="two">
+          <div><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel" required></div>
+          <div><label for="f-email">Email</label><input id="f-email" type="email" autocomplete="email"></div>
+        </div>
+        <label for="f-day">Preferred day</label>
+        <select id="f-day">
+          <option>Any day</option>
+          <option>Weekday daytime</option>
+          <option>Weekday evening (until 10pm)</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+        <label for="f-need">Are you missing one tooth, several, or a full arch?</label>
+        <select id="f-need" required>
+          <option value="">Please choose</option>
+          <option>One tooth</option>
+          <option>Several teeth</option>
+          <option>A full arch</option>
+          <option>Not sure yet</option>
+        </select>
+        <label class="consent"><input type="checkbox" required> I agree to Deansgate Dental Studio contacting me about my enquiry by phone, email or WhatsApp.</label>
+        <button class="btn" type="submit">Request my consultation</button>
+        <div class="msg" id="msg" hidden>This is a sample form. On the live page, enquiries go straight to your team and get an instant reply.</div>
+      </form>
+      <p class="fine">Prefer to book yourself? Online booking and WhatsApp are also available.</p>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:44px">
+    <div class="stats">
+      <div class="stat"><div class="n">4.9</div><p>Google rating</p></div>
+      <div class="stat"><div class="n">1,059</div><p>Google reviews</p></div>
+      <div class="stat"><div class="n">10pm</div><p>Open late, Monday to Friday</p></div>
+      <div class="stat"><div class="n">7 days</div><p>Open Saturday and Sunday too</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sh">
+      <div class="eyebrow">Why patients choose us</div>
+      <h2 class="t">An implant studio that fits around your life</h2>
+      <p>Practical reasons, not promises.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Appointments until 10pm</h3>
+        <p>Open 8am to 10pm on weekdays and 9am to 5pm at weekends, so consultations and follow ups do not need time off work.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></div>
+        <h3>Prices published up front</h3>
+        <p>Our full fee list is public, from a £35 new patient examination to full arch implant options, so you know where you stand before you visit.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3c4 3 7 6 7 10a7 7 0 0 1-14 0c0-4 3-7 7-10z"/><path d="M9.5 13.5l2 2 3.5-4"/></svg></div>
+        <h3>Options for nervous patients</h3>
+        <p>IV sedation is available from £400, so you can discuss with the team whether it suits your treatment.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H8l-4 4z"/></svg></div>
+        <h3>Book online or on WhatsApp</h3>
+        <p>Choose a time through online booking, or message the studio on WhatsApp if you have a quick question first.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></div>
+        <h3>Trusted by 1,059 reviewers</h3>
+        <p>A 4.9 Google rating from 1,059 reviews, from an independent single site studio in Deansgate.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7V5h8v2"/></svg></div>
+        <h3>Membership from £26.99 a month</h3>
+        <p>An adult membership plan helps you look after your teeth, and your implants, after treatment. Partner brands shown by the studio include Invisalign, SureSmile and Dentsply Sirona.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="options">
+  <div class="wrap">
+    <div class="sh">
+      <div class="eyebrow">Implant options and prices</div>
+      <h2 class="t">Choose the option that matches your situation</h2>
+      <p>Prices are taken from our published fee list. Your exact fee is confirmed after your consultation.</p>
+    </div>
+    <div class="grid4">
+      <div class="card opt feature">
+        <span class="pill">Missing one tooth</span>
+        <h3>Single dental implant</h3>
+        <div class="price">from<b>£2800</b>Dental implant from £2500</div>
+        <p>A single implant to replace one missing tooth.</p>
+        <a class="btn sm" href="#book">Ask about this</a>
+      </div>
+      <div class="card opt">
+        <span class="pill">Full arch</span>
+        <h3>Implant supported denture</h3>
+        <div class="price">from<b>£6500</b>Full arch</div>
+        <p>A denture supported by implants for a full arch of teeth.</p>
+        <a class="btn sm" href="#book">Ask about this</a>
+      </div>
+      <div class="card opt">
+        <span class="pill">Full arch</span>
+        <h3>Implant retained denture</h3>
+        <div class="price">from<b>£9000</b>Full arch</div>
+        <p>A denture held in place by implants, discussed in detail at consultation.</p>
+        <a class="btn sm" href="#book">Ask about this</a>
+      </div>
+      <div class="card opt">
+        <span class="pill">Nervous patients</span>
+        <h3>IV sedation</h3>
+        <div class="price">from<b>£400</b>Added to treatment</div>
+        <p>Available for patients who feel anxious about dental treatment.</p>
+        <a class="btn sm" href="#book">Ask about this</a>
+      </div>
+    </div>
+
+    <div class="card rec" style="margin-top:22px">
+      <div class="tagline">Recommended: 0% finance option</div>
+      <h3>Spread the cost of your implant treatment</h3>
+      <p>Showing a monthly figure next to each implant price helps patients compare options before they call. Example wording: "Ask us about spreading the cost of your treatment over monthly payments."</p>
+      <p class="note">Suggested addition, finance provider to be confirmed. Not a current offer.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sh">
+      <div class="eyebrow">How it works</div>
+      <h2 class="t">Three steps from enquiry to treatment plan</h2>
+    </div>
+    <div class="steps">
+      <div class="step" style="background:var(--bg)"><div class="num">1</div><h3>Book a consultation</h3><p>Send the short form, book online or message on WhatsApp. Choose a weekday, evening or weekend slot. (Suggested offer: free implant consultation.)</p></div>
+      <div class="step" style="background:var(--bg)"><div class="num">2</div><h3>Assessment and options</h3><p>The dentist examines your mouth, explains which implant options suit you, and answers your questions, including sedation if you are nervous.</p></div>
+      <div class="step" style="background:var(--bg)"><div class="num">3</div><h3>Your treatment plan</h3><p>You get a clear plan with the fee and next steps, so you can decide in your own time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh">
+      <div class="eyebrow">Practical details</div>
+      <h2 class="t">Good to know before you book</h2>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <h3>Related fees</h3>
+        <ul class="feelist">
+          <li>New patient examination <b>£35</b></li>
+          <li>Emergency assessment <b>£50</b></li>
+          <li>Dental implant <b>from £2500</b></li>
+          <li>IV sedation <b>from £400</b></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Ways to get in touch</h3>
+        <ul class="feelist">
+          <li>Phone <b>0161 912 6200</b></li>
+          <li>Online booking <b>Available</b></li>
+          <li>WhatsApp <b>Available</b></li>
+          <li>Enquiry form <b>Above</b></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>After treatment</h3>
+        <p>The adult membership plan is £26.99 per month, an easy way to keep regular check ups on the calendar once your implant treatment is complete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sh">
+      <div class="eyebrow">Reviews</div>
+      <h2 class="t">What patients say</h2>
+    </div>
+    <div class="rev-row">
+      <div class="review">
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+        </div>
+        <blockquote>"I broke a filling on one of my front teeth last night, and Dr Hassan repaired it this morning (booked an emergency appointment). He was polite, efficient, friendly, professional, and meticulous throughout the appointment."</blockquote>
+        <cite>Georgia Anagnostou, Google review</cite>
+      </div>
+      <div class="scorecard">
+        <div class="big">4.9</div>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+        </div>
+        <p>Average from 1,059 Google reviews</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh">
+      <div class="eyebrow">Location and hours</div>
+      <h2 class="t">In the heart of Deansgate</h2>
+    </div>
+    <div class="loc">
+      <div class="mapblock" role="img" aria-label="Simple location graphic for South Tower, Deansgate">
+        <span class="pin"></span>
+        <span class="maplab">South Tower, 13 Owen Street</span>
+      </div>
+      <div class="card">
+        <p class="addr"><b>Deansgate Dental Studio</b><br>South Tower, 13 Owen Street<br>Deansgate, Manchester M15 4YB</p>
+        <table class="hours">
+          <tr><td>Monday to Friday</td><td>8:00am to 10:00pm</td></tr>
+          <tr><td>Saturday</td><td>9:00am to 5:00pm</td></tr>
+          <tr><td>Sunday</td><td>9:00am to 5:00pm</td></tr>
+          <tr><td>Phone</td><td>0161 912 6200</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sh">
+      <div class="eyebrow">Questions</div>
+      <h2 class="t">Dental implant FAQs</h2>
+      <p>General information only. Your dentist will advise on your own situation at consultation.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>How long does implant treatment take?</summary>
+        <p>It varies from patient to patient. Implant treatment usually happens in stages over several months, because the implant needs time to settle before the final tooth or teeth are fitted. Your dentist will give you an expected timeline in your treatment plan.</p>
+      </details>
+      <details>
+        <summary>Is having a dental implant painful?</summary>
+        <p>The procedure is carried out under local anaesthetic, so the area is numbed. Some tenderness and swelling afterwards is common for a few days. Your dentist will explain what to expect and how to manage it.</p>
+      </details>
+      <details>
+        <summary>What affects the price of implant treatment?</summary>
+        <p>The number of teeth being replaced, the type of restoration (a single crown, a supported denture or a retained denture), whether extra procedures are needed first, and whether you choose sedation. Our published fees start from £2500, and your exact fee is confirmed after consultation.</p>
+      </details>
+      <details>
+        <summary>I am nervous about dental treatment. Can I have sedation?</summary>
+        <p>IV sedation is available from £400. Whether it is suitable for you depends on your medical history, which the dentist will check with you at consultation.</p>
+      </details>
+      <details>
+        <summary>How do I get started?</summary>
+        <p>The first step is a consultation. Use the form on this page, book online, message on WhatsApp or call 0161 912 6200. The dentist will assess whether implants are suitable for you and talk you through the options.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="final">
+  <div class="wrap">
+    <h2>Ready to talk about dental implants?</h2>
+    <p>Book a consultation at a time that suits you, including evenings until 10pm and weekends.</p>
+    <a class="btn" href="#book">Book your implant consultation</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <b>Deansgate Dental Studio</b>, South Tower, 13 Owen Street, Deansgate, Manchester M15 4YB<br>
+    Concept landing page prepared by Usman Gull. Sample only, not a live page.
+  </div>
+</footer>
+
+<div class="mbar">
+  <div class="call">Call<small>0161 912 6200</small></div>
+  <a class="btn" href="#book">Book</a>
+</div>
+
+</body>
+</html>

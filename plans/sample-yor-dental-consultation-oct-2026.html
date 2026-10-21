@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sample: Free Smile Consultation Manchester | YOR Dental (concept)</title>
+<style>
+  :root{
+    --ink:#10233a; --muted:#566a80; --line:#e2e8f0;
+    --bg:#ffffff; --soft:#f4f8fb; --mint:#e8f6f3;
+    --teal:#0f8b7d; --teal-d:#0b6e63; --navy:#10233a;
+    --gold:#d9a441; --notice:#fff4d6; --notice-ink:#6b4e00;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;padding-bottom:72px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+  .notice{background:var(--notice);color:var(--notice-ink);font-size:13.5px;font-weight:600;text-align:center;padding:9px 16px;border-bottom:1px solid #f0dca0}
+  .offer{background:var(--navy);color:#e6eef7;font-size:14px;text-align:center;padding:8px 16px}
+  .offer b{color:#fff}
+  header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.3px}
+  .brand small{display:block;font-weight:500;font-size:12px;color:var(--muted);letter-spacing:0}
+  .top-r{display:flex;align-items:center;gap:16px}
+  .top-phone{font-size:14.5px;color:var(--muted)}
+  .top-phone b{color:var(--ink)}
+  .btn{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15.5px;border:0;cursor:pointer;box-shadow:0 6px 18px rgba(15,139,125,.25);transition:background .15s}
+  .btn:hover{background:var(--teal-d)}
+  .btn.sm{padding:9px 18px;font-size:14px}
+  .btn.ghost{background:#fff;color:var(--teal-d);border:2px solid var(--teal);box-shadow:none}
+  .hero{background:linear-gradient(160deg,#eef8f6 0%,#f7fbff 55%,#fff 100%);padding:48px 0 40px;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(15,139,125,.14),rgba(15,139,125,0) 70%)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start;position:relative}
+  .eyebrow{display:inline-block;background:var(--mint);color:var(--teal-d);font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+  h1{font-size:clamp(32px,5.4vw,52px);line-height:1.08;letter-spacing:-1.2px;font-weight:800;margin-bottom:14px}
+  .lead{font-size:18px;color:var(--muted);max-width:560px;margin-bottom:18px}
+  .rating{display:flex;align-items:center;gap:10px;font-weight:700;margin-bottom:22px;flex-wrap:wrap}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:18px}
+  .rating span.t{font-size:15px}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+  .hero-note{font-size:13.5px;color:var(--muted)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 14px}
+  .stat .n{font-size:22px;font-weight:800;color:var(--teal-d);line-height:1.15}
+  .stat p{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.35}
+  .formcard{background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(16,35,58,.12);padding:26px 24px;border:1px solid var(--line);scroll-margin-top:84px}
+  .formcard h2{font-size:22px;letter-spacing:-.3px;margin-bottom:4px}
+  .formcard .sub{font-size:14px;color:var(--muted);margin-bottom:16px}
+  .field{margin-bottom:12px}
+  label{display:block;font-size:13.5px;font-weight:600;margin-bottom:5px}
+  input[type=text],input[type=tel],input[type=email],select{width:100%;font:inherit;font-size:15.5px;padding:11px 12px;border:1.5px solid #cfd8e3;border-radius:10px;background:#fff;color:var(--ink)}
+  input:focus,select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,139,125,.15)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .radios{display:flex;gap:10px;flex-wrap:wrap}
+  .radios label{display:flex;align-items:center;gap:7px;font-weight:500;border:1.5px solid #cfd8e3;border-radius:10px;padding:9px 12px;font-size:14.5px;cursor:pointer;margin:0}
+  .consent{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:var(--muted);font-weight:400;margin:6px 0 14px}
+  .consent input{margin-top:3px}
+  .formcard .btn{width:100%;font-size:16.5px;padding:15px}
+  .msg{display:none;margin-top:12px;background:var(--mint);color:var(--teal-d);border-radius:10px;padding:12px;font-size:14px;font-weight:600}
+  .msg.show{display:block}
+  .trust{font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px}
+  section{padding:64px 0}
+  section.soft{background:var(--soft)}
+  .sh{text-align:center;max-width:680px;margin:0 auto 34px}
+  .sh h2{font-size:clamp(26px,3.8vw,36px);letter-spacing:-.6px;line-height:1.15;margin-bottom:8px}
+  .sh p{color:var(--muted);font-size:16.5px}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column}
+  .ticon{width:42px;height:42px;border-radius:12px;background:var(--mint);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .tcard h3{font-size:18px;margin-bottom:4px}
+  .price{font-size:15px;color:var(--muted)}
+  .price b{font-size:22px;color:var(--ink);letter-spacing:-.3px}
+  .monthly{display:inline-block;margin-top:8px;background:#fdf4e2;color:#7a5410;font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;align-self:flex-start}
+  .tcard p.d{font-size:14px;color:var(--muted);margin-top:8px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+  .stp{background:#fff;border-radius:16px;padding:24px 22px;border:1px solid var(--line);position:relative}
+  .stp .k{width:38px;height:38px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .stp h3{font-size:18px;margin-bottom:6px}
+  .stp p{font-size:14.5px;color:var(--muted)}
+  .fin{background:var(--navy);color:#fff;border-radius:22px;padding:36px 32px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+  .fin h2{font-size:clamp(24px,3.4vw,32px);letter-spacing:-.5px;line-height:1.2;margin-bottom:10px}
+  .fin p{color:#c9d6e4;font-size:15.5px}
+  .fin ul{list-style:none;display:grid;gap:10px}
+  .fin li{background:rgba(255,255,255,.07);border-radius:12px;padding:13px 16px;font-size:15px}
+  .fin li b{color:#7fe0d3}
+  .fin .small{font-size:12.5px;color:#9fb2c7;margin-top:12px}
+  .reviews{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:900px;margin:0 auto}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px}
+  .rev .stars{font-size:16px;margin-bottom:8px}
+  .rev blockquote{font-size:16.5px;line-height:1.55;margin-bottom:12px}
+  .rev cite{font-style:normal;font-weight:700;font-size:14px;color:var(--muted)}
+  .revnote{text-align:center;color:var(--muted);font-size:14.5px;margin-top:20px}
+  .loc{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .lcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px}
+  .lcard h3{font-size:18px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+  .lcard p{color:var(--muted);font-size:15px}
+  .hours{width:100%;border-collapse:collapse;font-size:15px}
+  .hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+  .hours td:last-child{text-align:right;font-weight:600}
+  .faq{max-width:780px;margin:0 auto}
+  details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 20px;margin-bottom:10px}
+  summary{cursor:pointer;font-weight:700;font-size:16px;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";color:var(--teal);font-size:22px;line-height:1}
+  details[open] summary:after{content:"\2212"}
+  details p{color:var(--muted);font-size:15px;padding-bottom:16px}
+  .final{background:linear-gradient(135deg,var(--teal) 0%,#13a593 100%);color:#fff;text-align:center;padding:60px 0}
+  .final h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.6px;margin-bottom:8px}
+  .final p{color:#e3f6f3;font-size:17px;margin-bottom:22px}
+  .final .btn{background:#fff;color:var(--teal-d);box-shadow:none}
+  .final .ph{display:block;margin-top:14px;font-size:15px;color:#e3f6f3}
+  footer{background:var(--navy);color:#9fb2c7;font-size:13.5px;padding:26px 0;text-align:center}
+  footer b{color:#fff}
+  .mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:10px 12px;gap:10px;box-shadow:0 -6px 20px rgba(16,35,58,.08)}
+  .mbar .btn{flex:1;text-align:center;padding:12px 10px}
+  .mbar .call{background:#fff;color:var(--teal-d);border:2px solid var(--teal);box-shadow:none}
+  @media (max-width:900px){
+    .hero-grid,.fin,.loc{grid-template-columns:1fr}
+    .tgrid,.steps{grid-template-columns:1fr 1fr}
+    .stats{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:620px){
+    .top-phone{display:none}
+    .tgrid,.steps,.reviews{grid-template-columns:1fr}
+    .two{grid-template-columns:1fr}
+    .mbar{display:flex}
+    .hero{padding:32px 0 30px}
+    section{padding:48px 0}
+    .fin{padding:26px 20px}
+    .wrap{padding:0 16px}
+    .formcard{padding:22px 16px}
+  }
+  @media (max-width:380px){
+    .brand{font-size:17px}
+    .btn.sm{padding:8px 14px;font-size:13px}
+    .stat .n{font-size:19px}
+  }
+</style>
+</head>
+<body>
+
+<div class="notice">Concept landing page prepared by Usman Gull for YOR Dental. Sample only, not a live page.</div>
+<div class="offer"><b>Free, no-obligation consultation</b> with a Patient Journey Coordinator</div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#0f8b7d"/><path d="M10 11c0-2 2-3 3.5-2.4L16 9.5l2.5-.9C20 8 22 9 22 11c0 2.5-.8 4-1.4 6.5-.5 2.2-.8 5.5-2.1 5.5-1.2 0-1.3-3.5-2.5-3.5s-1.3 3.5-2.5 3.5c-1.3 0-1.6-3.3-2.1-5.5C10.8 15 10 13.5 10 11z" fill="#fff"/></svg>
+      <div>YOR Dental<small>MediaCityUK, Salford</small></div>
+    </div>
+    <div class="top-r">
+      <div class="top-phone">Call <b>0161 503 0915</b></div>
+      <a class="btn sm" href="#book">Book free consultation</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Independent practice, Manchester</span>
+      <h1>Free smile consultation at MediaCityUK</h1>
+      <p class="lead">Talk through Invisalign, composite bonding, whitening or implants with one of our Patient Journey Coordinators, face to face or virtually. Clear prices, 0% finance options and no obligation.</p>
+      <div class="rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="t">4.9 from 500+ Google reviews</span></div>
+      <div class="hero-ctas">
+        <a class="btn" href="#book">Book my free consultation</a>
+        <a class="btn ghost" href="#treatments">See treatment prices</a>
+      </div>
+      <p class="hero-note">Prefer to talk? Call 0161 503 0915, Monday to Friday from 8am.</p>
+      <div class="stats">
+        <div class="stat"><div class="n">500+</div><p>Google reviews, rated 4.9</p></div>
+        <div class="stat"><div class="n">0%</div><p>Finance on treatments over £500</p></div>
+        <div class="stat"><div class="n">£2200</div><p>Invisalign from</p></div>
+        <div class="stat"><div class="n">10,000</div><p>New smiles</p></div>
+      </div>
+    </div>
+
+    <div class="formcard" id="book">
+      <h2>Book your free consultation</h2>
+      <p class="sub">Takes under a minute. A Patient Journey Coordinator will contact you to arrange a time.</p>
+      <form onsubmit="event.preventDefault();document.getElementById('msg').classList.add('show');">
+        <div class="field"><label for="name">Full name</label><input id="name" type="text" autocomplete="name" required></div>
+        <div class="two">
+          <div class="field"><label for="phone">Mobile number</label><input id="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field"><label for="interest">Treatment interest</label>
+          <select id="interest" required>
+            <option value="">Choose a treatment</option>
+            <option>Invisalign</option>
+            <option>Composite bonding</option>
+            <option>Smile makeover</option>
+            <option>Implants</option>
+            <option>Whitening</option>
+            <option>General dentistry</option>
+          </select>
+        </div>
+        <div class="field"><label for="time">Preferred contact time</label>
+          <select id="time">
+            <option>Morning (8am to 12pm)</option>
+            <option>Afternoon (12pm to 4pm)</option>
+            <option>Early evening (4pm to 7pm)</option>
+          </select>
+        </div>
+        <div class="field"><label>Consultation type</label>
+          <div class="radios">
+            <label><input type="radio" name="ctype" checked> Face to face</label>
+            <label><input type="radio" name="ctype"> Virtual</label>
+          </div>
+        </div>
+        <label class="consent"><input type="checkbox" required> I agree to YOR Dental contacting me about my enquiry by phone, SMS or email.</label>
+        <button class="btn" type="submit">Request my free consultation</button>
+        <div class="msg" id="msg" role="status">This is a sample form. On the live page, enquiries reach your Patient Journey Coordinators instantly with an automatic reply.</div>
+        <p class="trust">Free and no obligation. Your details are only used to arrange your consultation.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="treatments">
+  <div class="wrap">
+    <div class="sh"><h2>Popular treatments and from prices</h2><p>Your exact price is confirmed after your consultation. Monthly figures are shown where available.</p></div>
+    <div class="tgrid">
+      <div class="tcard">
+        <div class="ticon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="8" rx="4" fill="none" stroke="#0f8b7d" stroke-width="2"/></svg></div>
+        <h3>Invisalign</h3>
+        <div class="price">from <b>£2200</b></div>
+        <span class="monthly">0% finance, £999 deposit, from £83 a month</span>
+        <p class="d">Clear aligners to straighten teeth discreetly.</p>
+      </div>
+      <div class="tcard">
+        <div class="ticon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16v6H4z" fill="none" stroke="#0f8b7d" stroke-width="2"/><path d="M9 9v6M15 9v6" stroke="#0f8b7d" stroke-width="2"/></svg></div>
+        <h3>Composite bonding</h3>
+        <div class="price">from <b>£1575</b> for 6 teeth</div>
+        <span class="monthly">Per tooth from £200</span>
+        <p class="d">Reshape chips, gaps and uneven edges.</p>
+      </div>
+      <div class="tcard">
+        <div class="ticon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11c2 4 12 4 14 0" fill="none" stroke="#0f8b7d" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Mini smile makeover</h3>
+        <div class="price">from <b>£2250</b></div>
+        <span class="monthly">0% finance on treatments over £500</span>
+        <p class="d">A planned combination of treatments for a fresh smile.</p>
+      </div>
+      <div class="tcard">
+        <div class="ticon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="#0f8b7d" stroke-width="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="#0f8b7d" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Enlighten whitening</h3>
+        <div class="price">from <b>£656</b></div>
+        <span class="monthly">0% finance on treatments over £500</span>
+        <p class="d">Professional whitening planned by your dentist.</p>
+      </div>
+      <div class="tcard">
+        <div class="ticon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M8 8h8M9 13h6M10 18h4" stroke="#0f8b7d" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Dental implants</h3>
+        <div class="price">from <b>£2573</b> per implant</div>
+        <span class="monthly">0% finance on treatments over £500</span>
+        <p class="d">A long term replacement for missing teeth.</p>
+      </div>
+      <div class="tcard">
+        <div class="ticon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10c3-4 15-4 18 0M5 10v4M9 10v5M15 10v5M19 10v4" fill="none" stroke="#0f8b7d" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Teeth in a day</h3>
+        <div class="price">from <b>£16,000</b> per arch</div>
+        <span class="monthly">£335 a month over 60 months</span>
+        <p class="d">A full arch of fixed teeth on implants.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh"><h2>How it works</h2><p>Three simple steps from enquiry to your new smile.</p></div>
+    <div class="steps">
+      <div class="stp"><div class="k">1</div><h3>Book your free consultation</h3><p>Fill in the short form or call us. Choose face to face at MediaCityUK or a virtual appointment.</p></div>
+      <div class="stp"><div class="k">2</div><h3>Meet a Patient Journey Coordinator</h3><p>Talk through your goals, your options and the costs, with no pressure and no obligation.</p></div>
+      <div class="stp"><div class="k">3</div><h3>Start with 0% finance</h3><p>If you go ahead, spread the cost of treatments over £500 with 0% finance, subject to status.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap">
+    <div class="fin">
+      <div>
+        <h2>Spread the cost of your treatment</h2>
+        <p>Treatments over £500 can be paid monthly, so you can start sooner without paying everything up front. Your coordinator will explain the options at your free consultation.</p>
+      </div>
+      <div>
+        <ul>
+          <li><b>0% finance</b> over 6 or 12 months</li>
+          <li><b>Extended finance</b> over 24 or 36 months</li>
+          <li>Available on treatments <b>over £500</b></li>
+        </ul>
+        <p class="small">Finance is subject to status. Terms are confirmed before you commit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh"><h2>What our patients say</h2><p>Rated 4.9 from 500+ Google reviews.</p></div>
+    <div class="reviews">
+      <div class="rev"><div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"The only dentist who managed to treat me with my medical difficulties. Made me feel relaxed and very happy with the results. Wouldn't go anywhere else!"</blockquote><cite>Rosie</cite></div>
+      <div class="rev"><div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Been with YOR Dental for 10 years now. Always fabulous service in a relaxed atmosphere."</blockquote><cite>Adam</cite></div>
+    </div>
+    <p class="revnote">Independent practice co-founded by Dr Deepa Vakil and Dr Hitesh Panchal.</p>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap">
+    <div class="sh"><h2>Find us at MediaCityUK</h2></div>
+    <div class="loc">
+      <div class="lcard">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c-4 0-7 3-7 7 0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" fill="none" stroke="#0f8b7d" stroke-width="2"/><circle cx="12" cy="9" r="2.5" fill="#0f8b7d"/></svg>Address</h3>
+        <p>YOR Dental<br>Unit 1 Digital Park, Pacific Way<br>MediaCityUK, Salford M50 1DR</p>
+        <p style="margin-top:12px">Phone: <b style="color:var(--ink)">0161 503 0915</b></p>
+      </div>
+      <div class="lcard">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#0f8b7d" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="#0f8b7d" stroke-width="2" stroke-linecap="round"/></svg>Opening hours</h3>
+        <table class="hours">
+          <tr><td>Monday to Thursday</td><td>8am to 7pm</td></tr>
+          <tr><td>Friday</td><td>8am to 4pm</td></tr>
+          <tr><td>Emergency treatment</td><td>By arrangement</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh"><h2>Questions before you book</h2></div>
+    <div class="faq">
+      <details><summary>Is the consultation really free?</summary><p>Yes. Your consultation with a Patient Journey Coordinator is free and there is no obligation to go ahead with any treatment.</p></details>
+      <details><summary>Can I have my consultation virtually?</summary><p>Yes. You can choose a face to face consultation at our MediaCityUK practice or a virtual consultation from home. Just pick your preference on the form.</p></details>
+      <details><summary>How does finance work?</summary><p>Treatments over £500 can be spread with 0% finance over 6 or 12 months, or extended finance over 24 or 36 months. Finance is subject to status, and your coordinator will explain the options and monthly costs before you decide.</p></details>
+      <details><summary>How long does Invisalign take?</summary><p>It depends on how much your teeth need to move. Some cases are quicker and others take longer, so your dentist will give you an expected timeline once your smile has been assessed.</p></details>
+      <details><summary>What should I bring?</summary><p>Bring a list of any medicines you take and any relevant medical history, plus questions about the treatments you are interested in. For a virtual consultation, a phone or laptop with a camera is all you need.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="final">
+  <div class="wrap">
+    <h2>Ready to talk about your smile?</h2>
+    <p>Book a free, no-obligation consultation with a Patient Journey Coordinator.</p>
+    <a class="btn" href="#book">Book my free consultation</a>
+    <span class="ph">Or call 0161 503 0915</span>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><b>YOR Dental</b>, Unit 1 Digital Park, Pacific Way, MediaCityUK, Salford M50 1DR<br>Concept landing page prepared by Usman Gull. Sample only, not a live page.</div>
+</footer>
+
+<div class="mbar">
+  <a class="btn call" href="#book">Call</a>
+  <a class="btn" href="#book">Book free consultation</a>
+</div>
+
+</body>
+</html>
