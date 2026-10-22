@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sample: Consultation with Mr Mark Gorman | Gorman Plastic Surgery (concept)</title>
+<style>
+  :root{
+    --ink:#1a2230; --muted:#5b6575; --line:#e6e2da;
+    --bg:#fbfaf7; --soft:#f3efe7; --white:#fff;
+    --accent:#1d3b4f; --accent-d:#142a39; --gold:#b8945a; --gold-l:#e9dcc4;
+    --ok:#2f6b4f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;padding-bottom:72px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{line-height:1.15;letter-spacing:-.4px}
+  h2{font-size:clamp(26px,4vw,34px);margin-bottom:12px}
+  .lead{color:var(--muted);max-width:640px;margin-bottom:32px;font-size:17px}
+  section{padding:64px 0}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:15px 26px;border-radius:999px;font-size:16px;border:0;cursor:pointer;text-align:center}
+  .btn:hover{background:var(--accent-d)}
+  .btn.gold{background:var(--gold);color:#fff}
+  .btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+
+  .notice{background:#fff4d6;color:#5a4410;font-size:13.5px;text-align:center;padding:9px 16px;border-bottom:1px solid #ecd9a0;font-weight:600}
+  .offer{background:var(--accent-d);color:var(--gold-l);font-size:13.5px;text-align:center;padding:7px 16px;letter-spacing:.3px;font-weight:600}
+  header.top{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+  header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+  .brand{font-weight:800;font-size:17px;color:var(--ink);line-height:1.25}
+  .brand small{display:block;font-weight:500;font-size:12px;color:var(--muted);letter-spacing:.2px}
+  header.top .btn{padding:10px 18px;font-size:14px}
+
+  .hero{background:var(--soft);padding:56px 0 64px}
+  .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:14px}
+  .hero h1{font-size:clamp(32px,6vw,54px);font-weight:800;margin-bottom:16px}
+  .proof{font-weight:600;color:var(--ink);margin-bottom:18px}
+  .hero p.sub{color:var(--muted);font-size:18px;max-width:540px;margin-bottom:26px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .reassure{font-size:13.5px;color:var(--muted);margin-top:14px}
+  .creds{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .creds h3{font-size:18px;margin-bottom:4px}
+  .creds .post{font-size:13.5px;color:var(--gold);font-weight:700;letter-spacing:.6px;margin-bottom:14px}
+  .creds ul{list-style:none}
+  .creds li{font-size:14.5px;color:var(--muted);padding:8px 0;border-top:1px solid var(--line)}
+  .creds li b{color:var(--ink)}
+
+  .stats{background:var(--accent);color:#fff;padding:28px 0}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+  .stat .n{font-size:30px;font-weight:800;color:var(--gold-l);line-height:1.1}
+  .stat p{font-size:13.5px;color:#cdd8e0;margin-top:4px}
+
+  .procs .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:14px;padding:24px}
+  .card h3{font-size:18px;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:15px}
+
+  .book{background:var(--white)}
+  .book .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+  .checks{list-style:none;margin-top:8px}
+  .checks li{padding-left:22px;position:relative;margin-bottom:12px;color:var(--ink)}
+  .checks li:before{content:"";position:absolute;left:0;top:8px;width:10px;height:10px;border-radius:2px;background:var(--gold)}
+  form{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 10px 30px rgba(26,34,48,.06)}
+  form h3{font-size:21px;margin-bottom:4px}
+  form .hint{font-size:14px;color:var(--muted);margin-bottom:18px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  label{display:block;font-size:13.5px;font-weight:600;margin-bottom:5px}
+  .f{margin-bottom:14px}
+  input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;padding:12px 13px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
+  textarea{min-height:90px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);font-weight:400;margin:6px 0 16px}
+  .consent input{margin-top:3px;accent-color:var(--accent)}
+  form .btn{width:100%}
+  .msg{display:none;margin-top:14px;background:#eaf3ee;border:1px solid #bcd9c8;color:var(--ok);padding:12px 14px;border-radius:10px;font-size:14px;font-weight:600}
+
+  .why .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+  .price{background:var(--white)}
+  .pbox{border:2px dashed var(--gold);border-radius:16px;padding:28px;background:#fffdf8;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .pitem{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
+  .pitem h3{font-size:17px;margin-bottom:8px}
+  .pitem .ph{font-size:26px;font-weight:800;color:var(--gold);letter-spacing:1px}
+  .pitem p{font-size:13.5px;color:var(--muted);margin-top:4px}
+  .pnote{grid-column:1/-1;font-size:14.5px;color:var(--ink);background:var(--gold-l);border-radius:10px;padding:12px 16px}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+  .st{background:var(--white);border-radius:14px;padding:26px;border:1px solid var(--line)}
+  .st:before{counter-increment:s;content:counter(s);display:flex;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;align-items:center;justify-content:center;margin-bottom:14px}
+  .st h3{font-size:18px;margin-bottom:6px}
+  .st p{color:var(--muted);font-size:15px}
+
+  .testi{background:var(--accent);color:#fff}
+  .testi blockquote{max-width:760px;margin:0 auto;text-align:center;font-size:clamp(18px,2.6vw,23px);line-height:1.5}
+  .testi cite{display:block;font-style:normal;margin-top:18px;font-size:15px;color:var(--gold-l);font-weight:700}
+  .awards{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .awards span{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 14px;font-size:13px;color:#dbe4ea}
+
+  .locs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .loc{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .loc h3{font-size:20px;margin-bottom:4px}
+  .loc .addr{color:var(--muted);font-size:15px}
+
+  .faq details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+  .faq summary{font-weight:700;cursor:pointer}
+  .faq details p{color:var(--muted);margin-top:10px;font-size:15px}
+
+  .final{background:var(--accent);color:#fff;text-align:center}
+  .final p{color:#cdd8e0;max-width:560px;margin:0 auto 24px}
+
+  footer{background:var(--accent-d);color:#9fb0bd;font-size:13px;padding:24px 0;text-align:center}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;display:none;padding:10px 12px;background:rgba(255,255,255,.97);border-top:1px solid var(--line);z-index:30;box-shadow:0 -6px 20px rgba(26,34,48,.08)}
+  .mbar .btn{display:block;padding:13px 10px;font-size:15px}
+
+  @media (max-width:860px){
+    .hero .wrap,.book .wrap{grid-template-columns:1fr}
+    .stats .wrap{grid-template-columns:repeat(2,1fr)}
+    .procs .cards,.why .cards,.pbox,.locs{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .mbar{display:block}
+    header.top .btn{display:none}
+  }
+  @media (max-width:420px){
+    .wrap{padding:0 16px}
+    section{padding:48px 0}
+    .grid2,.steps{grid-template-columns:1fr}
+    form{padding:20px}
+    .stat .n{font-size:24px}
+    .pbox{padding:18px}
+    .creds{padding:20px}
+  }
+</style>
+</head>
+<body>
+
+<div class="notice">Sample page prepared by Usman Gull for Gorman Plastic Surgery. Concept only, not a live page.</div>
+<div class="offer">Consultations in Hale, Altrincham and at Pines Hospital, Manchester</div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Gorman Plastic Surgery<small>Mr Mark Gorman, Consultant Plastic Surgeon</small></div>
+    <a class="btn" href="#enquire">Request a consultation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Breast, body and face surgery</span>
+      <h1>Book a consultation with Mr Mark Gorman</h1>
+      <p class="proof">5/5 from 32 Doctify reviews &middot; 4.6 from 21 Trustpilot reviews</p>
+      <p class="sub">Consultant plastic surgeon with 20 years of experience. Meet Mr Gorman in person, talk through what you want to achieve, and leave with a clear plan and time to decide.</p>
+      <div class="cta-row">
+        <a class="btn gold" href="#enquire">Request my consultation</a>
+        <a class="btn ghost" href="#how">How it works</a>
+      </div>
+      <p class="reassure">No pressure to proceed. Your consultation is a conversation, not a sales pitch.</p>
+    </div>
+    <div class="creds">
+      <h3>Mr Mark Gorman</h3>
+      <div class="post">FRCS (PLAST) MD MEd MSc PGCERT</div>
+      <ul>
+        <li><b>20 years</b> of experience in plastic surgery</li>
+        <li><b>GMC registered</b>, number 6144604</li>
+        <li><b>MSc Microsurgery</b>, Queen Mary University of London</li>
+        <li><b>MD Skin Cancer</b>, University of Glasgow</li>
+        <li><b>PGCert Surgical Sciences</b>, University of Edinburgh</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="n">5/5</div><p>Doctify, 32 reviews</p></div>
+    <div class="stat"><div class="n">4.6</div><p>Trustpilot, 21 reviews</p></div>
+    <div class="stat"><div class="n">20</div><p>Years of experience</p></div>
+    <div class="stat"><div class="n">2</div><p>Consultation locations</p></div>
+  </div>
+</div>
+
+<section class="procs" id="procedures">
+  <div class="wrap">
+    <h2>Procedures</h2>
+    <p class="lead">The procedures patients most often see Mr Gorman for. Every plan is agreed with you at consultation.</p>
+    <div class="cards">
+      <div class="card"><h3>Breast augmentation</h3><p>Implants chosen with you for size and shape, with the aim of a natural result that suits your body.</p></div>
+      <div class="card"><h3>Breast reduction</h3><p>Smaller, lighter breasts for comfort and shape, often combined with an uplift.</p></div>
+      <div class="card"><h3>Breast uplift</h3><p>Mastopexy to lift and reshape, with or without implants.</p></div>
+      <div class="card"><h3>Implant removal and revision</h3><p>For patients with older implants, including removal and reshaping of the breast.</p></div>
+      <div class="card"><h3>Tummy tuck and mummy makeover</h3><p>Abdominoplasty, often combined with breast surgery after pregnancy or weight loss.</p></div>
+      <div class="card"><h3>Arm lift and body contouring</h3><p>Removal of loose skin after weight loss, planned around your goals and recovery.</p></div>
+      <div class="card"><h3>Deep plane facelift</h3><p>Facial surgery for a refreshed, natural looking result.</p></div>
+      <div class="card"><h3>Skin cancer and lipoma surgery</h3><p>Removal of skin cancers and lipomas by a surgeon with an MD in skin cancer.</p></div>
+      <div class="card"><h3>Non-surgical treatments</h3><p>Anti-wrinkle injections and dermal fillers alongside surgical care.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="enquire">
+  <div class="wrap">
+    <div>
+      <h2>Request your consultation</h2>
+      <p class="lead">Tell us which procedure you are interested in and where you would like to be seen. The team will be in touch to arrange a time.</p>
+      <ul class="checks">
+        <li>See Mr Gorman in person, not a sales adviser</li>
+        <li>Your questions answered in plain English</li>
+        <li>Time to reflect before you decide</li>
+        <li>Hale, Altrincham or Pines Hospital, Manchester</li>
+      </ul>
+    </div>
+    <form onsubmit="event.preventDefault();document.getElementById('msg').style.display='block';">
+      <h3>Consultation request</h3>
+      <p class="hint">Takes under a minute.</p>
+      <div class="grid2">
+        <div class="f"><label for="n">Full name</label><input id="n" type="text" autocomplete="name" required></div>
+        <div class="f"><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="f"><label for="e">Email</label><input id="e" type="email" autocomplete="email"></div>
+      <div class="grid2">
+        <div class="f"><label for="pr">Procedure</label>
+          <select id="pr" required>
+            <option value="">Choose a procedure</option>
+            <option>Breast augmentation</option>
+            <option>Breast reduction</option>
+            <option>Breast uplift</option>
+            <option>Implant removal or revision</option>
+            <option>Tummy tuck</option>
+            <option>Mummy makeover</option>
+            <option>Arm lift or body contouring</option>
+            <option>Deep plane facelift</option>
+            <option>Skin cancer or lipoma</option>
+            <option>Non-surgical treatment</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="f"><label for="l">Preferred location</label>
+          <select id="l"><option>Hale, Altrincham</option><option>Pines Hospital, Manchester</option><option>No preference</option></select>
+        </div>
+      </div>
+      <div class="f"><label for="m">Anything you would like Mr Gorman to know? (optional)</label><textarea id="m"></textarea></div>
+      <label class="consent"><input type="checkbox" required>I agree to be contacted about my enquiry by phone, SMS or email.</label>
+      <button class="btn gold" type="submit">Request my consultation</button>
+      <div class="msg" id="msg">This is a sample form and nothing has been sent. On the live page, every request is logged, tracked and answered with an instant confirmation.</div>
+    </form>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2>Why patients choose Mr Gorman</h2>
+    <p class="lead">What his patients say most often in their reviews.</p>
+    <div class="cards">
+      <div class="card"><h3>He listens</h3><p>Reviewers repeatedly say they felt heard, and that the result matched what they asked for.</p></div>
+      <div class="card"><h3>Everything explained</h3><p>Patients describe clear explanations of the procedure, the recovery and what to expect at every stage.</p></div>
+      <div class="card"><h3>No pushy sales</h3><p>Consultations focus on what suits you, including help choosing the right size and approach.</p></div>
+      <div class="card"><h3>Natural results</h3><p>Natural looking results and tidy scars are a common theme across his reviews.</p></div>
+      <div class="card"><h3>Care after surgery</h3><p>Follow-up calls and clinic appointments, with the team available for questions during recovery.</p></div>
+      <div class="card"><h3>Highly qualified</h3><p>FRCS (Plast), with postgraduate degrees in microsurgery, skin cancer and surgical education.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="price">
+  <div class="wrap">
+    <h2>Recommended: show from prices</h2>
+    <p class="lead">Placeholder block for the live page.</p>
+    <div class="pbox">
+      <div class="pitem"><h3>Consultation fee</h3><div class="ph">&pound; ___</div><p>Redeemable against surgery, if offered</p></div>
+      <div class="pitem"><h3>Breast augmentation from</h3><div class="ph">&pound; ___</div><p>Including hospital stay and aftercare</p></div>
+      <div class="pitem"><h3>Finance example</h3><div class="ph">&pound; ___ /mo</div><p>Subject to status, if offered</p></div>
+      <div class="pnote">Your consultation fee and from prices go here. Pages that show a starting price attract better qualified enquiries than pages that hide it.</div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How your consultation works</h2>
+    <p class="lead">Four steps from first enquiry to a decision you are comfortable with.</p>
+    <div class="steps">
+      <div class="st"><h3>Send your request</h3><p>Choose a procedure and location. The team will contact you to arrange a time.</p></div>
+      <div class="st"><h3>Meet Mr Gorman</h3><p>Talk through what you want to achieve. He examines, explains the options and answers every question.</p></div>
+      <div class="st"><h3>Your written plan</h3><p>You receive the recommended procedure, recovery time and cost, so you can think it over at home.</p></div>
+      <div class="st"><h3>Time to decide</h3><p>A cooling off period before any surgery, and a second consultation if you would like one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="testi">
+  <div class="wrap">
+    <blockquote>
+      "Professional, straightforward and he took the time to answer all my questions and explain the procedure in great length. No pushy sales pitch."
+      <cite>Dawn G., breast reduction, Trustpilot</cite>
+    </blockquote>
+    <div class="awards">
+      <span>Doctify: 5/5 from 32 reviews</span>
+      <span>Trustpilot: 4.6 from 21 reviews</span>
+      <span>GMC number 6144604</span>
+    </div>
+  </div>
+</section>
+
+<section id="locations">
+  <div class="wrap">
+    <h2>Where you can be seen</h2>
+    <p class="lead">Choose the location that suits you when you enquire.</p>
+    <div class="locs">
+      <div class="loc">
+        <h3>Hale, Altrincham</h3>
+        <p class="addr">Pinewood House, 28 Victoria Road, Hale WA15 9AD</p>
+      </div>
+      <div class="loc">
+        <h3>Pines Hospital, Manchester</h3>
+        <p class="addr">192 Altrincham Road, Wythenshawe, Manchester M22 4RZ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Consultation questions</h2>
+    <p class="lead">Quick answers to what patients ask most. Mr Gorman will go through your own case in person.</p>
+    <details open><summary>Who will I see at my consultation?</summary><p>You will see Mr Mark Gorman himself. He will talk through your goals, examine you where needed and explain the options that suit you.</p></details>
+    <details><summary>Do I have to decide on the day?</summary><p>No. You will leave with a clear plan and time to think it over. A cooling off period applies before any cosmetic surgery, and you can book a second consultation if you have more questions.</p></details>
+    <details><summary>Can I have more than one procedure at once?</summary><p>Some patients combine procedures, for example breast surgery with a tummy tuck as part of a mummy makeover. Whether that is right for you is discussed at your consultation.</p></details>
+    <details><summary>Where does surgery take place?</summary><p>Mr Gorman primarily practises at Pines Hospital in Wythenshawe, Manchester. Where your surgery takes place will be confirmed in your written plan.</p></details>
+    <details><summary>What aftercare is included?</summary><p>Patients describe follow-up phone calls and clinic appointments during recovery. The exact aftercare for your procedure will be set out in your written plan.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Ready to talk it through?</h2>
+    <p>Request a consultation with Mr Mark Gorman in Hale or at Pines Hospital, Manchester.</p>
+    <a class="btn gold" href="#enquire">Request my consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Gorman Plastic Surgery. Sample page prepared by Usman Gull. Concept only, not a live page.</div>
+</footer>
+
+<div class="mbar">
+  <a class="btn gold" href="#enquire">Request a consultation</a>
+</div>
+
+</body>
+</html>
