@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xprez Marketing 30 Day Tracking Plan</title>
+<style>
+:root{
+  --navy:#0b1f36; --card:#12355b; --blue:#0f4c81; --gold:#c8a24a; --gold-l:#e3c77f;
+  --bg:#e9eff6; --white:#ffffff; --red:#b3261e; --green:#1f6f43;
+  --ink:#16202b; --muted:#4d5b6a; --line:#d5dee8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h1,h2,h3{line-height:1.25}
+strong{font-weight:700}
+.gold{color:var(--gold)}
+.hl{background:#f6ecd2;padding:0 4px;border-radius:3px;font-weight:700}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b9c6d6;border-bottom:1px solid #22406a;padding-bottom:16px;margin-bottom:44px}
+.label{color:var(--gold-l);text-transform:uppercase;letter-spacing:.14em;font-size:13px;font-weight:700}
+.hero h1{font-size:44px;margin:10px 0 14px}
+.hero .outcome{font-size:20px;max-width:760px;color:#dbe4ee}
+.hero .outcome strong{color:var(--gold-l)}
+.meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:24px 0 34px;font-size:14px;color:#b9c6d6}
+.meta span b{color:#fff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:20px}
+.kpi .n{font-size:38px;font-weight:800;color:var(--gold-l);line-height:1.1}
+.kpi .t{font-size:14px;color:#cdd8e4;margin-top:6px}
+
+/* section headings */
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
+.sh .num{color:var(--blue);font-weight:800;font-size:15px;letter-spacing:.08em}
+.sh h2{font-size:30px}
+.intro{max-width:780px;color:var(--muted);font-size:17px;margin-bottom:34px}
+.dark .sh .num{color:var(--gold-l)}
+.dark .sh h2{color:#fff}
+.dark .intro{color:#c3cfdc}
+
+/* finding cards */
+.find{background:var(--white);border-radius:10px;box-shadow:0 6px 18px rgba(11,31,54,.08);padding:26px;margin-bottom:22px;border-left:6px solid var(--blue)}
+.find.med{border-left-color:var(--gold)}
+.find-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:10px}
+.find h3{font-size:20px}
+.tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.tag.high{background:var(--blue);color:#fff}
+.tag.medium{background:var(--gold);color:var(--navy)}
+.find p{color:var(--muted);margin-bottom:16px}
+
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.dt th{background:var(--navy);color:#fff;font-weight:600}
+.dt td:first-child{font-weight:700;color:var(--blue);width:34px}
+.dt td:nth-child(2){font-weight:600;width:30%}
+.cmp th{font-weight:700}
+.cmp th.bad{color:var(--red);border-bottom:2px solid var(--red)}
+.cmp th.good{color:var(--green);border-bottom:2px solid var(--green)}
+.cmp td:first-child{font-weight:600;width:24%}
+.cmp td.bad{color:var(--red)}
+.cmp td.good{color:var(--green)}
+.tablewrap{overflow-x:auto}
+
+/* call path diagram */
+.paths{display:grid;gap:16px}
+.path{border:1px solid var(--line);border-radius:8px;padding:16px}
+.path .pt{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.path.bad .pt{color:var(--red)}
+.path.good .pt{color:var(--green)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.node{background:var(--bg);border-radius:6px;padding:8px 12px;font-size:14px;font-weight:600}
+.path.bad .node.end{background:#f7e3e1;color:var(--red)}
+.path.good .node.end{background:#dff0e6;color:var(--green)}
+.node.wc{background:var(--navy);color:var(--gold-l)}
+.arrow{width:26px;height:2px;background:#9aa9b9;position:relative}
+.arrow:after{content:"";position:absolute;right:-1px;top:-4px;border-left:7px solid #9aa9b9;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+
+/* plan */
+.white{background:var(--white)}
+.timeline{background:var(--navy);border-radius:12px;padding:24px;color:#fff;margin-bottom:34px}
+.tl-head,.tl-row{display:grid;grid-template-columns:200px repeat(4,1fr);gap:6px;align-items:center}
+.tl-head{font-size:12px;color:var(--gold-l);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px}
+.tl-row{margin-bottom:10px}
+.tl-row .lbl{font-size:14px;color:#dbe4ee}
+.bar{height:22px;background:var(--gold);border-radius:4px}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:56px 1fr;gap:16px;border:1px solid var(--line);border-radius:10px;padding:20px;background:#fbfcfe}
+.step .sn{width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:18px;margin-bottom:4px}
+.step .when{font-size:13px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.step ul{margin:8px 0 8px 18px;color:var(--muted);font-size:15px}
+.step li{margin-bottom:4px}
+.step .why{font-size:14px;color:var(--ink);border-top:1px dashed var(--line);padding-top:8px;margin-top:6px}
+.step .why b{color:var(--blue)}
+
+/* results */
+.dark{background:var(--navy);color:#fff}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rc{background:var(--card);border-radius:10px;padding:22px}
+.rc .who{font-size:13px;color:#b9c6d6;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.rc .big{font-size:36px;font-weight:800;color:var(--gold-l);margin:8px 0 2px;line-height:1.1}
+.rc .what{font-size:15px;color:#dbe4ee;margin-bottom:16px}
+.bl{font-size:13px;color:#b9c6d6;margin-bottom:4px;display:flex;justify-content:space-between}
+.track{background:#0b2a4a;border-radius:4px;height:14px;margin-bottom:12px}
+.fill{height:14px;border-radius:4px;background:#5d7795}
+.fill.g{background:var(--gold)}
+.rc .lever{font-size:13.5px;color:#c3cfdc;border-top:1px solid #22406a;padding-top:10px;margin-top:6px}
+
+/* next */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nc{background:var(--white);border-top:5px solid var(--gold);border-radius:10px;padding:22px;box-shadow:0 6px 18px rgba(11,31,54,.06)}
+.nc .k{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.nc h3{font-size:18px;margin:6px 0 8px}
+.nc p{color:var(--muted);font-size:15px}
+
+.cta{background:var(--gold);color:var(--navy);padding:48px 0;text-align:center}
+.cta h2{font-size:30px;margin-bottom:8px}
+.cta p{font-size:18px}
+footer{background:var(--navy);color:#b9c6d6;padding:26px 0;font-size:14px;text-align:center}
+footer b{color:#fff}
+
+@media (max-width:820px){
+  .kpis,.res,.next{grid-template-columns:1fr}
+  .tl-head,.tl-row{grid-template-columns:110px repeat(4,1fr)}
+  .tl-row .lbl{font-size:12.5px}
+  .hero h1{font-size:34px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 16px}
+  section{padding:48px 0}
+  .hero h1{font-size:30px}
+  .hero .outcome{font-size:17px}
+  .sh h2{font-size:24px}
+  .find{padding:20px}
+  .find-head{flex-direction:column}
+  .step{grid-template-columns:1fr}
+  .timeline{padding:16px}
+  .tl-head,.tl-row{grid-template-columns:86px repeat(4,1fr);gap:4px}
+  .tl-head{font-size:10.5px;letter-spacing:.04em}
+  .tl-row .lbl{font-size:11.5px}
+  .bar{height:18px}
+  .dt td:nth-child(2){width:auto}
+  table{font-size:13.5px}
+  th,td{padding:9px 8px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><span>Lead tracking plan</span><span>October 22, 2026</span></div>
+    <div class="label">30 day plan prepared for</div>
+    <h1>Xprez Marketing</h1>
+    <p class="outcome">Every call, form and click ID reaches Google Ads as the right conversion, and <strong>the lead count matches across WhatConverts, Google Ads, GA4 and the CRM</strong>, documented as one SOP you can repeat on the next contractor account.</p>
+    <div class="meta">
+      <span>Scope: <b>WhatConverts, Google Ads, GTM, GA4, CRM</b></span>
+      <span>Accounts: <b>Contractor and home services clients</b></span>
+      <span>Length: <b>30 days, then ongoing</b></span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="n">72 hrs</div><div class="t">Click IDs sitting in WhatConverts with zero conversions in Google Ads. The first gap we close.</div></div>
+      <div class="kpi"><div class="n">5</div><div class="t">Number sources on one system: landing page pools, call assets, Local Services Ads, Google Business Profile, offline.</div></div>
+      <div class="kpi"><div class="n">4</div><div class="t">Systems reconciled every week, with every gap explained in writing.</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sh"><span class="num">01</span><h2>What we found</h2></div>
+    <p class="intro">Your brief describes three separate breaks that show up as one symptom: <span class="hl">leads exist in WhatConverts but Google Ads cannot see them or bid on them.</span> Each one has a known cause and a test that proves it.</p>
+
+    <div class="find">
+      <div class="find-head"><h3>Click IDs are captured but never become Google Ads conversions</h3><span class="tag high">High impact</span></div>
+      <p>A gclid in WhatConverts proves the click was captured. A zero in Google Ads after 72 hours means <strong>the import step is failing or the result is reported somewhere you are not looking.</strong> This is the order we check it in, cheapest test first.</p>
+      <div class="tablewrap">
+      <table class="dt">
+        <thead><tr><th>#</th><th>Checkpoint</th><th>What we look for</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Date range and column</td><td>Imported conversions land on the click date, not the upload date. A secondary action only shows in All conversions.</td></tr>
+          <tr><td>2</td><td>Google Ads upload diagnostics</td><td>Errors such as click not found, click too old, conversion action not found, or an action created too recently to accept uploads.</td></tr>
+          <tr><td>3</td><td>WhatConverts integration</td><td>Correct Google Ads customer ID, a valid connection, the exact conversion action name mapped, and lead filters that may be holding the lead back.</td></tr>
+          <tr><td>4</td><td>Click ID ownership</td><td>A gclid from a different account or the manager account, or a wbraid or gbraid that the import path does not accept.</td></tr>
+          <tr><td>5</td><td>Conversion action settings</td><td>Source set to click imports, status active, counting and conversion window correct, primary or secondary set on purpose.</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="find">
+      <div class="find-head"><h3>Two scripts compete for the same phone number</h3><span class="tag high">High impact</span></div>
+      <p>When a landing page shows a Google forwarding number instead of the WhatConverts pool number, <strong>Google's website call tag and the WhatConverts script are both swapping the same number</strong>, and whichever loads last wins. We confirm it in GTM Preview and the rendered page, not the page source.</p>
+      <div class="tablewrap">
+      <table class="cmp">
+        <thead><tr><th></th><th class="bad">When it breaks</th><th class="good">When it is fixed</th></tr></thead>
+        <tbody>
+          <tr><td>Who swaps the number</td><td class="bad">Google call tag and WhatConverts both target it</td><td class="good">WhatConverts only, Google call tag removed or pointed elsewhere</td></tr>
+          <tr><td>Where tags live</td><td class="bad">Hard coded in the theme and also in GTM</td><td class="good">One GTM container, one owner per tag</td></tr>
+          <tr><td>Load rules</td><td class="bad">Fires on every page, no exceptions</td><td class="good">Triggers with exceptions, tested in Preview</td></tr>
+          <tr><td>Page cache</td><td class="bad">Swapped number cached and served to everyone</td><td class="good">Swap runs client side after cache</td></tr>
+          <tr><td>Result in Google Ads</td><td class="bad">Calls split or counted twice</td><td class="good">One call, one source, one imported conversion</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="find med">
+      <div class="find-head"><h3>Calls from the ad call button can skip WhatConverts</h3><span class="tag medium">Medium impact</span></div>
+      <p>If the call asset holds the business line, Google's forwarding number rings the client directly and <strong>WhatConverts never hears the call.</strong> Test calls also vanish when an account level asset overrides the campaign one, or when the spam challenge drops the tester before the call connects.</p>
+      <div class="paths">
+        <div class="path bad">
+          <div class="pt">Call is lost</div>
+          <div class="flow"><span class="node">Ad call button</span><span class="arrow"></span><span class="node">Google forwarding number</span><span class="arrow"></span><span class="node end">Business main line</span></div>
+        </div>
+        <div class="path good">
+          <div class="pt">Call is tracked</div>
+          <div class="flow"><span class="node">Ad call button</span><span class="arrow"></span><span class="node">Google forwarding number</span><span class="arrow"></span><span class="node wc">WhatConverts number</span><span class="arrow"></span><span class="node">Call flow</span><span class="arrow"></span><span class="node end">Business line</span></div>
+        </div>
+      </div>
+      <p class="note">Then we decide one primary call conversion: Google's calls from ads action or the WhatConverts import, never both, so a single call is not counted twice.</p>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <div class="sh"><span class="num">02</span><h2>The 30 day plan</h2></div>
+    <p class="intro">We start on one live contractor account, prove every path with a real click, a real call and a real form, then <span class="hl">turn the working setup into an SOP</span> for the rest of your accounts.</p>
+
+    <div class="timeline">
+      <div class="tl-head"><span></span><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div>
+      <div class="tl-row"><span class="lbl">Audit and live tests</span><div class="bar" style="grid-column:2 / 3"></div></div>
+      <div class="tl-row"><span class="lbl">Google Ads imports</span><div class="bar" style="grid-column:2 / 4"></div></div>
+      <div class="tl-row"><span class="lbl">Number pools and call flows</span><div class="bar" style="grid-column:3 / 4"></div></div>
+      <div class="tl-row"><span class="lbl">Forms and GTM</span><div class="bar" style="grid-column:3 / 5"></div></div>
+      <div class="tl-row"><span class="lbl">Reconcile and SOP</span><div class="bar" style="grid-column:4 / 6"></div></div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="sn">1</div><div>
+        <div class="when">Week 1, days 1 to 3</div>
+        <h3>Trace one lead from click to CRM</h3>
+        <ul>
+          <li>Run a real ad click, a real call and a real Gravity Forms submission on the pilot account.</li>
+          <li>Record the gclid, wbraid or gbraid at every hop: landing page, WhatConverts, Google Ads upload log, GA4, CRM.</li>
+          <li>Run the five checkpoint order above on the 72 hour zero conversion issue.</li>
+        </ul>
+        <div class="why"><b>Why:</b> one written trace shows exactly where the lead stops, so fixes are based on evidence, not guesses.</div>
+      </div></div>
+
+      <div class="step"><div class="sn">2</div><div>
+        <div class="when">Weeks 1 and 2</div>
+        <h3>Rebuild the Google Ads conversion layer</h3>
+        <ul>
+          <li>Confirm auto-tagging is on and the tracking template passes the click ID through untouched.</li>
+          <li>Set up click based import actions for qualified calls and qualified forms, plus call extension conversions with a minimum call length.</li>
+          <li>Turn on enhanced conversions for leads as a backup match when the click ID is missing.</li>
+          <li>Set primary versus secondary so bidding only learns from leads that matter.</li>
+        </ul>
+        <div class="why"><b>Why:</b> Smart Bidding can only optimize toward what is imported as primary. Wrong settings mean the budget chases the wrong signal.</div>
+      </div></div>
+
+      <div class="step"><div class="sn">3</div><div>
+        <div class="when">Week 2</div>
+        <h3>Number pools and call flows</h3>
+        <ul>
+          <li>Dynamic pools sized to peak traffic on landing pages, plus dedicated numbers for call assets, Local Services Ads, Google Business Profile and offline.</li>
+          <li>Call flows built and tested: dial steps, ring timing, voicemail, recording disclosure, spam challenge and caller ID.</li>
+          <li>Carrier forwarding or number port coordinated where a client keeps a legacy line.</li>
+        </ul>
+        <div class="why"><b>Why:</b> every number source gets its own attribution, and no real customer gets blocked by a spam rule.</div>
+      </div></div>
+
+      <div class="step"><div class="sn">4</div><div>
+        <div class="when">Weeks 2 and 3</div>
+        <h3>Forms and Google Tag Manager</h3>
+        <ul>
+          <li>Register each Gravity Forms form, including multi step forms, so every submission becomes a WhatConverts lead with source and click ID.</li>
+          <li>Load the WhatConverts script through GTM with page triggers and exceptions, and remove any conflicting Google call tag.</li>
+          <li>Test in Preview, publish with named versions so any change can be rolled back.</li>
+        </ul>
+        <div class="why"><b>Why:</b> forms are where click IDs most often go missing, and clean GTM versioning stops the next edit from breaking tracking.</div>
+      </div></div>
+
+      <div class="step"><div class="sn">5</div><div>
+        <div class="when">Weeks 3 and 4</div>
+        <h3>Reconcile counts and write the SOP</h3>
+        <ul>
+          <li>Weekly count match across WhatConverts, Google Ads, GA4 and the CRM, with each gap explained: spam filtered, attribution window, duplicate, or lead with no click.</li>
+          <li>Written SOP with screenshots and a go live checklist, then a second client account rolled out from it.</li>
+        </ul>
+        <div class="why"><b>Why:</b> your team can repeat the setup without me, and clients see numbers that agree.</div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="sh"><span class="num">03</span><h2>Comparable results</h2></div>
+    <p class="intro">Tracking repairs on live lead generation accounts, and what happened once the right conversions reached Google Ads.</p>
+    <div class="res">
+      <div class="rc">
+        <div class="who">Cosmetic surgery clinic, USD</div>
+        <div class="big">+140%</div>
+        <div class="what">Confirmed bookings</div>
+        <div class="bl"><span>Before</span><span>5</span></div>
+        <div class="track"><div class="fill" style="width:42%"></div></div>
+        <div class="bl"><span>After</span><span>12</span></div>
+        <div class="track"><div class="fill g" style="width:100%"></div></div>
+        <div class="lever">Offline conversion uploads re-established, call tracking set with a minimum duration, cost per conversion $99.97 to $46.15.</div>
+      </div>
+      <div class="rc">
+        <div class="who">London plastic surgery clinic</div>
+        <div class="big">0 to 18</div>
+        <div class="what">Book Appointment conversions in one month</div>
+        <div class="bl"><span>Before</span><span>0.00</span></div>
+        <div class="track"><div class="fill" style="width:2%"></div></div>
+        <div class="bl"><span>After</span><span>18.00</span></div>
+        <div class="track"><div class="fill g" style="width:100%"></div></div>
+        <div class="lever">Booking flow tracking launched to capture enquiries that were previously uncounted.</div>
+      </div>
+      <div class="rc">
+        <div class="who">UK air conditioning installer</div>
+        <div class="big">21 of 22</div>
+        <div class="what">Leads captured by the quote form, 95.5%</div>
+        <div class="bl"><span>Quote form leads</span><span>21</span></div>
+        <div class="track"><div class="fill g" style="width:95.5%"></div></div>
+        <div class="bl"><span>Top ad group cost per lead</span><span>£11.20</span></div>
+        <div class="track"><div class="fill g" style="width:75%"></div></div>
+        <div class="lever">A broken conversion tag that was under reporting leads was diagnosed and fixed.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh"><span class="num">04</span><h2>What happens next</h2></div>
+    <p class="intro">Three steps to a working pilot account inside the first week.</p>
+    <div class="next">
+      <div class="nc"><div class="k">Step 1</div><h3>Short call</h3><p>We walk through this plan, pick the pilot account and agree how findings are reported in writing.</p></div>
+      <div class="nc"><div class="k">Step 2</div><h3>Access</h3><p>WhatConverts user, Google Ads standard access, GTM publish rights, GA4 viewer and CRM read access for the pilot account.</p></div>
+      <div class="nc"><div class="k">Step 3</div><h3>First week</h3><p>Live click, call and form tests, the lead trace sheet, and the cause of the 72 hour zero conversion issue in writing.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
