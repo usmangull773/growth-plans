@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Acorn Dental | 30 Day Patient Growth Plan | Usman Gull</title>
+<style>
+  :root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--gold-l:#e3c77f;--bg:#e9eff6;--white:#ffffff;--red:#b3261e;--green:#1f6f43;--ink:#14263b;--muted:#4a5d73;--line:#d3dde9}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  strong{font-weight:700}
+  .hl{background:rgba(200,162,74,.22);padding:1px 4px;border-radius:3px;font-weight:700}
+  .hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+  .topbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:14px;color:#a9bbd0;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:44px}
+  .topbar b{color:#fff;font-weight:600}
+  .prep{color:var(--gold-l);font-size:15px;font-weight:600;margin-bottom:10px}
+  .hero h1{font-size:clamp(40px,7vw,68px);line-height:1.02;letter-spacing:-1.5px;font-weight:800;margin-bottom:20px}
+  .outcome{font-size:clamp(18px,2.4vw,23px);max-width:760px;color:#dbe5f1;line-height:1.45;margin-bottom:28px}
+  .outcome span{color:var(--gold-l);font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+  .meta div{font-size:13.5px;color:#c4d3e4;border:1px solid rgba(255,255,255,.16);padding:6px 12px;border-radius:4px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .kpi{background:var(--card);border-radius:8px;padding:22px 22px 20px}
+  .kpi .n{font-size:44px;font-weight:800;color:var(--gold-l);line-height:1;margin-bottom:10px;letter-spacing:-1px}
+  .kpi p{font-size:14.5px;color:#cfdbe9;line-height:1.45}
+  section{padding:76px 0}
+  .light{background:var(--bg)} .white{background:var(--white)} .dark{background:var(--navy);color:#fff}
+  .sh{display:flex;align-items:baseline;gap:16px;margin-bottom:14px}
+  .sn{font-size:15px;font-weight:800;color:var(--blue);border:2px solid var(--blue);border-radius:4px;padding:2px 8px;line-height:1.3}
+  .dark .sn{color:var(--gold-l);border-color:var(--gold-l)}
+  h2{font-size:clamp(28px,4vw,38px);letter-spacing:-.6px;line-height:1.15;font-weight:800}
+  .intro{max-width:720px;font-size:17.5px;color:var(--muted);margin-bottom:40px}
+  .dark .intro{color:#c4d3e4}
+  .finding{background:#fff;border-radius:8px;box-shadow:0 6px 24px rgba(11,31,54,.08);padding:30px 30px 28px;margin-bottom:24px;border-left:6px solid var(--blue)}
+  .finding.med{border-left-color:var(--gold)}
+  .fhead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+  .finding h3{font-size:21px;line-height:1.3;max-width:720px}
+  .tag{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap}
+  .tag.high{background:var(--blue);color:#fff} .tag.med{background:var(--gold);color:var(--navy)}
+  .finding > p{color:var(--muted);max-width:780px;margin-bottom:22px}
+  .finding > p strong{color:var(--ink)}
+  .flow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:6px}
+  .node{flex:1;min-width:170px;border:1.5px solid var(--line);border-radius:6px;padding:14px;background:#f7f9fc}
+  .node .u{font-weight:700;font-size:14px;color:var(--blue);word-break:break-all}
+  .node p{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+  .node.risk{border-color:var(--red);background:#fbf1f0} .node.risk .u{color:var(--red)}
+  .node.ok{border-color:var(--green);background:#eff6f2} .node.ok .u{color:var(--green)}
+  .arrow{flex:0 0 34px;position:relative;min-width:34px}
+  .arrow:before{content:"";position:absolute;top:50%;left:6px;right:12px;height:2px;background:var(--muted)}
+  .arrow:after{content:"";position:absolute;top:calc(50% - 5px);right:4px;border-left:9px solid var(--muted);border-top:6px solid transparent;border-bottom:6px solid transparent}
+  .fnote{font-size:13.5px;color:var(--muted);margin-top:12px}
+  .tbl{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--navy);color:#fff;font-weight:600;font-size:13.5px}
+  .cmp th.bad{background:var(--red)} .cmp th.good{background:var(--green)}
+  .cmp td.bad{color:var(--red)} .cmp td.good{color:var(--green);font-weight:600}
+  td:first-child{font-weight:600}
+  tr.you td{background:#fbf6e8}
+  .timeline{background:var(--navy);border-radius:10px;padding:28px;margin-bottom:44px;color:#fff;overflow-x:auto}
+  .tl{display:grid;grid-template-columns:180px repeat(4,1fr);row-gap:12px;column-gap:6px;min-width:600px;align-items:center}
+  .tl .wk{font-size:13px;color:#a9bbd0;font-weight:600;text-align:center;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .tl .lab{font-size:14px;color:#e2eaf3}
+  .bar{height:22px;background:var(--gold);border-radius:4px} .bar.soft{background:var(--gold-l);opacity:.55}
+  .tlkey{font-size:13px;color:#a9bbd0;margin-top:18px}
+  .steps{display:grid;gap:18px}
+  .step{display:grid;grid-template-columns:56px 1fr;gap:18px;background:var(--bg);border-radius:8px;padding:22px 24px}
+  .step .num{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+  .step h4{font-size:18px;margin-bottom:4px} .step p{color:var(--muted);font-size:15.5px}
+  .step .why{margin-top:8px;font-size:14px;color:var(--green);font-weight:600}
+  .results{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .rc{background:var(--card);border-radius:10px;padding:26px 24px}
+  .rc .who{font-size:13.5px;color:#a9bbd0;margin-bottom:14px;line-height:1.4}
+  .rc .big{font-size:46px;font-weight:800;color:var(--gold-l);line-height:1;letter-spacing:-1px}
+  .rc .what{font-size:15px;color:#e2eaf3;margin:8px 0 20px}
+  .row{margin-bottom:12px} .row .l{display:flex;justify-content:space-between;font-size:13px;color:#c4d3e4;margin-bottom:5px}
+  .track{height:12px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+  .fill{height:100%;background:var(--gold);border-radius:3px} .fill.before{background:#5d7896}
+  .rc .sub{font-size:13.5px;color:#c4d3e4;border-top:1px solid rgba(255,255,255,.1);padding-top:14px;margin-top:16px}
+  .rc .sub b{color:var(--gold-l)}
+  .quote{margin-top:36px;border-left:4px solid var(--gold);padding:6px 0 6px 20px;color:#dbe5f1;font-size:17px;max-width:760px}
+  .quote span{display:block;font-size:13.5px;color:#a9bbd0;margin-top:6px}
+  .next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .nc{background:#fff;border-top:5px solid var(--gold);border-radius:8px;padding:26px 24px;box-shadow:0 6px 24px rgba(11,31,54,.06)}
+  .nc .when{font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px}
+  .nc h4{font-size:19px;margin-bottom:8px} .nc p{color:var(--muted);font-size:15px}
+  .cta{background:var(--gold);padding:56px 0} .cta h2{color:var(--navy)}
+  .cta p{color:var(--navy);font-size:17px;margin-top:6px;max-width:560px}
+  footer{background:var(--navy);color:#a9bbd0;padding:36px 0;font-size:14.5px} footer b{color:#fff}
+  @media (max-width:860px){.kpis,.results,.next{grid-template-columns:1fr}}
+  @media (max-width:520px){.wrap{padding:0 18px}section{padding:56px 0}.finding{padding:22px 18px}.step{grid-template-columns:1fr;gap:10px;padding:20px}.timeline{padding:20px 16px}.kpi .n{font-size:38px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><div><b>Usman Gull</b>, Google Ads, Meta Ads and SEO Specialist</div><div>October 23, 2026</div></div>
+    <div class="prep">30 day plan prepared for</div>
+    <h1>Acorn Dental</h1>
+    <p class="outcome">Established in 1967, award winning and spread across three Birmingham sites, Acorn Dental already has the reputation patients look for. The next step is <span>turning 564 reviews and three sites into booked consultations from Google and Meta</span>, with every booking reported back so the budget learns what works.</p>
+    <div class="meta"><div>Moseley, Barnt Green, Blythe Valley Park</div><div>Established 1967</div><div>Google Ads, Meta, SEO, booking</div></div>
+    <div class="kpis">
+      <div class="kpi"><div class="n">0</div><p>Google ads shown in the last 30 days pointing to acorndental.co.uk (UK, Google Ads Transparency Center).</p></div>
+      <div class="kpi"><div class="n">2</div><p>Separate online booking systems across your three sites, and from the outside neither reports bookings back to an ad account.</p></div>
+      <div class="kpi"><div class="n">564</div><p>Google reviews at 4.8. Strong proof that is ready to put in front of people searching near each of your sites.</p></div>
+    </div>
+  </div>
+</header>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">01</span><h2>What we found</h2></div>
+    <p class="intro">This review uses only public information: your website, Google Ads Transparency Center and Meta Ad Library. It is a starting point, not an account audit. Your base is strong: 564 Google reviews at 4.8, three sites in Moseley, Barnt Green and Blythe Valley Park, a practice established in 1967, and awards including Aesthetic Dentistry Awards 2018 Best Aesthetic Dentist, Private Dentistry Awards 2017 Best Young Dentist South and Smile Awards 2012. You also offer Chrysalis Finance at each site and a contact form that replies by phone, SMS or WhatsApp. <span class="hl">The gap is demand and measurement, not reputation.</span></p>
+
+    <div class="finding">
+      <div class="fhead"><h3>No Google ads in the last 30 days and one Meta ad that started on 21 October</h3><span class="tag high">High impact</span></div>
+      <p>Ad counts are not spend, but they show how actively each practice is competing for the same Birmingham patients. <strong>You have one of the most decorated reputations in the city</strong>, yet patients searching for implants, cosmetic work or a new dentist near Moseley, Barnt Green or Blythe Valley Park see none of it in paid search, and only one Meta ad has just gone live.</p>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Birmingham practice</th><th>Google ads, last 30 days</th><th>Active Meta ads</th></tr></thead>
+          <tbody>
+            <tr><td>BPI Dental</td><td>6</td><td>None found</td></tr>
+            <tr><td>MiSmile Birmingham</td><td>2</td><td>None found</td></tr>
+            <tr><td>Birmingham Dental Excellence</td><td>0</td><td>~9</td></tr>
+            <tr class="you"><td>Acorn Dental (you)</td><td>0</td><td>~1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fnote">Sources: Google Ads Transparency Center (UK, last 30 days, by domain) and Meta Ad Library (UK, active ads, by domain), checked October 23, 2026.</p>
+    </div>
+
+    <div class="finding">
+      <div class="fhead"><h3>Booking is split across two systems, and neither carries your own site tags</h3><span class="tag high">High impact</span></div>
+      <p>Moseley and Barnt Green book through uk.dentalhub.online, which forwards to booking.uk.hsone.app. That booking page loads its own container (GTM-NJ5V4RX), not your GA4 tag (G-WRZLBX3Y95). Blythe Valley Park books through a separate portal.dental page, and there is also a new patient appointment page. <strong>From the outside, a booked consultation at any of the three sites does not appear to report back to an ad account</strong>, so any ad budget would learn from clicks, not patients.</p>
+      <div class="flow">
+        <div class="node"><div class="u">Google or Instagram</div><p>Dentist near Moseley, Barnt Green or Blythe Valley Park</p></div><div class="arrow"></div>
+        <div class="node ok"><div class="u">acorndental.co.uk</div><p>Your tag: GA4 G-WRZLBX3Y95 only</p></div><div class="arrow"></div>
+        <div class="node risk"><div class="u">Two booking systems</div><p>Moseley and Barnt Green: dentalhub to hsone, own container GTM-NJ5V4RX. Blythe Valley Park: portal.dental.</p></div><div class="arrow"></div>
+        <div class="node risk"><div class="u">Booked consultation</div><p>Not reported to any ad account (as seen from the outside)</p></div>
+      </div>
+      <p class="fnote">Week 1 check: one test booking per site, confirmed or ruled out as a conversion in Google Ads, GA4 and Meta.</p>
+    </div>
+
+    <div class="finding med">
+      <div class="fhead"><h3>Measurement and local search are not set up for three separate sites</h3><span class="tag med">Medium impact</span></div>
+      <p>Only a GA4 tag is visible in the homepage page code. No Google Ads tag, no GTM container and no Meta pixel are visible there, although a consent tool could hold some tags back until a visitor accepts. The homepage heading is "World class dentistry in Birmingham.", which speaks to the city rather than to each of your three locations.</p>
+      <div class="tbl">
+        <table class="cmp">
+          <thead><tr><th>Check</th><th class="bad">Today</th><th class="good">Target in 30 days</th></tr></thead>
+          <tbody>
+            <tr><td>Tags visible in the page code</td><td class="bad">GA4 only (G-WRZLBX3Y95)</td><td class="good">Google Ads conversion tag, GA4 and Meta pixel, consent aware</td></tr>
+            <tr><td>Homepage H1</td><td class="bad">"World class dentistry in Birmingham."</td><td class="good">Clear routes to each site and its key treatments</td></tr>
+            <tr><td>Location pages</td><td class="bad">Not reviewed in detail</td><td class="good">A page for Moseley, Barnt Green and Blythe Valley Park</td></tr>
+            <tr><td>Google Business Profile</td><td class="bad">Not reviewed per site</td><td class="good">Three profiles, each aligned with its location page and schema</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fnote">Source: public review of acorndental.co.uk, October 23, 2026.</p>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <div class="sh"><span class="sn">02</span><h2>The 30 day plan</h2></div>
+    <p class="intro">This is a growth setup, not a lead list. <span class="hl">Your awards and reviews in front of patients searching near each site, one booking route that reports back, and organic visibility that keeps working</span> when the ads pause. Each step ends with one named action and a date to check it.</p>
+    <div class="timeline">
+      <div class="tl">
+        <div></div><div class="wk">Week 1</div><div class="wk">Week 2</div><div class="wk">Week 3</div><div class="wk">Week 4</div>
+        <div class="lab" style="grid-row:2;grid-column:1">BookedSmile online booking</div><div class="bar" style="grid-row:2;grid-column:2 / span 2"></div>
+        <div class="lab" style="grid-row:3;grid-column:1">Google Search per site</div><div class="bar" style="grid-row:3;grid-column:3 / span 3"></div>
+        <div class="lab" style="grid-row:4;grid-column:1">Meta for cosmetic treatments</div><div class="bar" style="grid-row:4;grid-column:4 / span 2"></div>
+        <div class="lab" style="grid-row:5;grid-column:1">SEO and location pages</div><div class="bar" style="grid-row:5;grid-column:2 / span 4"></div>
+        <div class="lab" style="grid-row:6;grid-column:1">Weekly patient report</div><div class="bar soft" style="grid-row:6;grid-column:2 / span 4"></div>
+      </div>
+      <p class="tlkey">Solid bars are focus work. The lighter bar runs every week.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h4>Move online booking to BookedSmile so every confirmed booking reports back to Google Ads, GA4 and Meta</h4><p>One booking route for Moseley, Barnt Green and Blythe Valley Park. Patients pick their site and book in three clicks, and each confirmed booking is counted as a conversion against the ad that produced it.</p><div class="why">Why: bidding should learn from booked patients, not from clicks, and one system is easier for your team to run.</div></div></div>
+      <div class="step"><div class="num">2</div><div><h4>Google Search for each site: implants, cosmetic and new patients</h4><p>Separate campaigns per site for dental implants, cosmetic dentistry and new patient appointments, with your awards, 564 reviews and Chrysalis Finance in the ad copy, each with its own cost per booked consultation target.</p><div class="why">Why: these are the patients already searching near your sites, and today none of them see a paid ad from you.</div></div></div>
+      <div class="step"><div class="num">3</div><div><h4>Meta campaigns for cosmetic treatments, plus retargeting</h4><p>Building on the ad that started on 21 October: cosmetic creative sent to a page with a clear booking route for each site, plus retargeting for people who visited but did not book.</p><div class="why">Why: cosmetic patients compare for weeks, and the practice they keep seeing gets the booking.</div></div></div>
+      <div class="step"><div class="num">4</div><div><h4>SEO: a location page per site and a Google Business Profile for each of the three sites</h4><p>A page each for Moseley, Barnt Green and Blythe Valley Park, local schema, and three Google Business Profiles that match those pages, so search and AI tools can describe each site correctly.</p><div class="why">Why: organic enquiries cost nothing per click and keep coming when budgets change.</div></div></div>
+      <div class="step"><div class="num">5</div><div><h4>Follow-up automation and one weekly patient report</h4><p>Instant reply by SMS or WhatsApp, matching the preference patients already choose on your contact form, then reminders and a rebook message for no-shows. One report: searches, clicks, booked consultations and treatment started, by channel and by site.</p><div class="why">Why: you get decisions, not a longer dashboard.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">03</span><h2>BookedSmile: booking that reports back</h2></div>
+    <p class="intro">BookedSmile is our own booking platform for dental practices. Patients book in three clicks, and every confirmed booking is sent server-side to Google Ads, GA4 and Meta, so your campaigns learn from real patients.</p>
+    <p class="intro">Confirmations and reminders go out by email and WhatsApp, and every patient gets an automatic Google review request after the visit. <span class="hl">We set it up for you in a day and run your campaigns on top of it.</span></p>
+    <div class="finding">
+      <div class="tbl">
+        <table class="cmp">
+          <thead><tr><th>Step</th><th class="bad">Your booking today</th><th class="good">With BookedSmile</th></tr></thead>
+          <tbody>
+            <tr><td>How patients book</td><td class="bad">Two systems: dentalhub (hsone) and portal.dental</td><td class="good">3-click online booking</td></tr>
+            <tr><td>Reporting</td><td class="bad">Booking pages load their own containers, not reported to your ad accounts (as seen from the outside)</td><td class="good">Every confirmed booking sent to Google Ads, GA4 and Meta</td></tr>
+            <tr><td>What bidding learns from</td><td class="bad">No ad account receives bookings</td><td class="good">Booked patients</td></tr>
+            <tr><td>Reminders</td><td class="bad">Not visible from the outside</td><td class="good">Email and WhatsApp confirmations and reminders</td></tr>
+            <tr><td>Reviews</td><td class="bad">Not visible from the outside</td><td class="good">Automatic Google review request</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="sh"><span class="sn">04</span><h2>Comparable results</h2></div>
+    <p class="intro">UK healthcare accounts where growth came from tracking real bookings, moving budget to what converts, and building organic search.</p>
+    <div class="results">
+      <div class="rc"><div class="who">UK dental practice, Google Search and Performance Max</div><div class="big">+50%</div><div class="what">leads in one month</div>
+        <div class="row"><div class="l"><span>July</span><span>104</span></div><div class="track"><div class="fill before" style="width:67%"></div></div></div>
+        <div class="row"><div class="l"><span>August</span><span>156</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="sub">Cost per lead <b>£10.58 to £8.90</b>, phone calls 175 to 254</div></div>
+      <div class="rc"><div class="who">London plastic surgery clinic, booking flow tracking</div><div class="big">0 to 18</div><div class="what">Book Appointment conversions</div>
+        <div class="row"><div class="l"><span>Cost per conversion before</span><span>£256.84</span></div><div class="track"><div class="fill before" style="width:100%"></div></div></div>
+        <div class="row"><div class="l"><span>After</span><span>£77.87</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div>
+        <div class="sub">A <b>69.7% reduction</b> in cost per conversion</div></div>
+      <div class="rc"><div class="who">SEO results across client sites</div><div class="big">+108%</div><div class="what">organic traffic growth</div>
+        <div class="row"><div class="l"><span>Form enquiries</span><span>+240%</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="row"><div class="l"><span>Average ranking</span><span>13.7 to 9.5</span></div><div class="track"><div class="fill" style="width:70%"></div></div></div>
+        <div class="sub"><b>491</b> Google Business Profile interactions in 6 months</div></div>
+    </div>
+    <p class="quote">"Our go-to person for fixing any ads-related problem. He over-delivered and we are impressed with his performance."<span>Client review</span></p>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">05</span><h2>What happens next</h2></div>
+    <p class="intro">Independent and hands on. I do the work myself, nothing is passed to a junior team.</p>
+    <div class="next">
+      <div class="nc"><div class="when">This week</div><h4>15 minute call</h4><p>You walk me through how a new patient enquiry becomes a booked patient at each of your three sites today. I show you the first three changes I would make and why.</p></div>
+      <div class="nc"><div class="when">Day 1</div><h4>Read only access</h4><p>Google Business Profiles for each site, GA4, any ad accounts and your booking reports from both systems. Nothing changes without your sign off.</p></div>
+      <div class="nc"><div class="when">Days 2 to 5</div><h4>Written growth audit</h4><p>Where patients find each site, where they stall before booking, what it is costing and the fix order, written so your team can follow every step.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta"><div class="wrap"><h2>Let's have a quick call</h2><p>Reply to my message with a time that suits you.</p></div></div>
+<footer><div class="wrap"><div><b>Usman Gull</b><br>Google Ads and SEO Specialist</div></div></footer>
+
+</body>
+</html>
