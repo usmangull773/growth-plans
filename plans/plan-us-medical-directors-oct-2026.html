@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attribution Fix Plan</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#e9eff6;color:#1a2433;line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h2{font-size:28px;line-height:1.25;margin-bottom:14px;color:#0b1f36}
+h3{font-size:18px;line-height:1.35;margin-bottom:8px;color:#0b1f36}
+p{margin-bottom:12px}
+b,strong{font-weight:700}
+.hl{background:#e3c77f;color:#0b1f36;padding:0 4px;border-radius:3px;font-weight:700}
+.num{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;color:#0f4c81;margin-bottom:6px}
+section{padding:64px 0}
+.light{background:#e9eff6}
+.white{background:#ffffff}
+.dark{background:#0b1f36;color:#dfe7f1}
+.dark h2,.dark h3{color:#ffffff}
+.dark .num{color:#e3c77f}
+
+/* hero */
+.hero{background:#0b1f36;color:#dfe7f1;border-bottom:6px solid #c8a24a;padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#9fb3c9;padding-bottom:22px;border-bottom:1px solid #12355b;margin-bottom:40px}
+.label{color:#e3c77f;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.hero h1{font-size:44px;line-height:1.1;color:#ffffff;margin-bottom:16px}
+.hero .lead{font-size:20px;max-width:760px;margin-bottom:22px}
+.hero .lead b{color:#e3c77f}
+.meta{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px;color:#9fb3c9;margin-bottom:36px}
+.meta span b{color:#ffffff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:#12355b;border-radius:10px;padding:20px}
+.kpi .v{font-size:40px;font-weight:800;color:#e3c77f;line-height:1.1}
+.kpi .k{font-size:14px;color:#cfdbe8;margin-top:6px}
+
+/* findings */
+.intro{max-width:780px;font-size:18px;margin-bottom:30px}
+.find{background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(11,31,54,.08);padding:26px;margin-bottom:22px;border-left:6px solid #0f4c81}
+.find.med{border-left-color:#c8a24a}
+.find-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.tag{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px;color:#ffffff;background:#0f4c81;white-space:nowrap}
+.tag.med{background:#c8a24a;color:#0b1f36}
+
+/* consolidation diagram */
+.diagram{display:grid;grid-template-columns:1fr 60px 1fr 60px 1fr;align-items:center;gap:0;margin-top:18px}
+.col{display:flex;flex-direction:column;gap:8px}
+.box{border-radius:6px;padding:9px 12px;font-size:14px;text-align:center}
+.box.red{background:#fbeceb;border:1px solid #b3261e;color:#7a1a15}
+.box.blue{background:#e9eff6;border:1px solid #0f4c81;color:#0b1f36}
+.box.green{background:#e7f2ec;border:1px solid #1f6f43;color:#134a2c;font-weight:700}
+.box.navy{background:#0b1f36;color:#e3c77f;font-weight:700;padding:16px 12px}
+.arrow{text-align:center;color:#0f4c81;font-size:22px;font-weight:700}
+.cap{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#5b6b7f;text-align:center;margin-bottom:2px}
+
+/* tables */
+table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #dbe3ec}
+thead th{background:#0b1f36;color:#ffffff;font-weight:600}
+td.bad{color:#b3261e;background:#fdf5f4}
+td.good{color:#1f6f43;background:#f2f8f4}
+.tbl{overflow-x:auto}
+
+/* timeline */
+.timeline{background:#0b1f36;border-radius:12px;padding:26px;margin:10px 0 34px;color:#dfe7f1}
+.timeline h3{color:#ffffff;margin-bottom:18px}
+.row{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:center;margin-bottom:12px}
+.row .lab{font-size:14px}
+.track{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:#12355b;border-radius:6px;padding:4px}
+.cell{height:22px;border-radius:4px}
+.on{background:#c8a24a}
+.weeks{display:grid;grid-template-columns:200px 1fr;gap:14px;font-size:12px;color:#9fb3c9;margin-bottom:8px}
+.weeks .w{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;text-align:center}
+
+/* steps */
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#e9eff6;border-radius:10px;padding:22px}
+.step .n{width:48px;height:48px;border-radius:50%;background:#0f4c81;color:#ffffff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
+.step p{margin-bottom:6px}
+.why{font-size:14px;color:#0f4c81;font-weight:600}
+
+/* results */
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.rc{background:#12355b;border-radius:10px;padding:22px}
+.rc .big{font-size:38px;font-weight:800;color:#e3c77f;line-height:1.1;margin:6px 0 4px}
+.rc .ctx{font-size:13px;color:#9fb3c9;margin-bottom:16px}
+.bar{margin-bottom:10px}
+.bar .bl{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px}
+.bar .bt{background:#0b1f36;border-radius:4px;height:14px}
+.bar .bf{height:14px;border-radius:4px;background:#5e7a99}
+.bar .bf.g{background:#c8a24a}
+.lever{font-size:13px;color:#cfdbe8;border-top:1px solid #1d4a75;padding-top:12px;margin-top:14px}
+
+/* next */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.nc{background:#ffffff;border-top:5px solid #c8a24a;border-radius:10px;padding:24px;box-shadow:0 2px 10px rgba(11,31,54,.06)}
+.nc .when{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0f4c81;margin-bottom:6px}
+
+/* cta + footer */
+.cta{background:#c8a24a;color:#0b1f36;padding:48px 0;text-align:center}
+.cta h2{color:#0b1f36;margin-bottom:8px}
+.cta p{font-size:18px;margin:0}
+footer{background:#0b1f36;color:#9fb3c9;padding:26px 0;font-size:14px;text-align:center}
+footer b{color:#ffffff}
+
+@media (max-width:820px){
+ .kpis,.results,.next{grid-template-columns:1fr}
+ .diagram{grid-template-columns:1fr;gap:6px}
+ .arrow{transform:rotate(90deg);padding:2px 0}
+ .row,.weeks{grid-template-columns:1fr;gap:6px}
+ .weeks>span:first-child{display:none}
+ .hero h1{font-size:32px}
+ h2{font-size:24px}
+}
+@media (max-width:420px){
+ .wrap{padding:0 16px}
+ section{padding:48px 0}
+ .hero .lead{font-size:18px}
+ .kpi .v{font-size:34px}
+ .step{grid-template-columns:1fr;gap:10px}
+ .find{padding:20px}
+ th,td{padding:8px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="topbar"><span>Attribution and RevOps plan</span><span>October 24, 2026</span></div>
+  <div class="label">30 day plan prepared for</div>
+  <h1>US Medical Directors</h1>
+  <p class="lead">Every Meta and Google lead traced from first click to <b>held call and closed client</b>, with the results sent back to both ad platforms so they bid on revenue, not form fills.</p>
+  <div class="meta">
+   <span><b>Stack:</b> GoHighLevel, Meta CAPI, Google Ads, GTM, GA4, WordPress</span>
+   <span><b>Scope:</b> Milestones 1 to 3</span>
+   <span><b>Owner:</b> Physician-founder</span>
+  </div>
+  <div class="kpis">
+   <div class="kpi"><div class="v">6</div><div class="k">attribution breaks named in your brief, all on one fix list</div></div>
+   <div class="kpi"><div class="v">4</div><div class="k">entry points to tag: Meta forms, Google Ads, CF7 forms, calendars</div></div>
+   <div class="kpi"><div class="v">3</div><div class="k">numbers you will see per campaign and ad: cost per lead, held call, close</div></div>
+  </div>
+ </div>
+</header>
+
+<section class="light">
+ <div class="wrap">
+  <div class="num">01</div>
+  <h2>What we found</h2>
+  <p class="intro">Your ads are not the problem. The problem is that <span class="hl">the data trail breaks in three places between the click and the payment</span>, so neither Meta nor Google ever learns which leads turned into patients.</p>
+
+  <div class="find">
+   <div class="find-head"><h3>Intake is split across several workflows, so leads go missing</h3><span class="tag">High impact</span></div>
+   <p>Each Meta instant form feeds its own GHL intake workflow. When one of them misses a step, the contact lands with <b>no tag, no owner and no opportunity</b>. Those leads never reach a pipeline, so they never count as a held call or a close.</p>
+   <div class="diagram">
+    <div class="col">
+     <div class="cap">Today</div>
+     <div class="box red">Meta form A</div>
+     <div class="box red">Meta form B</div>
+     <div class="box red">Meta form C</div>
+     <div class="box red">CF7 website form</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="col">
+     <div class="cap">Fix</div>
+     <div class="box navy">One intake router workflow</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="col">
+     <div class="cap">Every lead gets</div>
+     <div class="box green">Source and campaign tags</div>
+     <div class="box green">Owner assigned</div>
+     <div class="box green">Opportunity created</div>
+     <div class="box green">Click IDs stored</div>
+    </div>
+   </div>
+  </div>
+
+  <div class="find">
+   <div class="find-head"><h3>Google only sees held calls from some calendars</h3><span class="tag">High impact</span></div>
+   <p>The offline "Held Call" conversion fires from only part of your calendars, and CF7 leads arrive with no GCLID. Google is bidding on <b>a partial picture of your real results</b>, which pushes budget toward the wrong searches.</p>
+   <div class="tbl">
+   <table>
+    <thead><tr><th>Signal</th><th>Today</th><th>After the fix</th></tr></thead>
+    <tbody>
+     <tr><td>Held Call to Google Ads</td><td class="bad">Fires from some calendars only</td><td class="good">Fires from every calendar via one workflow</td></tr>
+     <tr><td>GCLID on CF7 leads</td><td class="bad">Missing</td><td class="good">Captured in hidden fields and mapped to GHL</td></tr>
+     <tr><td>Held call and close to Meta</td><td class="bad">Not sent</td><td class="good">Sent as CAPI CRM events with fbclid and hashed contact data</td></tr>
+     <tr><td>Creative level source</td><td class="bad">Static labels in custom fields</td><td class="good">Dynamic UTM values written per lead</td></tr>
+     <tr><td>Leads with no click ID</td><td class="bad">Lost to Google</td><td class="good">Matched through enhanced conversions for leads</td></tr>
+    </tbody>
+   </table>
+   </div>
+  </div>
+
+  <div class="find med">
+   <div class="find-head"><h3>Revenue lives outside GHL, so nobody sees spend to revenue</h3><span class="tag med">Medium impact</span></div>
+   <p>Closed deals sit in Monday.com and Stripe. GHL has no won stage tied to the ad that started the lead. That is why <b>cost per close cannot be reported by campaign or ad today</b>.</p>
+   <div class="tbl">
+   <table>
+    <thead><tr><th>Stage</th><th>Where it lives now</th><th>Where it will live</th></tr></thead>
+    <tbody>
+     <tr><td>Lead</td><td>GHL, partly orphaned</td><td>GHL pipeline, every lead</td></tr>
+     <tr><td>Booked call</td><td>GHL calendars</td><td>GHL, with click IDs attached</td></tr>
+     <tr><td>Held call</td><td>GHL appointment status</td><td>GHL, sent to Google and Meta</td></tr>
+     <tr><td>Closed client</td><td>Monday.com and Stripe</td><td>Won stage in GHL, synced by webhook, value sent to both platforms</td></tr>
+    </tbody>
+   </table>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="white">
+ <div class="wrap">
+  <div class="num">02</div>
+  <h2>The 30 day plan</h2>
+  <div class="timeline">
+   <h3>Week by week</h3>
+   <div class="weeks"><span></span><div class="w"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div></div>
+   <div class="row"><div class="lab">Audit and fix plan</div><div class="track"><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div></div>
+   <div class="row"><div class="lab">Intake and click ID capture</div><div class="track"><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div></div></div>
+   <div class="row"><div class="lab">Offline conversions and CAPI</div><div class="track"><div class="cell"></div><div class="cell on"></div><div class="cell on"></div><div class="cell"></div></div></div>
+   <div class="row"><div class="lab">Revenue sync and reporting</div><div class="track"><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div></div></div>
+   <div class="row"><div class="lab">QA, docs and handoff</div><div class="track"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div></div></div>
+  </div>
+
+  <div class="steps">
+   <div class="step"><div class="n">1</div><div>
+    <h3>Map every entry point, workflow and conversion action</h3>
+    <p>Each Meta form, Google campaign, CF7 form and calendar traced to its GHL workflow, pipeline stage, pixel event and Google conversion action. Delivered as a prioritized fix list and a short walkthrough call with you.</p>
+    <p class="why">Why: nothing gets changed until we know which break costs the most data.</p>
+   </div></div>
+   <div class="step"><div class="n">2</div><div>
+    <h3>Route all intake through one router workflow</h3>
+    <p>One intake workflow handles tags, owner assignment and opportunity creation for every source. The old form workflows are cloned, tested on test contacts, then retired without stopping live leads.</p>
+    <p class="why">Why: one path means no orphaned leads and one place to maintain.</p>
+   </div></div>
+   <div class="step"><div class="n">3</div><div>
+    <h3>Capture UTM, GCLID and fbclid on every entry point</h3>
+    <p>GTM stores click IDs and UTMs on landing, CF7 passes them through hidden fields, and GHL writes them to contact fields. Meta lead forms carry dynamic campaign and ad values instead of static labels.</p>
+    <p class="why">Why: a conversion can only be sent back if the click that started it was kept.</p>
+   </div></div>
+   <div class="step"><div class="n">4</div><div>
+    <h3>Send held calls and closes back to Google and Meta</h3>
+    <p>One "appointment showed" trigger covers every calendar and sends a Held Call to Google Ads offline conversion import and to Meta CAPI. Won stages send the close with its value. Enhanced conversions for leads catch the contacts that arrive without a GCLID.</p>
+    <p class="why">Why: both platforms start optimizing toward patients who show up, not toward cheap form fills.</p>
+   </div></div>
+   <div class="step"><div class="n">5</div><div>
+    <h3>Connect Stripe and Monday.com, then report and document</h3>
+    <p>Stripe payments and Monday.com status changes move the GHL opportunity to Won by webhook. A Looker Studio view shows cost per lead, cost per held call and cost per close by campaign and ad, with written documentation for your team.</p>
+    <p class="why">Why: you see spend to revenue in one place, and your GHL builder can maintain it.</p>
+   </div></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <div class="num">03</div>
+  <h2>Comparable results</h2>
+  <p style="max-width:760px">Tracking rebuilds on clinic accounts where the ad platforms were bidding on the wrong signal.</p>
+  <div class="results">
+   <div class="rc">
+    <h3>Confirmed bookings</h3>
+    <div class="big">+140%</div>
+    <div class="ctx">Cosmetic surgery clinic, Google Ads Search, one month</div>
+    <div class="bar"><div class="bl"><span>Before</span><span>5</span></div><div class="bt"><div class="bf" style="width:42%"></div></div></div>
+    <div class="bar"><div class="bl"><span>After</span><span>12</span></div><div class="bt"><div class="bf g" style="width:100%"></div></div></div>
+    <div class="lever">Re-established offline conversion uploads and moved bidding to confirmed bookings.</div>
+   </div>
+   <div class="rc">
+    <h3>Cost per conversion</h3>
+    <div class="big">$46.15</div>
+    <div class="ctx">Same clinic, down from $99.97, a 53.8% reduction</div>
+    <div class="bar"><div class="bl"><span>Before</span><span>$99.97</span></div><div class="bt"><div class="bf" style="width:100%"></div></div></div>
+    <div class="bar"><div class="bl"><span>After</span><span>$46.15</span></div><div class="bt"><div class="bf g" style="width:46%"></div></div></div>
+    <div class="lever">Reclassified micro conversions and set call tracking with a minimum duration.</div>
+   </div>
+   <div class="rc">
+    <h3>Book Appointment conversions</h3>
+    <div class="big">0 to 18</div>
+    <div class="ctx">Plastic surgery clinic, one month after booking flow tracking went live</div>
+    <div class="bar"><div class="bl"><span>Before</span><span>0.00</span></div><div class="bt"><div class="bf" style="width:2%"></div></div></div>
+    <div class="bar"><div class="bl"><span>After</span><span>18.00</span></div><div class="bt"><div class="bf g" style="width:100%"></div></div></div>
+    <div class="lever">Booking flow tracking captured enquiries that were previously uncounted.</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="light">
+ <div class="wrap">
+  <div class="num">04</div>
+  <h2>What happens next</h2>
+  <div class="next">
+   <div class="nc"><div class="when">Day 1</div><h3>Kickoff call</h3><p>30 minutes with you and your fractional CMO to confirm priorities, then access to GHL, Meta Business Manager, Google Ads, GTM, GA4 and WordPress.</p></div>
+   <div class="nc"><div class="when">Days 2 to 5</div><h3>Audit and fix plan</h3><p>Full map of entry points, workflows and conversion actions. Prioritized fix list and a walkthrough call before any live change.</p></div>
+   <div class="nc"><div class="when">Week 2 onward</div><h3>Build, test, hand off</h3><p>Changes go live in tested stages with your GHL builder and web developer in the loop, then reporting and documentation.</p></div>
+  </div>
+ </div>
+</section>
+
+<div class="cta">
+ <div class="wrap">
+  <h2>Let's have a quick call</h2>
+  <p>Reply to my message with a time that suits you.</p>
+ </div>
+</div>
+
+<footer><div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div></footer>
+
+</body>
+</html>
