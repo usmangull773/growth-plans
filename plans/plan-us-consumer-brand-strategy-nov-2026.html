@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 Day Strategy Plan, US Consumer Brand</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#e9eff6;color:#1a2433;line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+b,strong{font-weight:700}
+.gold{color:#c8a24a}.lgold{color:#e3c77f}
+.hl{background:#f6ecd0;padding:0 4px;border-radius:3px;font-weight:700}
+/* hero */
+.hero{background:#0b1f36;color:#fff;border-bottom:6px solid #c8a24a;padding:22px 0 48px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b7c4d6;padding-bottom:36px;border-bottom:1px solid #1d3a5c;margin-bottom:36px}
+.label{color:#e3c77f;text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:700}
+.hero h1{font-size:40px;line-height:1.15;margin:10px 0 14px}
+.hero p.lead{font-size:19px;color:#d6dfeb;max-width:760px}
+.meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 30px;font-size:14px;color:#b7c4d6}
+.meta span b{color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:#12355b;border-radius:10px;padding:20px}
+.kpi .n{font-size:34px;font-weight:800;color:#e3c77f;line-height:1.1}
+.kpi .t{font-size:14px;color:#d6dfeb;margin-top:6px}
+/* sections */
+section{padding:60px 0}
+.light{background:#e9eff6}.white{background:#fff}.dark{background:#0b1f36;color:#fff}
+.sn{color:#0f4c81;font-weight:800;font-size:14px;letter-spacing:2px}
+.dark .sn{color:#e3c77f}
+h2{font-size:30px;margin:4px 0 14px;line-height:1.2}
+.intro{max-width:780px;font-size:17px;margin-bottom:30px}
+.dark .intro{color:#d6dfeb}
+.card{background:#fff;border-radius:10px;box-shadow:0 2px 14px rgba(11,31,54,.08);padding:24px;margin-bottom:22px}
+.find{border-left:6px solid #0f4c81}
+.find.med{border-left-color:#c8a24a}
+.fhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.fhead h3{font-size:20px;line-height:1.3}
+.tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.tag.high{background:#0f4c81;color:#fff}.tag.med{background:#c8a24a;color:#0b1f36}
+.find p{margin-bottom:14px}
+/* flow diagram */
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:8px}
+.fbox{flex:1 1 140px;border:2px solid #0f4c81;border-radius:8px;padding:12px;text-align:center;font-size:14px;background:#f4f7fb}
+.fbox b{display:block;color:#0f4c81;font-size:15px}
+.fbox.gap{border-color:#b3261e;background:#fbeceb}.fbox.gap b{color:#b3261e}
+.fbox.fix{border-color:#1f6f43;background:#e8f3ec}.fbox.fix b{color:#1f6f43}
+.arrow{align-self:center;font-weight:800;color:#0f4c81}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #dfe6ef}
+thead th{background:#0b1f36;color:#fff;font-weight:700}
+.cmp td.bad{color:#b3261e}.cmp td.good{color:#1f6f43;font-weight:600}
+.cmp th.bad{background:#b3261e}.cmp th.good{background:#1f6f43}
+.tscroll{overflow-x:auto}
+/* timeline */
+.tl{background:#0b1f36;border-radius:12px;padding:24px;color:#fff;margin-bottom:30px}
+.tl h3{color:#e3c77f;font-size:16px;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
+.tlrow{display:grid;grid-template-columns:200px 1fr;gap:12px;align-items:center;margin-bottom:10px;font-size:14px}
+.track{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:22px;position:relative}
+.track .c{background:#12355b;border-radius:3px}
+.track .on{background:#c8a24a}
+.weeks{display:grid;grid-template-columns:200px 1fr;gap:12px;font-size:12px;color:#b7c4d6;margin-bottom:8px}
+.weeks div:last-child{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.split{display:flex;height:30px;border-radius:6px;overflow:hidden;margin-top:18px;font-size:12px;font-weight:700}
+.split div{display:flex;align-items:center;justify-content:center;color:#0b1f36}
+.legend{font-size:13px;color:#b7c4d6;margin-top:8px}
+.step{display:grid;grid-template-columns:54px 1fr;gap:16px;border:1px solid #dfe6ef;border-radius:10px;padding:20px;margin-bottom:14px;background:#fff}
+.step .num{width:44px;height:44px;border-radius:50%;background:#0f4c81;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step h4{font-size:18px;margin-bottom:4px}
+.step .why{font-size:14px;color:#0f4c81;margin-top:6px}
+.step .wk{font-size:12px;font-weight:700;color:#c8a24a;text-transform:uppercase;letter-spacing:1px}
+/* results */
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rcard{background:#12355b;border-radius:10px;padding:22px}
+.rcard .tagl{font-size:12px;color:#b7c4d6;text-transform:uppercase;letter-spacing:1px}
+.rcard .big{font-size:32px;font-weight:800;color:#e3c77f;margin:6px 0 4px;line-height:1.1}
+.rcard p{font-size:14px;color:#d6dfeb}
+.bars{margin-top:16px}
+.bar{display:grid;grid-template-columns:86px 1fr;gap:8px;align-items:center;font-size:12px;color:#d6dfeb;margin-bottom:8px}
+.bar .b{height:16px;background:#c8a24a;border-radius:3px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;color:#0b1f36;font-weight:700;font-size:11px}
+.note{margin-top:24px;background:#12355b;border-left:5px solid #c8a24a;border-radius:8px;padding:18px 20px;color:#d6dfeb;font-size:15px}
+/* next */
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ncard{background:#fff;border-top:5px solid #c8a24a;border-radius:10px;padding:22px;box-shadow:0 2px 14px rgba(11,31,54,.08)}
+.ncard .s{color:#0f4c81;font-weight:800;font-size:13px;letter-spacing:1px}
+.ncard h4{font-size:18px;margin:6px 0}
+.cta{background:#c8a24a;color:#0b1f36;padding:44px 0;text-align:center}
+.cta h2{margin:0 0 8px}
+.cta p{font-size:18px}
+footer{background:#0b1f36;color:#b7c4d6;padding:26px 0;font-size:14px;text-align:center}
+footer b{color:#fff}
+@media (max-width:820px){
+.kpis,.rgrid,.ngrid{grid-template-columns:1fr}
+.hero h1{font-size:30px}
+h2{font-size:25px}
+.tlrow,.weeks{grid-template-columns:1fr}
+.weeks div:first-child{display:none}
+.arrow{display:none}
+.step{grid-template-columns:1fr}
+}
+@media (max-width:400px){
+.wrap{padding:0 16px}
+.hero h1{font-size:26px}
+.kpi .n,.rcard .big{font-size:28px}
+th,td{padding:8px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="wrap">
+<div class="topbar"><span>Strategy and Performance Plan</span><span>11 November 2026</span></div>
+<div class="label">30 day plan prepared for</div>
+<h1>US Consumer Brand team</h1>
+<p class="lead">One strategy layer that turns media buyer reports into creative briefs, so <span class="lgold"><b>every new ad starts from what the data already proved</b></span>, in time for the holiday peak and Q1.</p>
+<div class="meta">
+<span>Role: <b>Digital Marketing and Performance Manager</b></span>
+<span>Channels: <b>Meta Ads, Google Ads</b></span>
+<span>Commitment: <b>about 10 hrs per week, 12+ months</b></span>
+</div>
+<div class="kpis">
+<div class="kpi"><div class="n">3</div><div class="t">parties to align every week: client, creative team, external media buyer</div></div>
+<div class="kpi"><div class="n">16 days</div><div class="t">from today to Thanksgiving, 26 November 2026, with Black Friday and Cyber Monday right after</div></div>
+<div class="kpi"><div class="n">1</div><div class="t">shared scorecard and one brief format, replacing separate reports and ad hoc requests</div></div>
+</div>
+</div>
+</header>
+
+<section class="light">
+<div class="wrap">
+<div class="sn">01</div>
+<h2>What we found</h2>
+<p class="intro">Your post describes a strong setup with one missing piece. The media buyer runs the campaigns and the creative team builds the assets, but <span class="hl">nobody currently owns the link between the numbers and the next round of creative</span>. That link is the role. Three things follow from it.</p>
+
+<div class="card find">
+<div class="fhead"><h3>1. Performance data and creative work run on separate tracks</h3><span class="tag high">High impact</span></div>
+<p>When results come back from the media buyer, they usually describe what happened on each platform. They rarely say what the creative team should make next. Without someone translating, <b>new creative gets built from taste and the brief from the last meeting</b>, not from which hooks, offers and formats actually won.</p>
+<div class="flow">
+<div class="fbox"><b>Media buyer</b>Platform reports</div>
+<div class="arrow">&gt;</div>
+<div class="fbox gap"><b>Missing today</b>Insight to brief translation</div>
+<div class="arrow">&gt;</div>
+<div class="fbox"><b>Creative team</b>New assets</div>
+<div class="arrow">&gt;</div>
+<div class="fbox fix"><b>Added by this role</b>Test log feeds the next brief</div>
+</div>
+</div>
+
+<div class="card find">
+<div class="fhead"><h3>2. Briefs need a fixed structure that starts with a data point</h3><span class="tag high">High impact</span></div>
+<p>A creative brief that opens with "make something for the holidays" produces assets that are hard to judge. A brief that opens with <b>one proven insight and one hypothesis to test</b> gives the creative team a clear target and gives the media buyer a clean test to run.</p>
+<div class="tscroll">
+<table class="cmp">
+<thead><tr><th>Area</th><th class="bad">Without a strategy owner</th><th class="good">With this plan</th></tr></thead>
+<tbody>
+<tr><td>Creative brief</td><td class="bad">Open request, no success measure</td><td class="good">Insight, audience, hook, offer, format, KPI to beat</td></tr>
+<tr><td>Performance review</td><td class="bad">Meta and Google reports read separately</td><td class="good">One weekly scorecard with blended revenue against total spend</td></tr>
+<tr><td>Testing</td><td class="bad">Many changes at once, unclear winner</td><td class="good">One variable per test, logged and reused</td></tr>
+<tr><td>Client meetings</td><td class="bad">Recap of numbers</td><td class="good">Three decisions, each backed by one chart</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card find med">
+<div class="fhead"><h3>3. The US retail calendar needs planning six to eight weeks ahead</h3><span class="tag med">Medium impact</span></div>
+<p>Holiday creative is already locked for most brands by now. The opportunity is to <b>run the remaining peak days cleanly and have Q1 and Q2 briefs ready before January</b>, so the creative team is never building under deadline.</p>
+<div class="tscroll">
+<table>
+<thead><tr><th>Moment</th><th>Date</th><th>Brief due</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td>Thanksgiving to Cyber Monday</td><td>26 to 30 Nov 2026</td><td>Now</td><td>Offer clarity, urgency, retargeting of recent visitors</td></tr>
+<tr><td>Last shipping days and gifting</td><td>Mid December 2026</td><td>Week 2</td><td>Gift angle, delivery cut off messaging</td></tr>
+<tr><td>New Year reset</td><td>January 2027</td><td>Week 3</td><td>New customer acquisition at lower January costs</td></tr>
+<tr><td>Valentine's Day</td><td>14 Feb 2027</td><td>Week 4</td><td>Gift bundles, last minute buyers</td></tr>
+<tr><td>Mother's Day</td><td>9 May 2027</td><td>March 2027</td><td>Gift guides, early bird offers</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<section class="white">
+<div class="wrap">
+<div class="sn">02</div>
+<h2>The 30 day plan</h2>
+<p class="intro">Built around your 10 hours a week. The first month sets up the system. From month two it runs as a weekly rhythm.</p>
+
+<div class="tl">
+<h3>Week 1 to 4 timeline</h3>
+<div class="weeks"><div></div><div><span>Wk 1</span><span>Wk 2</span><span>Wk 3</span><span>Wk 4</span></div></div>
+<div class="tlrow"><span>Onboarding and data review</span><div class="track"><div class="c on"></div><div class="c"></div><div class="c"></div><div class="c"></div></div></div>
+<div class="tlrow"><span>Weekly performance scorecard</span><div class="track"><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div></div></div>
+<div class="tlrow"><span>Brief template and first briefs</span><div class="track"><div class="c"></div><div class="c on"></div><div class="c on"></div><div class="c"></div></div></div>
+<div class="tlrow"><span>Q1 and Q2 seasonal calendar</span><div class="track"><div class="c"></div><div class="c"></div><div class="c on"></div><div class="c on"></div></div></div>
+<div class="tlrow"><span>Monthly strategy review</span><div class="track"><div class="c"></div><div class="c"></div><div class="c"></div><div class="c on"></div></div></div>
+<div class="split">
+<div style="width:30%;background:#e3c77f">Analysis 3h</div>
+<div style="width:30%;background:#c8a24a">Briefs 3h</div>
+<div style="width:20%;background:#b9c9dc">Meetings 2h</div>
+<div style="width:20%;background:#8fa6c2">Planning 2h</div>
+</div>
+<p class="legend">Suggested split of the 10 weekly hours.</p>
+</div>
+
+<div class="step"><div class="num">1</div><div><div class="wk">Week 1</div><h4>Onboarding and a 90 day data review</h4><p>Read the media buyer's last 90 days of Meta and Google reports, Shopify sales, and the past creative library. Tag each ad by hook, offer and format.</p><p class="why">Why: you cannot brief the next ad until you know which past ads actually sold.</p></div></div>
+<div class="step"><div class="num">2</div><div><div class="wk">Week 1 onward</div><h4>One weekly scorecard everyone reads</h4><p>A single page: Shopify revenue against total ad spend, new versus returning customers, and the top and bottom three creatives on each platform.</p><p class="why">Why: Meta and Google can both claim the same sale. A blended view keeps decisions honest.</p></div></div>
+<div class="step"><div class="num">3</div><div><div class="wk">Weeks 2 to 3</div><h4>Creative brief template and the first two briefs</h4><p>A one page format: insight, audience, hook, offer, format, KPI to beat. First two briefs cover the December gifting window and January acquisition.</p><p class="why">Why: the creative team gets a clear target and the media buyer gets a clean test.</p></div></div>
+<div class="step"><div class="num">4</div><div><div class="wk">Weeks 3 to 4</div><h4>Q1 and Q2 seasonal calendar</h4><p>Key US retail moments through Mother's Day, each with a brief due date, creative deadline and budget note for the media buyer.</p><p class="why">Why: briefs land six to eight weeks ahead, so nothing is rushed.</p></div></div>
+<div class="step"><div class="num">5</div><div><div class="wk">Week 4</div><h4>First monthly strategy review with the client</h4><p>Three recommendations, each with one supporting chart, plus the test log showing what was learned and what goes into next month's briefs.</p><p class="why">Why: the client sees decisions, not a recap of numbers they already have.</p></div></div>
+</div>
+</section>
+
+<section class="dark">
+<div class="wrap">
+<div class="sn">03</div>
+<h2>Comparable results</h2>
+<p class="intro">From a long running US DTC eCommerce account, where analysis of platform and site data shaped how budget and creative were used across Search, Shopping, Display and Video.</p>
+<div class="rgrid">
+<div class="rcard">
+<div class="tagl">US eCommerce, 2011 to 2023</div>
+<div class="big">$15.5M</div>
+<p>ad spend managed across 977 campaigns, 12.9M clicks and 4.8B impressions.</p>
+<div class="bars">
+<div class="bar"><span>Search</span><div class="b" style="width:96%">$7.45M</div></div>
+<div class="bar"><span>Display</span><div class="b" style="width:95%">$7.38M</div></div>
+</div>
+</div>
+<div class="rcard">
+<div class="tagl">Search and Shopping revenue</div>
+<div class="big">$2.13M</div>
+<p>in H1 2022, up from $1.85M in H1 2021.</p>
+<div class="bars">
+<div class="bar"><span>H1 2021</span><div class="b" style="width:87%">$1.85M</div></div>
+<div class="bar"><span>H2 2021</span><div class="b" style="width:95%">$2.03M</div></div>
+<div class="bar"><span>H1 2022</span><div class="b" style="width:100%">$2.13M</div></div>
+</div>
+</div>
+<div class="rcard">
+<div class="tagl">Verified Shopify revenue, 2022</div>
+<div class="big">$5.6M</div>
+<p>Best month July 2022: $778,584 from 3,385 orders.</p>
+<div class="bars">
+<div class="bar"><span>Year</span><div class="b" style="width:100%">$5.6M</div></div>
+<div class="bar"><span>Best month</span><div class="b" style="width:14%;min-width:44px">$778K</div></div>
+</div>
+</div>
+</div>
+<div class="note"><b class="lgold">The insight that changed the strategy:</b> cross referencing Analytics with Google Ads showed Display worked as a delayed branding layer. The returning customer rate spiked 104% in the two months after Display paused, which reframed how upper funnel creative was judged and budgeted. That is the same kind of read this role would give your media buyer and creative team every month.</div>
+</div>
+</section>
+
+<section class="light">
+<div class="wrap">
+<div class="sn">04</div>
+<h2>What happens next</h2>
+<p class="intro">Three simple steps to start this week.</p>
+<div class="ngrid">
+<div class="ncard"><div class="s">STEP 1</div><h4>Short intro call</h4><p>15 minutes to confirm the brand, current channels, the media buyer's reporting format and the creative team's workflow.</p></div>
+<div class="ncard"><div class="s">STEP 2</div><h4>Read only access</h4><p>View access to Meta Ads, Google Ads, GA4 and Shopify reports, plus the shared creative folder and project board.</p></div>
+<div class="ncard"><div class="s">STEP 3</div><h4>First week output</h4><p>The 90 day data review, the first scorecard and a short list of the three biggest opportunities for the holiday window.</p></div>
+</div>
+</div>
+</section>
+
+<div class="cta">
+<div class="wrap">
+<h2>Let's have a quick call</h2>
+<p>Reply to my message with a time that suits you.</p>
+</div>
+</div>
+
+<footer>
+<div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
