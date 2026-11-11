@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 Day Plan for Osmo</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--lgold:#e3c77f;--bg:#e9eff6;--white:#ffffff;--red:#b3261e;--green:#1f6f43;--text:#1b2733;--muted:#5a6b7d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:28px;line-height:1.25;margin-bottom:14px}
+h3{font-size:19px;line-height:1.3;margin-bottom:8px}
+p{margin-bottom:12px}
+.num{display:inline-block;color:var(--blue);font-weight:800;font-size:14px;letter-spacing:2px;margin-bottom:6px}
+.hl{background:#f5e7c0;padding:1px 4px;border-radius:3px;font-weight:700}
+.dark .num{color:var(--lgold)}
+/* hero */
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b9c7d8;border-bottom:1px solid #22405f;padding-bottom:16px;margin-bottom:40px}
+.label{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+.hero h1{font-size:44px;line-height:1.1;margin:10px 0 16px}
+.hero .lead{font-size:20px;max-width:760px;color:#dfe7f1}
+.hero .lead b{color:var(--lgold)}
+.meta{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:#b9c7d8;margin:20px 0 36px}
+.meta span b{color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:20px}
+.kpi .v{font-size:38px;font-weight:800;color:var(--gold);line-height:1.1}
+.kpi .t{font-size:14px;color:#cfdbe8;margin-top:6px}
+/* findings */
+.light{background:var(--bg)}
+.whitebg{background:var(--white)}
+.intro{max-width:780px;font-size:17px;margin-bottom:30px}
+.finding{background:#fff;border-radius:10px;box-shadow:0 4px 18px rgba(11,31,54,.08);padding:26px;margin-bottom:22px;border-left:6px solid var(--blue)}
+.finding.med{border-left-color:var(--gold)}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:10px;text-transform:uppercase}
+.tag.high{background:var(--blue);color:#fff}
+.tag.medium{background:var(--gold);color:var(--navy)}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #e1e8f0}
+.tdark th{background:var(--navy);color:#fff;font-weight:600}
+.cmp th.bad{background:var(--red);color:#fff}
+.cmp th.good{background:var(--green);color:#fff}
+.cmp td.bad{background:#fbeceb}
+.cmp td.good{background:#e8f3ec}
+.tablewrap{overflow-x:auto}
+.split{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center;margin-top:16px;text-align:center;font-size:14px}
+.box{border:2px solid var(--blue);border-radius:8px;padding:12px;background:#f4f8fc}
+.box.gold{border-color:var(--gold);background:#fbf5e6}
+.box b{display:block;font-size:15px}
+.arrow{color:var(--blue);font-weight:800;font-size:20px}
+/* plan */
+.timeline{background:var(--navy);border-radius:12px;padding:26px;color:#fff;margin:26px 0 30px}
+.timeline .head{display:grid;grid-template-columns:180px repeat(4,1fr);font-size:13px;color:#b9c7d8;margin-bottom:10px}
+.row{display:grid;grid-template-columns:180px 1fr;align-items:center;margin-bottom:12px;font-size:14px}
+.track{position:relative;height:22px;background:#17324f;border-radius:4px}
+.bar{position:absolute;top:0;height:22px;background:var(--gold);border-radius:4px}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:56px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:20px}
+.step .n{width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+.step p{margin:0;color:var(--muted)}
+.step .why{margin-top:6px;font-size:14px;color:var(--blue);font-weight:600}
+/* results */
+.dark{background:var(--navy);color:#fff}
+.dark p{color:#cfdbe8}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.rc{background:var(--card);border-radius:12px;padding:22px}
+.rc .big{font-size:34px;font-weight:800;color:var(--gold);line-height:1.1;margin:6px 0 4px}
+.rc .cap{font-size:13px;color:#b9c7d8;margin-bottom:16px}
+.bl{font-size:13px;color:#dfe7f1;margin-bottom:4px;display:flex;justify-content:space-between}
+.bt{height:16px;background:#0b2744;border-radius:4px;margin-bottom:12px}
+.bf{height:16px;border-radius:4px;background:#5d7a99}
+.bf.g{background:var(--gold)}
+.headline{margin-top:26px;background:var(--card);border-left:6px solid var(--gold);border-radius:10px;padding:18px 22px;font-size:16px;color:#dfe7f1}
+.headline b{color:var(--lgold)}
+/* next */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.nc{background:#fff;border-top:5px solid var(--gold);border-radius:10px;padding:22px;box-shadow:0 4px 18px rgba(11,31,54,.08)}
+.nc .s{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.nc p{margin:0;color:var(--muted)}
+/* cta */
+.cta{background:var(--gold);color:var(--navy);padding:48px 0;text-align:center}
+.cta h2{margin-bottom:8px}
+.cta p{font-size:18px;margin:0}
+footer{background:var(--navy);color:#b9c7d8;padding:26px 0;font-size:14px;text-align:center}
+footer b{color:#fff}
+@media (max-width:760px){
+ section{padding:44px 0}
+ .hero h1{font-size:32px}
+ .hero .lead{font-size:17px}
+ .kpis,.results,.next{grid-template-columns:1fr}
+ .split{grid-template-columns:1fr;}
+ .arrow{transform:rotate(90deg)}
+ .timeline .head{display:none}
+ .row{grid-template-columns:1fr;gap:6px}
+ .step{grid-template-columns:1fr}
+ h2{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="topbar"><span>Google Ads, GA4 and Shopping growth plan</span><span>12 November 2026</span></div>
+  <div class="label">30 day plan prepared for</div>
+  <h1>Osmo (playosmo.com)</h1>
+  <p class="lead">Fix the tracking first, then rebuild the Shopping feed and test landing pages, so every dollar in Google Ads is judged on <b>real Shopify orders and true ROAS</b>.</p>
+  <div class="meta"><span>Store: <b>Shopify</b></span><span>Market: <b>United States</b></span><span>Channels: <b>Shopping, Performance Max, Search</b></span></div>
+  <div class="kpis">
+   <div class="kpi"><div class="v">27</div><div class="t">products live on the public storefront, each one a Shopping feed item to clean up</div></div>
+   <div class="kpi"><div class="v">2</div><div class="t">device versions (iPad and Fire) sold as separate products for most kits</div></div>
+   <div class="kpi"><div class="v">25%</div><div class="t">sitewide Black Friday sale running now, the peak revenue window of the year</div></div>
+  </div>
+ </div>
+</header>
+
+<section class="light">
+ <div class="wrap">
+  <span class="num">01</span>
+  <h2>What we found</h2>
+  <p class="intro">From your brief and a review of the public storefront, the core issue is that <span class="hl">Google Ads cannot be optimized until it is counting the right purchases</span>. Shopping and Performance Max bid on whatever conversion signal they receive, so tracking comes first, then the feed, then testing.</p>
+
+  <div class="finding">
+   <span class="tag high">High impact</span>
+   <h3>Tracking: <span class="hl">the same sale can be counted more than once, or not at all</span></h3>
+   <p>Shopify stores commonly run the Google and YouTube app, a GA4 tag and a separate Google Ads tag at the same time. When two of them fire on checkout, Performance Max sees inflated ROAS and keeps spending on the wrong products. When none of them carry order value correctly, the account bids blind.</p>
+   <div class="tablewrap"><table class="cmp">
+    <tr><th class="bad">What usually breaks</th><th class="good">What we set up</th></tr>
+    <tr><td class="bad">Two purchase actions marked Primary in Google Ads</td><td class="good">One Primary purchase action, the rest set to Secondary</td></tr>
+    <tr><td class="bad">Purchase value missing or sent without currency</td><td class="good">Order value, currency and transaction ID on every purchase</td></tr>
+    <tr><td class="bad">No deduplication, so refreshes count twice</td><td class="good">Transaction ID dedupe plus Enhanced Conversions</td></tr>
+    <tr><td class="bad">GA4 and Shopify totals never reconciled</td><td class="good">Weekly check: Shopify orders vs GA4 vs Google Ads</td></tr>
+   </table></div>
+  </div>
+
+  <div class="finding">
+   <span class="tag high">High impact</span>
+   <h3>Shopping feed: <span class="hl">product titles are too short to match how parents search</span></h3>
+   <p>Titles such as "Genius Numbers - Fire" make sense on the site, but in Google Shopping they miss the words parents type: the subject, the age and the device. Google matches Shopping ads mostly from the title, so richer feed titles reach more of the right searches without changing the storefront.</p>
+   <div class="tablewrap"><table class="tdark">
+    <tr><th>Current title</th><th>Suggested feed title</th><th>Added signal</th></tr>
+    <tr><td>Genius Numbers - Fire</td><td>Osmo Genius Numbers Math Game for Kids, Amazon Fire Tablet</td><td>Subject, audience, device</td></tr>
+    <tr><td>Little Genius Starter Kit - Fire</td><td>Osmo Little Genius Preschool Learning Kit, Amazon Fire Tablet</td><td>Age stage, category</td></tr>
+    <tr><td>Coding Starter Kit - Fire</td><td>Osmo Coding Starter Kit, Screen Time Coding Game for Kids, Fire Tablet</td><td>Skill, audience</td></tr>
+   </table></div>
+   <p style="margin-top:12px">The same audit covers Merchant Center diagnostics, GTIN and brand fields, item group IDs for the iPad and Fire versions, and custom labels so best sellers and bundles get their own budgets.</p>
+  </div>
+
+  <div class="finding med">
+   <span class="tag medium">Medium impact</span>
+   <h3>A/B testing: <span class="hl">tests need a clean window and a single success metric</span></h3>
+   <p>With a 25% sitewide sale live, any landing page test started this month would mostly measure the discount. The right setup is ready to launch now and read once traffic returns to normal pricing, judged on purchase conversion rate and ROAS from the same tracked source.</p>
+   <div class="split">
+    <div class="box"><b>Paid traffic</b>Shopping, PMax, Search</div>
+    <div class="arrow">&rarr;</div>
+    <div class="box"><b>50 / 50 split</b>Control page vs variant page</div>
+    <div class="arrow">&rarr;</div>
+    <div class="box gold"><b>One verdict</b>Conversion rate and ROAS from GA4 purchase data</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="whitebg">
+ <div class="wrap">
+  <span class="num">02</span>
+  <h2>The 30 day plan</h2>
+  <p class="intro">Sequenced so each step gives the next one clean data to work with.</p>
+  <div class="timeline">
+   <div class="head"><span></span><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div>
+   <div class="row"><span>Tracking audit and fix</span><div class="track"><div class="bar" style="left:0;width:37%"></div></div></div>
+   <div class="row"><span>Merchant Center and feed</span><div class="track"><div class="bar" style="left:20%;width:35%"></div></div></div>
+   <div class="row"><span>Shopping, PMax, Search</span><div class="track"><div class="bar" style="left:40%;width:60%"></div></div></div>
+   <div class="row"><span>A/B test build</span><div class="track"><div class="bar" style="left:55%;width:30%"></div></div></div>
+   <div class="row"><span>Report and next steps</span><div class="track"><div class="bar" style="left:85%;width:15%"></div></div></div>
+  </div>
+
+  <div class="steps">
+   <div class="step"><div class="n">1</div><div><h3>Audit and fix Google Ads, GA4 and Shopify tracking</h3><p>Map every tag firing on checkout, keep one Primary purchase action with value, currency and transaction ID, turn on Enhanced Conversions, and reconcile Shopify orders against GA4 and Google Ads.</p><div class="why">Why: Shopping and PMax bidding is only as good as the purchase signal behind it.</div></div></div>
+   <div class="step"><div class="n">2</div><div><h3>Merchant Center and product feed audit</h3><p>Clear disapprovals and warnings, rewrite feed titles with subject, age and device, fill GTIN, brand and product type, group iPad and Fire versions, and add custom labels for best sellers, bundles and margin.</p><div class="why">Why: the feed decides which searches your products can show for.</div></div></div>
+   <div class="step"><div class="n">3</div><div><h3>Restructure Shopping, Performance Max and Search</h3><p>Split PMax by custom label so hero kits get their own budget, protect brand Search, and add negatives so Shopping stops paying for low intent queries.</p><div class="why">Why: budget follows the products that actually return a profit.</div></div></div>
+   <div class="step"><div class="n">4</div><div><h3>Build the landing page A/B test</h3><p>Control vs one variant (for example the starter kit page with a device picker above the fold), traffic split evenly, success measured on purchase conversion rate and ROAS, launched after the sale window closes.</p><div class="why">Why: a clean test gives a decision you can trust and roll out.</div></div></div>
+   <div class="step"><div class="n">5</div><div><h3>Report and next 60 days</h3><p>A clear view of spend, revenue and ROAS by campaign and product group, plus the list of changes for the next two months.</p><div class="why">Why: you see exactly where the money goes and what it returns.</div></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <span class="num">03</span>
+  <h2>Comparable results</h2>
+  <p>Verified numbers from eCommerce and tracking work on comparable accounts.</p>
+  <div class="results">
+   <div class="rc">
+    <h3>Shopify brand, Search and Shopping</h3>
+    <div class="big">16.43% to 31.31%</div>
+    <div class="cap">Search ROAS, 2021 to H1 2022</div>
+    <div class="bl"><span>Before</span><span>16.43%</span></div>
+    <div class="bt"><div class="bf" style="width:52%"></div></div>
+    <div class="bl"><span>After</span><span>31.31%</span></div>
+    <div class="bt"><div class="bf g" style="width:100%"></div></div>
+   </div>
+   <div class="rc">
+    <h3>eCommerce store, month on month</h3>
+    <div class="big">+12% purchases</div>
+    <div class="cap">Purchases 321 to 359, revenue up 7%</div>
+    <div class="bl"><span>Before</span><span>321</span></div>
+    <div class="bt"><div class="bf" style="width:89%"></div></div>
+    <div class="bl"><span>After</span><span>359</span></div>
+    <div class="bt"><div class="bf g" style="width:100%"></div></div>
+   </div>
+   <div class="rc">
+    <h3>Tracking rebuild, US account</h3>
+    <div class="big">$99.97 to $46.15</div>
+    <div class="cap">Cost per conversion, 53.8% lower after conversion actions were rebuilt</div>
+    <div class="bl"><span>Before</span><span>$99.97</span></div>
+    <div class="bt"><div class="bf" style="width:100%"></div></div>
+    <div class="bl"><span>After</span><span>$46.15</span></div>
+    <div class="bt"><div class="bf g" style="width:46%"></div></div>
+   </div>
+  </div>
+  <div class="headline">Across 12 years in eCommerce: <b>$15.5M ad spend managed</b>, 977 campaigns, and <b>$5.6M verified Shopify revenue in 2022</b>.</div>
+ </div>
+</section>
+
+<section class="light">
+ <div class="wrap">
+  <span class="num">04</span>
+  <h2>What happens next</h2>
+  <div class="next">
+   <div class="nc"><div class="s">Step 1</div><h3>Quick call</h3><p>15 minutes to confirm goals, monthly budget and the products that matter most this season.</p></div>
+   <div class="nc"><div class="s">Step 2</div><h3>Access</h3><p>Read access to Google Ads, GA4, GTM, Merchant Center and Shopify. Nothing changes without your sign off.</p></div>
+   <div class="nc"><div class="s">Step 3</div><h3>First week</h3><p>Full tracking audit with a written list of what is firing, what is double counting and the exact fixes.</p></div>
+  </div>
+ </div>
+</section>
+
+<div class="cta">
+ <div class="wrap">
+  <h2>Let's have a quick call</h2>
+  <p>Reply to my message with a time that suits you.</p>
+ </div>
+</div>
+
+<footer>
+ <div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
