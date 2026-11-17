@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Final Expense Meta Plan</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--lgold:#e3c77f;--bg:#e9eff6;--white:#ffffff;--red:#b3261e;--green:#1f6f43;--text:#1b2733;--muted:#5a6b7c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+h2{font-size:28px;line-height:1.25;margin-bottom:14px}
+h3{font-size:18px;margin-bottom:8px}
+p{margin-bottom:12px}
+.num{display:inline-block;color:var(--blue);font-weight:700;font-size:14px;letter-spacing:.08em;margin-bottom:6px}
+.gold{color:var(--gold);font-weight:700}
+.hl{background:#f6ecd2;padding:0 4px;font-weight:700}
+/* hero */
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 48px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b9c7d6;border-bottom:1px solid #1f3d5e;padding-bottom:14px;margin-bottom:34px}
+.label{color:var(--lgold);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.hero h1{font-size:40px;line-height:1.15;margin:8px 0 14px}
+.hero .lead{font-size:19px;color:#dbe4ee;max-width:760px}
+.hero .lead b{color:var(--lgold)}
+.meta{display:flex;flex-wrap:wrap;gap:18px;margin:20px 0 30px;font-size:14px;color:#b9c7d6}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:20px}
+.kpi .v{font-size:34px;font-weight:800;color:var(--lgold);line-height:1.1}
+.kpi .t{font-size:14px;color:#cfd9e4;margin-top:6px}
+/* findings */
+.cards{display:grid;gap:20px;margin-top:24px}
+.fcard{background:var(--white);border-radius:10px;padding:24px;box-shadow:0 2px 10px rgba(11,31,54,.08);border-left:5px solid var(--blue)}
+.fcard.med{border-left-color:var(--gold)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;color:#fff;background:var(--blue)}
+.tag.medium{background:var(--gold);color:var(--navy)}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid #dde5ee;vertical-align:top}
+thead th{background:var(--navy);color:#fff;font-weight:600}
+.bad{color:var(--red);font-weight:600}
+.good{color:var(--green);font-weight:600}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.cmp div{border-radius:8px;padding:14px;font-size:14px}
+.cmp .r{background:#fbeceb;border:1px solid #efc6c3}
+.cmp .g{background:#e8f3ec;border:1px solid #bfdcc9}
+.cmp b{display:block;margin-bottom:6px}
+.cmp .r b{color:var(--red)}.cmp .g b{color:var(--green)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px;font-size:13px}
+.flow span{background:var(--bg);border:1px solid #c9d6e4;border-radius:6px;padding:8px 10px;font-weight:600}
+.flow i{font-style:normal;color:var(--gold);font-weight:800}
+.flow span.miss{border-color:var(--red);color:var(--red);background:#fbeceb}
+/* plan */
+.white{background:var(--white)}
+.timeline{background:var(--navy);border-radius:12px;padding:24px;margin:24px 0 28px;color:#fff}
+.trow{display:grid;grid-template-columns:90px 1fr;gap:12px;align-items:center;margin-bottom:12px}
+.trow:last-child{margin-bottom:0}
+.trow .wk{font-size:13px;color:#b9c7d6;font-weight:700}
+.track{background:#1f3d5e;border-radius:6px;height:34px;position:relative}
+.bar{position:absolute;top:0;height:34px;background:var(--gold);border-radius:6px;color:var(--navy);font-size:13px;font-weight:700;display:flex;align-items:center;padding:0 10px;white-space:nowrap;overflow:hidden}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:20px}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step .why{font-size:14px;color:var(--muted);margin:0}
+/* results */
+.dark{background:var(--navy);color:#fff}
+.dark .num{color:var(--lgold)}
+.dark p{color:#cfd9e4}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.rcard{background:var(--card);border-radius:10px;padding:22px}
+.rcard .big{font-size:32px;font-weight:800;color:var(--lgold);line-height:1.1}
+.rcard .cap{font-size:14px;color:#cfd9e4;margin:6px 0 16px}
+.bars{display:grid;gap:8px}
+.brow{font-size:12px;color:#b9c7d6}
+.btrack{background:#0b2a48;border-radius:4px;height:20px;margin-top:3px}
+.bfill{height:20px;border-radius:4px;background:var(--gold)}
+.bfill.dim{background:#5f7690}
+.niche{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--lgold);font-weight:700;margin-bottom:8px}
+/* next */
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.ncard{background:var(--white);border-radius:10px;padding:22px;border-top:5px solid var(--gold);box-shadow:0 2px 10px rgba(11,31,54,.06)}
+.cta{background:var(--gold);color:var(--navy);text-align:center;padding:44px 0}
+.cta h2{margin-bottom:8px}
+.cta p{margin:0;font-size:17px}
+footer{background:var(--navy);color:#b9c7d6;text-align:center;padding:26px 0;font-size:14px}
+footer b{color:#fff}
+@media (max-width:760px){
+.hero h1{font-size:30px}
+.kpis,.rgrid,.ngrid{grid-template-columns:1fr}
+.cmp{grid-template-columns:1fr}
+.trow{grid-template-columns:64px 1fr}
+h2{font-size:24px}
+section{padding:42px 0}
+table{font-size:13px}
+th,td{padding:8px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><span>Meta Ads and Automation Plan</span><span>18 November 2026</span></div>
+    <div class="label">30 day plan prepared for</div>
+    <h1>Elliott's Final Expense Agency Team</h1>
+    <p class="lead">Final expense leads from Meta that stay inside the insurance ad rules, reach your agents within seconds, and teach Meta to find <b>more people who actually buy a policy</b>.</p>
+    <div class="meta"><span>Channel: Meta Ads</span><span>Automation: Zapier and GoHighLevel</span><span>Market: United States</span></div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">18 to 65+</div><div class="t">Fixed age range on US insurance ads since Meta's Financial Products category, January 2025</div></div>
+      <div class="kpi"><div class="v">15 miles</div><div class="t">Minimum location radius. ZIP code targeting is not allowed</div></div>
+      <div class="kpi"><div class="v">0</div><div class="t">Lookalike audiences allowed in the Financial Products category</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="num">01</div>
+    <h2>What we found</h2>
+    <p>Final expense buyers are mostly 50 to 85. Since January 2025, Meta files every US insurance ad under the Financial Products and Services category. That category <span class="hl">removes age, ZIP code and lookalike targeting</span>, so the old way of reaching seniors no longer works. Ads that skip the category get rejected or paused, and repeat problems lead to account restrictions.</p>
+    <p>The points below come from the job brief, your hiring history and Meta's published category rules. Each one gets confirmed in the week 1 account review.</p>
+
+    <div class="cards">
+      <div class="fcard">
+        <span class="tag">Impact: High</span>
+        <h3>Targeting has moved from the audience to the ad itself</h3>
+        <p>When you cannot pick age 50 plus, the creative and the lead form have to do the filtering. An ad that says "life insurance" pulls in 25 year olds. An ad that speaks to seniors in the first second and asks a qualifying question on the form pulls in buyers.</p>
+        <div class="cmp">
+          <div class="r"><b>What stopped working</b>Age 50 to 85 targeting, ZIP code lists, lookalikes of past buyers, interest stacks like "AARP" or "retirement"</div>
+          <div class="g"><b>What works inside the rules</b>Senior focused hooks and visuals, state level geo where agents are licensed, form questions on age and coverage amount, customer list audiences</div>
+        </div>
+      </div>
+
+      <div class="fcard">
+        <span class="tag">Impact: High</span>
+        <h3>Account stability depends on compliance, not on account age</h3>
+        <p>Aged ad accounts bought from third parties carry someone else's history and can be shut down together with the Business Manager they sit in. A stable spend of $300 a day or more comes from <span class="hl">a verified Business Manager, a correctly declared category and ads that pass review</span>.</p>
+        <table>
+          <thead><tr><th>Area</th><th>Risk now</th><th>Fix</th></tr></thead>
+          <tbody>
+            <tr><td>Special ad category</td><td class="bad">Undeclared ads get rejected or paused</td><td class="good">Declare Financial Products on every campaign</td></tr>
+            <tr><td>Business Manager</td><td class="bad">Unverified business, borrowed accounts</td><td class="good">Business verification, domain verification, two admins</td></tr>
+            <tr><td>Ad copy</td><td class="bad">Personal attribute claims ("Are you over 60?")</td><td class="good">Policy safe hooks that still speak to seniors</td></tr>
+            <tr><td>Landing page</td><td class="bad">Thin page, no carrier or licence details</td><td class="good">Clear disclosures, privacy policy, agent details</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fcard med">
+        <span class="tag medium">Impact: Medium</span>
+        <h3>Meta optimises for form fills, not for policies sold</h3>
+        <p>Leads land in GoHighLevel, Closebot follows up and agents work the phones. Meta never hears which leads picked up, booked or bought, so it keeps finding cheap form fillers. <span class="hl">Sending the sales outcome back to Meta</span> changes who it shows the ads to.</p>
+        <div class="flow">
+          <span>Meta lead form</span><i>&rarr;</i><span>Zapier</span><i>&rarr;</i><span>GoHighLevel</span><i>&rarr;</i><span>Closebot SMS</span><i>&rarr;</i><span>Agent call</span><i>&rarr;</i><span class="miss">Sale sent back to Meta: missing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <div class="num">02</div>
+    <h2>The 30 day plan</h2>
+    <div class="timeline">
+      <div class="trow"><div class="wk">Week 1</div><div class="track"><div class="bar" style="left:0;width:40%">Audit and account health</div></div></div>
+      <div class="trow"><div class="wk">Week 2</div><div class="track"><div class="bar" style="left:20%;width:50%">Compliant rebuild and creative</div></div></div>
+      <div class="trow"><div class="wk">Week 3</div><div class="track"><div class="bar" style="left:40%;width:45%">Zapier and GHL automations</div></div></div>
+      <div class="trow"><div class="wk">Week 4</div><div class="track"><div class="bar" style="left:60%;width:40%">Optimise and scale</div></div></div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h3>Account, policy and tracking audit</h3><p>Review the Business Manager, verification status, rejected ads, category settings, pixel, Conversions API and the lead path into GoHighLevel. You get a written list of what is blocking delivery.</p><p class="why">Why: you cannot scale spend on accounts that keep getting paused.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>Rebuild campaigns inside the Financial Products rules</h3><p>Fewer, larger ad sets by licensed state. Instant forms with higher intent settings and qualifying questions on age range, coverage amount and best time to call.</p><p class="why">Why: broad delivery needs bigger ad sets to exit learning, and the form does the filtering the audience can no longer do.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Creative that selects seniors on its own</h3><p>Three angles tested side by side: protecting family from funeral costs, fixed premiums that never rise, and coverage without a medical exam. Each one is written to pass insurance ad review.</p><p class="why">Why: creative is now the targeting.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Zapier automations from lead to agent</h3><p>New lead to GoHighLevel contact with source tags, Closebot text within seconds, agent alert, and a row in your sales leaderboard. Dispositions such as contacted, appointment set and policy sold get written back automatically.</p><p class="why">Why: final expense leads go cold fast, and manual copying loses them.</p></div></div>
+      <div class="step"><div class="n">5</div><div><h3>Send sales outcomes back to Meta</h3><p>Pass "appointment set" and "policy sold" from GoHighLevel to Meta through the Conversions API, then move optimisation toward quality leads.</p><p class="why">Why: Meta learns who buys, not just who fills in a form.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="num">03</div>
+    <h2>Comparable results</h2>
+    <p>These come from US lead generation accounts with the same building blocks: ad policy limits, tracking rebuilt around real outcomes, and leads flowing into a CRM.</p>
+    <div class="rgrid">
+      <div class="rcard">
+        <div class="niche">Cosmetic surgery clinic, US</div>
+        <div class="big">+140%</div>
+        <div class="cap">Confirmed bookings after offline conversion uploads were rebuilt and bidding moved to real bookings</div>
+        <div class="bars">
+          <div class="brow">Before: 5 bookings<div class="btrack"><div class="bfill dim" style="width:42%"></div></div></div>
+          <div class="brow">After: 12 bookings<div class="btrack"><div class="bfill" style="width:100%"></div></div></div>
+        </div>
+      </div>
+      <div class="rcard">
+        <div class="niche">Cosmetic surgery clinic, US</div>
+        <div class="big">$46.15</div>
+        <div class="cap">Cost per conversion, down from $99.97, a 53.8% reduction</div>
+        <div class="bars">
+          <div class="brow">Before: $99.97<div class="btrack"><div class="bfill dim" style="width:100%"></div></div></div>
+          <div class="brow">After: $46.15<div class="btrack"><div class="bfill" style="width:46%"></div></div></div>
+        </div>
+      </div>
+      <div class="rcard">
+        <div class="niche">Behavioural health provider, US</div>
+        <div class="big">488</div>
+        <div class="cap">Conversions in 30 days on $2,684, with tracking built before any spend went live</div>
+        <div class="bars">
+          <div class="brow">Spend: $2,684<div class="btrack"><div class="bfill dim" style="width:55%"></div></div></div>
+          <div class="brow">Conversions: 488<div class="btrack"><div class="bfill" style="width:100%"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num">04</div>
+    <h2>What happens next</h2>
+    <div class="ngrid">
+      <div class="ncard"><h3>1. Short call</h3><p>We walk through your current Meta setup, licensed states, daily budget target and how leads are worked today.</p></div>
+      <div class="ncard"><h3>2. Access</h3><p>Partner access to the Business Manager, plus GoHighLevel and Zapier user access. No passwords shared.</p></div>
+      <div class="ncard"><h3>3. First week</h3><p>Audit delivered, category and verification fixed, the first Zapier lead flow live and tested end to end.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
