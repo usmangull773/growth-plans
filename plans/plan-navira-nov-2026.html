@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Navira Meta Growth Plan</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--lgold:#e3c77f;--bg:#e9eff6;--white:#fff;--red:#b3261e;--green:#1f6f43;--text:#1b2633;--muted:#5a6878}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+section{padding:56px 0}
+h2{font-size:26px;margin-bottom:14px;color:var(--navy)}
+.num{display:inline-block;color:var(--blue);font-weight:700;font-size:14px;letter-spacing:.08em;margin-bottom:6px}
+.hl{background:#f6ecd0;padding:0 4px;font-weight:700}
+.hero{background:var(--navy);color:#fff;border-bottom:5px solid var(--gold);padding:28px 0 48px}
+.topbar{display:flex;justify-content:space-between;font-size:13px;color:#b8c6d8;margin-bottom:36px;flex-wrap:wrap;gap:8px}
+.label{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.hero h1{font-size:36px;line-height:1.2;margin:8px 0 12px}
+.hero p.lead{font-size:19px;color:#dbe4ef;max-width:780px}
+.hero p.lead b{color:var(--lgold)}
+.meta{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;color:#b8c6d8;margin:18px 0 30px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:20px}
+.kpi .v{font-size:30px;font-weight:800;color:var(--lgold)}
+.kpi .t{font-size:14px;color:#c9d5e3}
+.light{background:var(--bg)}
+.white{background:var(--white)}
+.intro{max-width:800px;margin-bottom:28px;color:var(--muted)}
+.findings{display:grid;gap:20px}
+.finding{background:#fff;border-radius:10px;padding:24px;box-shadow:0 4px 16px rgba(11,31,54,.08);border-left:5px solid var(--blue)}
+.finding.med{border-left-color:var(--gold)}
+.finding h3{font-size:19px;margin-bottom:6px;color:var(--navy)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:20px;margin-bottom:10px;color:#fff;background:var(--blue)}
+.tag.med{background:var(--gold);color:var(--navy)}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px}
+td{padding:10px;border-bottom:1px solid #dde5ee;vertical-align:top}
+.bad{color:var(--red);font-weight:700}
+.good{color:var(--green);font-weight:700}
+.tablewrap{overflow-x:auto}
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px;font-size:14px}
+.node{background:var(--bg);border:1px solid #cdd8e5;border-radius:8px;padding:10px 12px;font-weight:600;color:var(--navy)}
+.node.g{background:#e6f1ea;border-color:#9cc5ab;color:var(--green)}
+.node.r{background:#f7e7e6;border-color:#e0a9a5;color:var(--red)}
+.arrow{color:var(--blue);font-weight:800}
+.timeline{background:var(--navy);border-radius:12px;padding:24px;margin:10px 0 30px;color:#fff}
+.timeline h3{font-size:15px;color:var(--lgold);margin-bottom:8px}
+.trow{display:grid;grid-template-columns:90px 1fr;gap:12px;align-items:center;margin:10px 0;font-size:14px}
+.track{position:relative;height:30px;background:#173b63;border-radius:6px}
+.bar{position:absolute;top:0;height:30px;background:var(--gold);border-radius:6px;color:var(--navy);font-weight:700;font-size:12px;padding:6px 10px;white-space:nowrap;overflow:hidden}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:20px}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step h3{font-size:17px;color:var(--navy);margin-bottom:4px}
+.step p{font-size:15px;color:var(--muted)}
+.dark{background:var(--navy);color:#fff}
+.dark h2{color:#fff}
+.dark .num{color:var(--lgold)}
+.dark .intro{color:#c9d5e3}
+.charts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.chart{background:var(--card);border-radius:10px;padding:22px}
+.chart .big{font-size:30px;font-weight:800;color:var(--lgold);line-height:1.1}
+.chart .cap{font-size:14px;color:#c9d5e3;margin:6px 0 16px}
+.cb{margin:10px 0;font-size:13px;color:#dbe4ef}
+.cb .tr{height:12px;background:#0b2a4a;border-radius:6px;margin-top:4px}
+.cb .fl{height:12px;background:var(--gold);border-radius:6px}
+.chart .src{font-size:12px;color:#9fb1c6;margin-top:14px}
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ncard{background:#fff;border-top:5px solid var(--gold);border-radius:10px;padding:22px;box-shadow:0 4px 16px rgba(11,31,54,.06)}
+.ncard h3{font-size:17px;color:var(--navy);margin-bottom:6px}
+.ncard p{font-size:15px;color:var(--muted)}
+.cta{background:var(--gold);padding:44px 0;text-align:center;color:var(--navy)}
+.cta h2{color:var(--navy);margin-bottom:6px}
+footer{background:var(--navy);color:#c9d5e3;padding:26px 0;font-size:14px;text-align:center}
+@media(max-width:760px){.kpis,.charts,.next{grid-template-columns:1fr}.hero h1{font-size:28px}section{padding:40px 0}.trow{grid-template-columns:64px 1fr}.step{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><span>Meta media buying and creative plan</span><span>November 2026</span></div>
+    <div class="label">30 day plan prepared for</div>
+    <h1>Navira, Meta for a multi-brand eCommerce portfolio</h1>
+    <p class="lead">Turn Meta into a channel that is judged on <b>blended profit across Shopify and Amazon</b>, not on in-platform ROAS alone, with one operator who designs, launches, tests and reports every week.</p>
+    <div class="meta"><span>Market: United States</span><span>Channels: Meta, Shopify, Amazon</span><span>Model: multi-brand, margin-led</span><span>Hours: US Eastern, Mon to Fri</span></div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">Per SKU</div><div class="t">Breakeven ROAS set from wholesale cost and retail margin, not one target for all</div></div>
+      <div class="kpi"><div class="v">Weekly</div><div class="t">Creative, offer and audience test cycle for every brand</div></div>
+      <div class="kpi"><div class="v">MER + CAC</div><div class="t">Headline numbers on one weekly report, with Meta and Amazon sales side by side</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="light">
+  <div class="wrap">
+    <span class="num">01</span>
+    <h2>What we found</h2>
+    <p class="intro">Navira has spent more than 10 years mastering Amazon: Buy Box control, MAP protection, catalog and logistics. The Meta role is a different muscle. The brands sell on Shopify and Amazon at the same time, and Navira earns on the retail margin. That means <span class="hl">the wrong scorecard can make a profitable Meta campaign look like a loser, or the reverse</span>. Three areas decide whether Meta scales profitably.</p>
+    <div class="findings">
+
+      <div class="finding">
+        <span class="tag">High impact</span>
+        <h3>Meta drives Amazon sales that Meta never sees</h3>
+        <p>A shopper sees a Reel, then searches the brand on Amazon and buys there. Ads Manager records no purchase, the ad set gets cut, and the Amazon lift disappears with it. For an Amazon-first portfolio, <b>in-platform ROAS undercounts what Meta is doing</b>.</p>
+        <div class="flow">
+          <span class="node">Meta ad</span><span class="arrow">to</span>
+          <span class="node">Shopify store</span><span class="arrow">or</span>
+          <span class="node">Amazon search</span><span class="arrow">to</span>
+          <span class="node r">Sale Meta cannot attribute</span>
+        </div>
+        <div class="flow">
+          <span class="node">Meta ad</span><span class="arrow">to</span>
+          <span class="node">Amazon Attribution tag</span><span class="arrow">to</span>
+          <span class="node g">Sale tracked, Brand Referral Bonus where eligible</span>
+        </div>
+        <p style="margin-top:12px">The fix is a blended view: Shopify MER, Amazon sales from tagged Meta traffic, and a holdout test before any big budget call.</p>
+      </div>
+
+      <div class="finding">
+        <span class="tag">High impact</span>
+        <h3>One ROAS target cannot fit every brand</h3>
+        <p>Navira buys at wholesale and earns in the margin, so every SKU has its own profit line. A 2.0 ROAS can be strong on a high-margin beauty item and a loss on a low-margin accessory. <b>Targets must come from contribution margin, product by product.</b></p>
+        <div class="tablewrap"><table>
+          <tr><th>Common multi-brand setup</th><th>Margin-led setup</th></tr>
+          <tr><td class="bad">Same ROAS goal across all brands</td><td class="good">Breakeven and target ROAS per SKU from landed cost, fees and shipping</td></tr>
+          <tr><td class="bad">Pixel and Conversions API purchases double counted</td><td class="good">One event ID per order, deduplicated, high match quality</td></tr>
+          <tr><td class="bad">Budget moves on 3-day ROAS swings</td><td class="good">Decisions on 7-day MER, CAC and new-customer share</td></tr>
+          <tr><td class="bad">Bundles and best sellers treated alike</td><td class="good">Higher AOV bundles pushed to cold traffic to protect margin</td></tr>
+        </table></div>
+      </div>
+
+      <div class="finding med">
+        <span class="tag med">Medium impact</span>
+        <h3>Creative volume is the real bottleneck</h3>
+        <p>On Meta, the creative is the targeting. Across several brands, results depend on a steady flow of new concepts, <b>designed, tested and documented by the same person who reads the data</b>, so nothing is lost between a designer and a media buyer.</p>
+        <div class="tablewrap"><table>
+          <tr><th>Layer</th><th>Per brand, every week</th></tr>
+          <tr><td>New concepts</td><td>3 to 5 angles: problem and solution, UGC style, product demo, offer, social proof</td></tr>
+          <tr><td>Formats</td><td>Feed 4:5, Stories and Reels 9:16, carousel</td></tr>
+          <tr><td>Test log</td><td>Hypothesis, spend, result and decision recorded in Asana</td></tr>
+          <tr><td>Winners</td><td>Moved into the scaling campaign, then refreshed before fatigue</td></tr>
+        </table></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <span class="num">02</span>
+    <h2>The 30 day plan</h2>
+    <div class="timeline">
+      <h3>Weeks 1 to 4</h3>
+      <div class="trow"><span>Week 1</span><div class="track"><div class="bar" style="left:0;width:30%">Audit and tracking</div></div></div>
+      <div class="trow"><span>Week 2</span><div class="track"><div class="bar" style="left:20%;width:40%">Structure and creative sprint</div></div></div>
+      <div class="trow"><span>Week 3</span><div class="track"><div class="bar" style="left:45%;width:35%">Testing cycle</div></div></div>
+      <div class="trow"><span>Week 4</span><div class="track"><div class="bar" style="left:65%;width:35%">Scale winners</div></div></div>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h3>Audit every account and fix the signal</h3><p>Review spend, ROAS, CPA and frequency by brand. Check Pixel and Conversions API deduplication, event match quality and Shopify purchase values. Reason: Meta can only optimise as well as the data it receives.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>Build a margin sheet per brand</h3><p>Breakeven ROAS, target CAC and AOV for each SKU, plus a blended MER goal per brand. Reason: every budget decision after this point is checked against profit, not a single platform number.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Restructure into testing, scaling and retargeting</h3><p>One clean testing campaign, one scaling campaign for proven ads, one retargeting layer, with the same naming convention across all brands. Reason: faster reading of results and fewer resets in delivery.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Ship the first creative sprint</h3><p>New static, carousel and short video concepts per brand, built from reviews, competitor ads and best sellers. Reason: fresh creative is the main lever for lower CPA on Meta.</p></div></div>
+      <div class="step"><div class="n">5</div><div><h3>Tag Amazon traffic and scale what wins</h3><p>Amazon Attribution links on Amazon-led products, budget steps of 15 to 20 percent on winners, and a weekly report with insights and next actions. Reason: Meta gets credit for the Amazon sales it drives, and scaling stays controlled.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <span class="num">03</span>
+    <h2>Comparable results</h2>
+    <p class="intro">From a US eCommerce brand managed on paid media and Shopify, 2011 to 2023.</p>
+    <div class="charts">
+      <div class="chart">
+        <div class="big">$15.5M</div>
+        <div class="cap">Ad spend managed across 977 campaigns</div>
+        <div class="cb">Search, $7.45M<div class="tr"><div class="fl" style="width:48%"></div></div></div>
+        <div class="cb">Display, $7.38M<div class="tr"><div class="fl" style="width:48%"></div></div></div>
+        <div class="src">US eCommerce brand, 2011 to 2023</div>
+      </div>
+      <div class="chart">
+        <div class="big">$5.6M</div>
+        <div class="cap">Verified Shopify revenue in 2022</div>
+        <div class="cb">Best month, July 2022: $778,584<div class="tr"><div class="fl" style="width:100%"></div></div></div>
+        <div class="cb">Orders that month: 3,385<div class="tr"><div class="fl" style="width:70%"></div></div></div>
+        <div class="src">Shopify revenue, 2022</div>
+      </div>
+      <div class="chart">
+        <div class="big">$2.13M</div>
+        <div class="cap">Search and Shopping revenue, Jan to Jun 2022</div>
+        <div class="cb">Jan to Jun 2021: $1.85M<div class="tr"><div class="fl" style="width:87%"></div></div></div>
+        <div class="cb">Jul to Dec 2021: $2.03M<div class="tr"><div class="fl" style="width:95%"></div></div></div>
+        <div class="cb">Jan to Jun 2022: $2.13M<div class="tr"><div class="fl" style="width:100%"></div></div></div>
+        <div class="src">Six-month revenue, growing each period</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <span class="num">04</span>
+    <h2>What happens next</h2>
+    <div class="next">
+      <div class="ncard"><h3>Short call</h3><p>We walk through the brands, current spend levels, margin structure and how Meta and Amazon reporting sit today.</p></div>
+      <div class="ncard"><h3>Account access</h3><p>Analyst access to Meta Business Manager, Shopify and your reporting tool, Triple Whale or GA4, plus a seat in Asana and Google Chat.</p></div>
+      <div class="ncard"><h3>First week</h3><p>Tracking audit, margin sheet per brand and the first creative concepts, with a written summary at the end of the week.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">Usman Gull, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
