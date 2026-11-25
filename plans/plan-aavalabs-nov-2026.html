@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aavalabs: 30 Day Paid Media Plan</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--lgold:#e3c77f;--bg:#e9eff6;--white:#ffffff;--red:#b3261e;--green:#1f6f43;--text:#1b2733;--muted:#5a6b7d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:28px;line-height:1.25;margin-bottom:14px;color:var(--navy)}
+h3{font-size:19px;line-height:1.35;margin-bottom:8px}
+p{margin-bottom:12px}
+strong{font-weight:700}
+.num{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--blue);text-transform:uppercase;margin-bottom:8px}
+.hl{background:rgba(200,162,74,.22);padding:0 4px;border-radius:3px;font-weight:700}
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b9c7d8;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:40px}
+.label{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.hero h1{font-size:44px;line-height:1.1;margin-bottom:16px}
+.hero .lead{font-size:20px;max-width:800px;color:#dbe4ef;margin-bottom:22px}
+.hero .lead strong{color:var(--lgold)}
+.meta{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:14px;color:#b9c7d8;margin-bottom:36px}
+.meta b{color:#fff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:20px}
+.kpi .v{font-size:34px;font-weight:800;color:var(--lgold);line-height:1.1}
+.kpi .l{font-size:14px;color:#c9d5e3;margin-top:6px}
+.cards{display:grid;gap:22px;margin-top:28px}
+.fcard{background:#fff;border-radius:10px;padding:26px;box-shadow:0 4px 18px rgba(11,31,54,.08);border-left:6px solid var(--blue)}
+.fcard.med{border-left-color:var(--gold)}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:10px;color:#fff;background:var(--blue)}
+.tag.med{background:var(--gold);color:var(--navy)}
+.tblw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600}
+td{padding:10px 12px;border-bottom:1px solid #e3e9f0;vertical-align:top}
+.ok{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.chk{color:var(--blue);font-weight:700}
+.bar{height:12px;background:#e3e9f0;border-radius:6px;overflow:hidden;min-width:80px}
+.bar i{display:block;height:100%;background:var(--gold)}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.cmp div{border-radius:8px;padding:16px;font-size:15px}
+.cmp .bad{background:#fbeceb;border-top:4px solid var(--red)}
+.cmp .good{background:#e8f3ec;border-top:4px solid var(--green)}
+.cmp h4{font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.cmp .bad h4{color:var(--red)}.cmp .good h4{color:var(--green)}
+.cmp ul{padding-left:18px}.cmp li{margin-bottom:6px}
+.white{background:#fff}
+.timeline{background:var(--navy);border-radius:12px;padding:26px;margin:26px 0 30px;color:#fff}
+.trow{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center;margin-bottom:14px}
+.trow:last-child{margin-bottom:0}
+.trow .wk{font-size:14px;color:#c9d5e3}
+.trow .wk b{color:#fff;display:block;font-size:15px}
+.track{position:relative;height:30px;background:rgba(255,255,255,.07);border-radius:6px}
+.track span{position:absolute;top:0;height:30px;background:var(--gold);border-radius:6px;color:var(--navy);font-size:13px;font-weight:700;padding:5px 10px;white-space:nowrap;overflow:hidden}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:20px}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step .why{font-size:14px;color:var(--muted);margin:0}
+.dark{background:var(--navy);color:#fff}
+.dark h2{color:#fff}
+.dark .num{color:var(--lgold)}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.rcard{background:var(--card);border-radius:10px;padding:22px}
+.rcard .big{font-size:36px;font-weight:800;color:var(--lgold);line-height:1.1}
+.rcard .cap{font-size:14px;color:#c9d5e3;margin:6px 0 16px}
+.rb{margin-bottom:10px;font-size:13px;color:#dbe4ef}
+.rb .line{display:flex;justify-content:space-between;gap:8px;margin-bottom:4px}
+.rb .t{height:10px;background:rgba(255,255,255,.1);border-radius:5px;overflow:hidden}
+.rb .t i{display:block;height:100%;background:var(--gold)}
+.note{font-size:13px;color:#9fb2c8;margin-top:18px}
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.ncard{background:#fff;border-radius:10px;padding:22px;border-top:5px solid var(--gold);box-shadow:0 4px 18px rgba(11,31,54,.06)}
+.ncard .s{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.cta{background:var(--gold);color:var(--navy);text-align:center;padding:48px 0}
+.cta h2{color:var(--navy);margin-bottom:8px}
+.cta p{font-size:18px;margin:0}
+footer{background:var(--navy);color:#c9d5e3;text-align:center;padding:26px 0;font-size:14px}
+footer b{color:#fff}
+.small{font-size:14px;color:var(--muted)}
+@media(max-width:760px){
+  section{padding:44px 0}
+  .hero h1{font-size:32px}.hero .lead{font-size:17px}
+  .kpis,.rgrid,.ngrid,.cmp{grid-template-columns:1fr}
+  .trow{grid-template-columns:1fr;gap:6px}
+  .step{grid-template-columns:1fr;gap:10px}
+  h2{font-size:24px}
+  .wrap{padding:0 16px}
+  table{font-size:14px}
+  td,th{padding:8px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><span>Paid media strategy and measurement plan</span><span>25 November 2026</span></div>
+    <div class="label">30 day plan prepared for</div>
+    <h1>Aavalabs</h1>
+    <p class="lead">One measurement layer across Google, Meta, Microsoft and the marketplaces, so every euro is judged on <strong>contribution margin and new customer CAC</strong>, and your team can scale spend without needing an outside expert day to day.</p>
+    <div class="meta"><span>Brand: <b>Aavalabs, Helsinki</b></span><span>Markets: <b>30 country storefronts</b></span><span>Channels: <b>Google, Meta, Microsoft, Amazon, Allegro, Shop Apotheke</b></span><span>Focus: <b>Margin, MER, new customers</b></span></div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">0 of 52</div><div class="l">Products in the online catalogue with a subscribe and save option, in a category built on repeat purchase</div></div>
+      <div class="kpi"><div class="v">6 for 30</div><div class="l">Site languages for 30 country storefronts. No Finnish, Swedish, Danish or Polish version</div></div>
+      <div class="kpi"><div class="v">0</div><div class="l">Microsoft Ads (UET) tags found on the storefront, while Microsoft Ads is part of the channel mix</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="num">01 What we found</span>
+    <h2>The constraint is measurement and margin, not reach</h2>
+    <p>This review used only what is public: the storefront, its tags, its product catalogue, its markets and its team page. From the outside, Aavalabs looks like a brand with strong products, strong marketplace specialists and a wide European footprint. What is missing is a <span class="hl">single view of what each channel adds to profit</span>. Without it, budget follows platform ROAS, discounts hide margin loss, and nobody can say with confidence what the next €10,000 should buy.</p>
+
+    <div class="cards">
+      <div class="fcard">
+        <span class="tag">High impact</span>
+        <h3>Tracking covers Google and Meta, but cannot yet prove incrementality</h3>
+        <p>Tags load through native Shopify apps, not a managed tag container. Google Ads, GA4, Merchant Center, the Meta pixel and Klaviyo all fire. <strong>No Microsoft UET tag was found</strong> on the homepage or product pages, so Microsoft Ads is likely optimising on imported or partial data. Each platform also claims its own sales, so the same order can be counted two or three times across channels.</p>
+        <div class="tblw"><table>
+          <tr><th>Signal checked on the live storefront</th><th style="width:34%">Status</th></tr>
+          <tr><td>Google Ads conversion tag and GA4</td><td class="ok">Found, via Shopify Google app</td></tr>
+          <tr><td>Google Merchant Center feed tag</td><td class="ok">Found</td></tr>
+          <tr><td>Meta pixel</td><td class="ok">Found</td></tr>
+          <tr><td>Microsoft Ads UET tag</td><td class="no">Not found</td></tr>
+          <tr><td>Tag container for custom events and server-side routing</td><td class="no">Not in use</td></tr>
+          <tr><td>Consent Mode v2 behaviour for EU visitors</td><td class="chk">Verify in week 1</td></tr>
+          <tr><td>Enhanced Conversions and Meta CAPI deduplication</td><td class="chk">Verify in week 1</td></tr>
+        </table></div>
+        <p class="small" style="margin-top:12px">The review was run from outside the EU, where the consent default is "granted". The EU default, and whether conversions are modelled correctly when visitors decline, has to be checked from an EU session in week 1.</p>
+      </div>
+
+      <div class="fcard">
+        <span class="tag">High impact</span>
+        <h3>Order economics put pressure on margin, and discounts make ROAS look better than it is</h3>
+        <p>Single products sit mostly between €18.99 and €35.99, and Black Week runs <strong>25% off everything and 30% off bundles</strong>. A Lion's Mane order at €17.25 rarely covers a paid first order on its own. Profit has to come from the second, third and fourth order, but <span class="hl">no subscribe and save option was found on any product</span>, so repeat purchase depends on customers coming back by themselves.</p>
+        <div class="cmp">
+          <div class="bad"><h4>Running now</h4><ul><li>Budget judged on platform ROAS per channel</li><li>Discount led first orders at €17 to €26</li><li>Repeat orders left to email and memory</li><li>Same ROAS target for new and returning buyers</li></ul></div>
+          <div class="good"><h4>What scales</h4><ul><li>Budget judged on blended MER and new customer CAC</li><li>Bundles and 90 day packs as the default first order</li><li>Subscribe and save on the 10 best repeat products</li><li>Higher bids for new customers, lower for existing ones</li></ul></div>
+        </div>
+      </div>
+
+      <div class="fcard med">
+        <span class="tag med">Medium impact</span>
+        <h3>Markets and claims are not ready for more spend everywhere</h3>
+        <p>Paid traffic in Poland, Sweden, Denmark and Finland lands on English pages, while Germany, France, Italy, Spain and the Netherlands get native language pages. On claims, most product copy is careful, but a few titles and meta descriptions attach a benefit to a botanical rather than to an authorised nutrient. These are the lines that Google Shopping and ads pull straight into listings.</p>
+        <div class="tblw"><table>
+          <tr><th>Item</th><th>What we saw</th><th style="width:22%">Risk</th></tr>
+          <tr><td>Lion's Mane page title and meta</td><td>"Cognitive Function and Mental Clarity" and "brain health and memory" next to Lion's Mane. The body copy correctly links cognitive function to zinc</td><td>EU health claim rules and Shopping disapprovals</td></tr>
+          <tr><td>Shilajit meta description</td><td>"for vitality" with no authorised claim beside it</td><td>General claim without a specific claim</td></tr>
+          <tr><td>Home market language</td><td>Finnish brand, no Finnish language site</td><td>Lower conversion rate in the home market</td></tr>
+          <tr><td>Poland storefront</td><td>English only, while Allegro is a core channel</td><td>Weak site support for Polish demand</td></tr>
+          <tr><td>Product structured data</td><td>Two Product blocks on one product page</td><td>Mixed signals for merchant listings</td></tr>
+        </table></div>
+      </div>
+
+      <div class="fcard med">
+        <span class="tag med">Medium impact</span>
+        <h3>The team is strong per channel. What is missing is the layer that connects it</h3>
+        <p>Aavalabs already has specialists for Amazon, Amazon PPC, Allegro and Kaufland, Shop Apotheke and DocMorris, data, regulations and design. The gap is <strong>one shared budget model, one profit view and one way of working</strong> across them. That is what the playbooks and training in this plan are built around.</p>
+        <div class="tblw"><table>
+          <tr><th>Role on your team</th><th>What they get from this engagement</th></tr>
+          <tr><td>CEO and Commercial Director</td><td>Monthly MER and new customer CAC by market, 12 month budget scenarios</td></tr>
+          <tr><td>Amazon managers and Amazon PPC manager</td><td>TACoS targets tied to margin, a branded versus non-branded split, a weekly routine</td></tr>
+          <tr><td>Allegro, Kaufland, Shop Apotheke and DocMorris managers</td><td>Marketplace ad playbooks with the same CAC and margin rules</td></tr>
+          <tr><td>Data analyst</td><td>A single weekly dashboard joining Shopify, platforms and marketplaces</td></tr>
+          <tr><td>QA and regulations specialist</td><td>An ad copy claims checklist per platform and market</td></tr>
+          <tr><td>Designers and content manager</td><td>A creative testing brief system for Meta and YouTube</td></tr>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <span class="num">02 The 30 day plan</span>
+    <h2>Baseline, waste in euros, clean signal, then a roadmap your team can run</h2>
+    <div class="timeline">
+      <div class="trow"><div class="wk"><b>Week 1</b>Audit and baseline</div><div class="track"><span style="left:0;width:34%">All accounts and tracking</span></div></div>
+      <div class="trow"><div class="wk"><b>Week 2</b>Waste in €</div><div class="track"><span style="left:22%;width:36%">Ranked action list</span></div></div>
+      <div class="trow"><div class="wk"><b>Week 3</b>Signal and tests</div><div class="track"><span style="left:44%;width:38%">Fixes live, tests designed</span></div></div>
+      <div class="trow"><div class="wk"><b>Week 4</b>Roadmap and training</div><div class="track"><span style="left:66%;width:34%">Playbooks and sessions</span></div></div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h3>Audit every account and agree one baseline</h3><p>Google, Meta, Microsoft, Amazon, Allegro and Shop Apotheke, plus GA4 and Shopify. Reconcile platform-reported sales against Shopify orders by market. Agree the baseline with leadership: blended MER, new customer CAC, contribution margin per order and payback period.</p><p class="why">Reason: every later decision needs one number everyone trusts, not six platform dashboards.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>Find wasted spend and price it in euros</h3><p>Search terms with no sales, brand traffic paid for twice in Search and Performance Max, low margin products eating Shopping budget, existing customers bought again as "new", marketplace ads judged on ACoS instead of TACoS. Each item gets a € estimate and an owner.</p><p class="why">Reason: a list ranked by € impact tells the team what to fix first.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Fix tracking and attribution</h3><p>Consent Mode v2 checked for EU visitors, Enhanced Conversions, Meta CAPI deduplication, Microsoft UET with consent, and server-side routing where it adds accuracy. Then turn on new customer acquisition goals in Google and Meta, using margin-based values instead of revenue.</p><p class="why">Reason: bidding can only chase profitable new customers if the signal tells it who they are.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Design the first incrementality tests</h3><p>A geo holdout on Meta in one matched market, a brand search holdout, and a Performance Max versus Shopping split. Each test gets a written hypothesis, duration, budget and decision rule before launch.</p><p class="why">Reason: tests show which channels truly drive sales, and they feed a light media mix model once 6 to 12 months of clean data exist.</p></div></div>
+      <div class="step"><div class="n">5</div><div><h3>Build the 12 month roadmap and train the team</h3><p>A budget split by channel and market with three spend scenarios, a claims checklist for every ad, and one playbook per role. Weekly training sessions so the team runs day to day optimisation without outside help.</p><p class="why">Reason: the goal by month 6 is a team that runs it alone, with strategy reviewed monthly.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <span class="num">03 Comparable results</span>
+    <h2>eCommerce scale and restricted category measurement</h2>
+    <div class="rgrid">
+      <div class="rcard">
+        <div class="big">$15.5M</div>
+        <div class="cap">Ad spend managed for a US eCommerce brand across 977 campaigns, 2011 to 2023</div>
+        <div class="rb"><div class="line"><span>Search spend</span><span>$7.45M</span></div><div class="t"><i style="width:48%"></i></div></div>
+        <div class="rb"><div class="line"><span>Display spend</span><span>$7.38M</span></div><div class="t"><i style="width:48%"></i></div></div>
+        <div class="rb"><div class="line"><span>Clicks</span><span>12.9M</span></div><div class="t"><i style="width:100%"></i></div></div>
+      </div>
+      <div class="rcard">
+        <div class="big">$5.6M</div>
+        <div class="cap">Verified Shopify revenue in 2022. Search and Shopping revenue grew each half year</div>
+        <div class="rb"><div class="line"><span>H1 2021</span><span>$1.85M</span></div><div class="t"><i style="width:87%"></i></div></div>
+        <div class="rb"><div class="line"><span>H2 2021</span><span>$2.03M</span></div><div class="t"><i style="width:95%"></i></div></div>
+        <div class="rb"><div class="line"><span>H1 2022</span><span>$2.13M</span></div><div class="t"><i style="width:100%"></i></div></div>
+      </div>
+      <div class="rcard">
+        <div class="big">+140%</div>
+        <div class="cap">Confirmed bookings for a cosmetic surgery clinic after a conversion tracking rebuild in a restricted healthcare category</div>
+        <div class="rb"><div class="line"><span>Confirmed bookings</span><span>5 to 12</span></div><div class="t"><i style="width:100%"></i></div></div>
+        <div class="rb"><div class="line"><span>Cost per conversion</span><span>$99.97 to $46.15</span></div><div class="t"><i style="width:46%"></i></div></div>
+        <div class="rb"><div class="line"><span>Conversion rate</span><span>1.50% to 6.54%</span></div><div class="t"><i style="width:100%"></i></div></div>
+      </div>
+    </div>
+    <p class="note">On the eCommerce account, Analytics and Ads data were cross-referenced to show Display worked as a delayed branding layer rather than a last click channel, the same thinking behind step 4. The clinic result came from rewriting ads within healthcare policy limits, re-establishing offline conversion uploads and pointing bidding at confirmed outcomes.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="num">04 What happens next</span>
+    <h2>Three steps to get started</h2>
+    <div class="ngrid">
+      <div class="ncard"><div class="s">Step 1</div><h3>Quick call</h3><p>30 minutes with the CEO and Commercial Director on margins by product, current spend by channel and market, and what success at day 90 looks like.</p></div>
+      <div class="ncard"><div class="s">Step 2</div><h3>Read-only access</h3><p>Read access to the ad accounts, GA4 and Shopify reports under NDA, so the audit and the € estimates use your real numbers.</p></div>
+      <div class="ncard"><div class="s">Step 3</div><h3>First week</h3><p>Baseline agreed, tracking verified from an EU session, first waste list priced in euros and the training calendar set with your team.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<footer><b>Usman Gull</b>, Google Ads and SEO Specialist</footer>
+
+</body>
+</html>
