@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Med Spa Magic Marketing | Friday Check and Optimization Plan | Usman Gull</title>
+<style>
+  :root{
+    --navy:#0b1f36; --card:#12355b; --blue:#0f4c81;
+    --gold:#c8a24a; --gold-l:#e3c77f;
+    --bg:#e9eff6; --white:#ffffff;
+    --red:#b3261e; --green:#1f6f43;
+    --ink:#14263b; --muted:#4a5d73; --line:#d3dde9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  strong{font-weight:700}
+  .hl{background:rgba(200,162,74,.22);padding:1px 4px;border-radius:3px;font-weight:700}
+  .hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+  .topbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:14px;color:#a9bbd0;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:44px}
+  .topbar b{color:#fff;font-weight:600}
+  .prep{color:var(--gold-l);font-size:15px;font-weight:600;margin-bottom:10px}
+  .hero h1{font-size:clamp(38px,7vw,64px);line-height:1.04;letter-spacing:-1.5px;font-weight:800;margin-bottom:20px}
+  .outcome{font-size:clamp(18px,2.4vw,23px);max-width:780px;color:#dbe5f1;line-height:1.45;margin-bottom:28px}
+  .outcome span{color:var(--gold-l);font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+  .meta div{font-size:13.5px;color:#c4d3e4;border:1px solid rgba(255,255,255,.16);padding:6px 12px;border-radius:4px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .kpi{background:var(--card);border-radius:8px;padding:22px 22px 20px}
+  .kpi .n{font-size:44px;font-weight:800;color:var(--gold-l);line-height:1;margin-bottom:10px;letter-spacing:-1px}
+  .kpi p{font-size:14.5px;color:#cfdbe9;line-height:1.45}
+  section{padding:76px 0}
+  .light{background:var(--bg)}
+  .white{background:var(--white)}
+  .dark{background:var(--navy);color:#fff}
+  .sh{display:flex;align-items:baseline;gap:16px;margin-bottom:14px}
+  .sn{font-size:15px;font-weight:800;color:var(--blue);border:2px solid var(--blue);border-radius:4px;padding:2px 8px;line-height:1.3}
+  .dark .sn{color:var(--gold-l);border-color:var(--gold-l)}
+  h2{font-size:clamp(28px,4vw,38px);letter-spacing:-.6px;line-height:1.15;font-weight:800}
+  .intro{max-width:740px;font-size:17.5px;color:var(--muted);margin-bottom:40px}
+  .dark .intro{color:#c4d3e4}
+  .finding{background:#fff;border-radius:8px;box-shadow:0 6px 24px rgba(11,31,54,.08);padding:30px 30px 28px;margin-bottom:24px;border-left:6px solid var(--blue)}
+  .finding.med{border-left-color:var(--gold)}
+  .fhead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+  .finding h3{font-size:21px;line-height:1.3;max-width:720px}
+  .tag{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap}
+  .tag.high{background:var(--blue);color:#fff}
+  .tag.med{background:var(--gold);color:var(--navy)}
+  .finding > p{color:var(--muted);max-width:800px;margin-bottom:22px}
+  .finding > p strong{color:var(--ink)}
+  .flow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:6px}
+  .node{flex:1;min-width:160px;border:1.5px solid var(--line);border-radius:6px;padding:14px;background:#f7f9fc}
+  .node .u{font-weight:700;font-size:14px;color:var(--blue)}
+  .node p{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+  .node.risk{border-color:var(--red);background:#fbf1f0}
+  .node.risk .u{color:var(--red)}
+  .node.ok{border-color:var(--green);background:#eff6f2}
+  .node.ok .u{color:var(--green)}
+  .arrow{flex:0 0 34px;position:relative;min-width:34px}
+  .arrow:before{content:"";position:absolute;top:50%;left:6px;right:12px;height:2px;background:var(--muted)}
+  .arrow:after{content:"";position:absolute;top:calc(50% - 5px);right:4px;border-left:9px solid var(--muted);border-top:6px solid transparent;border-bottom:6px solid transparent}
+  .fnote{font-size:13.5px;color:var(--muted);margin-top:12px}
+  .rootc{margin-top:18px;background:#f7f9fc;border:1px dashed var(--line);border-radius:6px;padding:14px 16px;font-size:14.5px;color:var(--ink)}
+  .rootc b{color:var(--red)}
+  .tbl{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--navy);color:#fff;font-weight:600;font-size:13.5px}
+  .cmp th.bad{background:var(--red)} .cmp th.good{background:var(--green)}
+  .cmp td.bad{color:var(--red)} .cmp td.good{color:var(--green);font-weight:600}
+  td:first-child{font-weight:600}
+  .timeline{background:var(--navy);border-radius:10px;padding:28px;margin-bottom:44px;color:#fff;overflow-x:auto}
+  .tl{display:grid;grid-template-columns:200px repeat(4,1fr);row-gap:12px;column-gap:6px;min-width:620px;align-items:center}
+  .tl .wk{font-size:13px;color:#a9bbd0;font-weight:600;text-align:center;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .tl .lab{font-size:14px;color:#e2eaf3}
+  .bar{height:22px;background:var(--gold);border-radius:4px}
+  .bar.soft{background:var(--gold-l);opacity:.55}
+  .tlkey{font-size:13px;color:#a9bbd0;margin-top:18px}
+  .steps{display:grid;gap:18px}
+  .step{display:grid;grid-template-columns:56px 1fr;gap:18px;background:var(--bg);border-radius:8px;padding:22px 24px}
+  .step .num{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+  .step h4{font-size:18px;margin-bottom:4px}
+  .step p{color:var(--muted);font-size:15.5px}
+  .step .why{margin-top:8px;font-size:14px;color:var(--green);font-weight:600}
+  .results{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .rc{background:var(--card);border-radius:10px;padding:26px 24px}
+  .rc .who{font-size:13.5px;color:#a9bbd0;margin-bottom:14px;line-height:1.4}
+  .rc .big{font-size:44px;font-weight:800;color:var(--gold-l);line-height:1;letter-spacing:-1px}
+  .rc .what{font-size:15px;color:#e2eaf3;margin:8px 0 20px}
+  .row{margin-bottom:12px}
+  .row .l{display:flex;justify-content:space-between;font-size:13px;color:#c4d3e4;margin-bottom:5px}
+  .track{height:12px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+  .fill{height:100%;background:var(--gold);border-radius:3px}
+  .fill.before{background:#5d7896}
+  .rc .sub{font-size:13.5px;color:#c4d3e4;border-top:1px solid rgba(255,255,255,.1);padding-top:14px;margin-top:16px}
+  .rc .sub b{color:var(--gold-l)}
+  .quote{margin-top:36px;border-left:4px solid var(--gold);padding:6px 0 6px 20px;color:#dbe5f1;font-size:17px;max-width:760px}
+  .quote span{display:block;font-size:13.5px;color:#a9bbd0;margin-top:6px}
+  .next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .nc{background:#fff;border-top:5px solid var(--gold);border-radius:8px;padding:26px 24px;box-shadow:0 6px 24px rgba(11,31,54,.06)}
+  .nc .when{font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px}
+  .nc h4{font-size:19px;margin-bottom:8px}
+  .nc p{color:var(--muted);font-size:15px}
+  .cta{background:var(--gold);padding:56px 0}
+  .cta h2{color:var(--navy)}
+  .cta p{color:var(--navy);font-size:17px;margin-top:6px;max-width:560px}
+  footer{background:var(--navy);color:#a9bbd0;padding:36px 0;font-size:14.5px}
+  footer b{color:#fff}
+  @media (max-width:860px){.kpis,.results,.next{grid-template-columns:1fr}}
+  @media (max-width:520px){
+    .wrap{padding:0 16px}
+    section{padding:56px 0}
+    .finding{padding:22px 18px}
+    .step{grid-template-columns:1fr;gap:10px;padding:20px}
+    .timeline{padding:20px 16px}
+    .kpi .n{font-size:38px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <div><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+      <div>November 26, 2026</div>
+    </div>
+    <div class="prep">30 day plan prepared for</div>
+    <h1>Med Spa Magic Marketing</h1>
+    <p class="outcome">Your clients buy you for one promise: tracking tied to booked and paid appointments. The Friday check is where that promise is kept or lost, so the plan is <span>a Friday routine that catches lead gaps the same week, and bidding that learns from booked patients instead of form fires</span>.</p>
+    <div class="meta">
+      <div>Med spa and aesthetics agency</div>
+      <div>Mt. Juliet, Tennessee</div>
+      <div>Google Ads, Landingi, GHL, Basecamp</div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="n">3</div><p>Systems every lead crosses before it is counted: Google Ads, Landingi and GHL. Each hop can break without warning.</p></div>
+      <div class="kpi"><div class="n">7</div><p>Separate tracking and analytics fixes your agency has paid freelancers for since 2023.</p></div>
+      <div class="kpi"><div class="n">~2 hrs</div><p>Each Friday for the whole roster, so the checks need a fixed order and clear flag rules.</p></div>
+    </div>
+  </div>
+</header>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">01</span><h2>What we found</h2></div>
+    <p class="intro">This review uses only public information: your job brief, your website, your Google Ads service page and your past freelance hiring history. It is a starting point, not an account audit. Your base is strong: 14+ years in med spas, a 5.0 rating from 31 Google reviews, and case studies like $404,508 in revenue from $52,008 in ad spend. <span class="hl">The risk is not strategy. It is lead data drifting between three systems while nobody is looking.</span></p>
+
+    <div class="finding">
+      <div class="fhead"><h3>A lead is counted three times, in three systems, and only one of them bids</h3><span class="tag high">High impact</span></div>
+      <p>Your Google Ads page promises <strong>conversion tracking tied to booked and paid appointments</strong>. In practice, Google Ads only sees what the Landingi page tells it. If the tag fires twice, fires on a thank-you page reload, or stops after a page edit, <strong>Google keeps bidding on the wrong signal</strong> while GHL shows a different number.</p>
+      <div class="flow">
+        <div class="node"><div class="u">Google ad click</div><p>"Botox near me", "lip filler", "laser hair removal"</p></div>
+        <div class="arrow"></div>
+        <div class="node risk"><div class="u">Landingi page</div><p>Form tag fires here. Duplicate or missing fires are invisible inside Google Ads</p></div>
+        <div class="arrow"></div>
+        <div class="node risk"><div class="u">GHL contact</div><p>Counted again, often with a different total than Google Ads</p></div>
+        <div class="arrow"></div>
+        <div class="node risk"><div class="u">Booked and paid</div><p>The outcome that matters, never sent back to Google</p></div>
+        <div class="arrow"></div>
+        <div class="node ok"><div class="u">Offline import</div><p>Booked and showed patients fed back so bidding learns from revenue</p></div>
+      </div>
+      <div class="rootc"><b>Root cause:</b> Google Ads optimises to the Landingi form event, not to the booked appointment in GHL. Until the booked outcome is imported back, every tracking break costs a full week of spend before the Friday check notices.</div>
+    </div>
+
+    <div class="finding">
+      <div class="fhead"><h3>Tracking gets fixed as a one-off project, then drifts again</h3><span class="tag high">High impact</span></div>
+      <p>Your hiring history shows the same problem returning: <strong>a Landingi to Google Ads conversion fix</strong>, a Google Ads conversion setup for a spa client, three GA4 and GTM builds, a Meta Pixel cleanup, and an ongoing Google Ads plus conversion tracking role. Each fix worked on the day it shipped. None of them came with a weekly rule that says when a gap is big enough to act on.</p>
+      <div class="tbl">
+        <table class="cmp">
+          <thead><tr><th>Check</th><th class="bad">Today, as a project</th><th class="good">Target, as a Friday routine</th></tr></thead>
+          <tbody>
+            <tr><td>Lead counts</td><td class="bad">Compared when a client asks why numbers differ</td><td class="good">Google Ads vs Landingi vs GHL every Friday, gap over 10% flagged</td></tr>
+            <tr><td>Conversion actions</td><td class="bad">Primary and secondary actions set once, rarely reviewed</td><td class="good">Only real leads and bookings set as primary, micro actions moved to secondary</td></tr>
+            <tr><td>Call tracking</td><td class="bad">Every call can count as a lead</td><td class="good">Minimum call length set, so only real conversations count</td></tr>
+            <tr><td>Booked outcomes</td><td class="bad">Live in GHL only</td><td class="good">Booked and showed imported to Google Ads as offline conversions</td></tr>
+            <tr><td>Who owns the fix</td><td class="bad">A new freelancer each time</td><td class="good">Same person, same log, same thresholds every week</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rootc"><b>Root cause:</b> tracking is treated as setup, not maintenance. Landing page edits, GHL workflow changes and Google updates break it quietly, so it needs a weekly owner with clear thresholds.</div>
+    </div>
+
+    <div class="finding med">
+      <div class="fhead"><h3>Two hours a Friday is enough, if the checks run in the right order</h3><span class="tag med">Medium impact</span></div>
+      <p>With a full client roster, the risk is spending the time on low-value checks and missing the one that costs money. The fix is <strong>a fixed order by cost of failure</strong>, with a clear trigger for each flag to the Account Manager in Basecamp. Med spa specific checks, like <strong>Allergan approval for Botox and Dysport ads</strong> and keeping PRP wording from getting ads disapproved, sit in the same pass.</p>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Order</th><th>Check</th><th>Flag to Account Manager when</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Billing, active campaigns, policy status</td><td>Any payment issue, paused campaign or limited or disapproved ad</td></tr>
+            <tr><td>2</td><td>7 day spend pacing vs monthly budget</td><td>Pacing more than 15% over or under plan</td></tr>
+            <tr><td>3</td><td>Lead reconciliation: Google Ads, Landingi, GHL</td><td>Gap over 10%, or a source showing zero leads</td></tr>
+            <tr><td>4</td><td>Search terms and negatives</td><td>New waste themes, such as jobs, training, DIY or wrong treatment</td></tr>
+            <tr><td>5</td><td>URLs, Recommendations, auto-apply</td><td>Any 404 or slow page, or auto-apply switched back on</td></tr>
+            <tr><td>6</td><td>Optimisation notes</td><td>CTR, conversion rate, bid strategy or ad copy chances worth testing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fnote">Thresholds are a starting point and would be set with your team during the paid test audit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <div class="sh"><span class="sn">02</span><h2>The 30 day plan</h2></div>
+    <p class="intro">Your SOP stays the backbone. The plan adds <span class="hl">a reconciliation log, shared med spa negative lists and booked-patient feedback into Google Ads</span>, so each Friday check also makes the accounts smarter.</p>
+
+    <div class="timeline">
+      <div class="tl">
+        <div></div><div class="wk">Week 1</div><div class="wk">Week 2</div><div class="wk">Week 3</div><div class="wk">Week 4</div>
+        <div class="lab" style="grid-row:2;grid-column:1">Paid test audit, one account</div><div class="bar" style="grid-row:2;grid-column:2 / span 1"></div>
+        <div class="lab" style="grid-row:3;grid-column:1">Roll SOP across roster</div><div class="bar" style="grid-row:3;grid-column:3 / span 3"></div>
+        <div class="lab" style="grid-row:4;grid-column:1">Shared negative lists</div><div class="bar" style="grid-row:4;grid-column:3 / span 2"></div>
+        <div class="lab" style="grid-row:5;grid-column:1">Booked patient import pilot</div><div class="bar" style="grid-row:5;grid-column:4 / span 2"></div>
+        <div class="lab" style="grid-row:6;grid-column:1">Friday Basecamp summary</div><div class="bar soft" style="grid-row:6;grid-column:2 / span 4"></div>
+      </div>
+      <p class="tlkey">Solid bars are focus work. The lighter bar runs every Friday.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h4>Paid test audit on one account</h4><p>Run your full Friday SOP, then a deeper pass on conversion actions, call settings, Landingi tags and the GHL lead source fields. You get a short summary of what was done, what was flagged and the two or three changes that would move CTR or cost per booking most.</p><div class="why">Why: you see the work quality on a real account before committing to weekly support.</div></div></div>
+      <div class="step"><div class="num">2</div><div><h4>A lead reconciliation log for every client</h4><p>One sheet, one row per client per Friday: Google Ads leads, Landingi submissions, GHL contacts and the gap. Anything over the agreed threshold goes to the Account Manager with the likely cause.</p><div class="why">Why: a tracking break is caught in 7 days, not when a client questions the report.</div></div></div>
+      <div class="step"><div class="num">3</div><div><h4>Shared med spa negative keyword lists</h4><p>Lists by theme, built from search terms across the roster: jobs and careers, training and certification, at-home and DIY, free and cheap, and treatments a clinic does not offer. Applied with the right match types, reviewed every Friday.</p><div class="why">Why: one search term found in one account protects every account.</div></div></div>
+      <div class="step"><div class="num">4</div><div><h4>Feed booked patients back to Google Ads</h4><p>On one pilot account, import booked and showed appointments from GHL as offline conversions, and set call conversions with a minimum length. Once proven, the same setup rolls to other clients.</p><div class="why">Why: bidding learns from patients who book, which is what your reporting promises.</div></div></div>
+      <div class="step"><div class="num">5</div><div><h4>A Friday summary your team can scan in one minute</h4><p>Per client in Basecamp: actions taken, flags with a suggested fix, and one optimisation idea. Policy items for Botox, Dysport and PRP ads are listed on their own line.</p><div class="why">Why: Account Managers get decisions, not a long report.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="sh"><span class="sn">03</span><h2>Comparable results</h2></div>
+    <p class="intro">Aesthetics and healthcare accounts where results came from fixing what Google Ads learns from, then letting the same budget work harder.</p>
+    <div class="results">
+      <div class="rc">
+        <div class="who">US cosmetic surgery clinic, Search</div>
+        <div class="big">+140%</div>
+        <div class="what">confirmed bookings after offline conversion uploads were re-established</div>
+        <div class="row"><div class="l"><span>Before</span><span>5</span></div><div class="track"><div class="fill before" style="width:42%"></div></div></div>
+        <div class="row"><div class="l"><span>After</span><span>12</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="sub">Cost per conversion <b>$99.97 to $46.15</b>, on level ad spend</div>
+      </div>
+      <div class="rc">
+        <div class="who">Same clinic, conversion setup</div>
+        <div class="big">6.54%</div>
+        <div class="what">conversion rate after micro conversions were reclassified</div>
+        <div class="row"><div class="l"><span>Before</span><span>1.50%</span></div><div class="track"><div class="fill before" style="width:23%"></div></div></div>
+        <div class="row"><div class="l"><span>After</span><span>6.54%</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="sub">Breast Augmentation ad group at <b>7.42x return on ad spend</b>, with ad copy rewritten to clear healthcare policy limits</div>
+      </div>
+      <div class="rc">
+        <div class="who">US dental practice, Google Ads with GoHighLevel</div>
+        <div class="big">$23.20</div>
+        <div class="what">cost per call, with ad calls and forms flowing into GHL</div>
+        <div class="row"><div class="l"><span>Local Search</span><span>6</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="row"><div class="l"><span>Broad Local</span><span>6</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="row"><div class="l"><span>Call Only</span><span>5</span></div><div class="track"><div class="fill" style="width:83%"></div></div></div>
+        <div class="sub"><b>17 conversions</b> on $2,375 spend across a 3 campaign local structure</div>
+      </div>
+    </div>
+    <p class="quote">"Our go-to person for fixing any ads-related problem. He over-delivered and we are impressed with his performance."<span>Client review</span></p>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="sh"><span class="sn">04</span><h2>What happens next</h2></div>
+    <p class="intro">I do the work myself, on your SOP, in your tools. Nothing changes in a client account without your sign off.</p>
+    <div class="next">
+      <div class="nc"><div class="when">This week</div><h4>15 minute call</h4><p>You walk me through the Friday SOP and the test account. I confirm the flag thresholds and the Basecamp format your Account Managers prefer.</p></div>
+      <div class="nc"><div class="when">Day 1</div><h4>Access to one account</h4><p>Google Ads, the Landingi pages and the GHL sub-account for the test client, plus the SOP document and your Basecamp project.</p></div>
+      <div class="nc"><div class="when">Friday</div><h4>Paid test audit delivered</h4><p>Full SOP run, a reconciliation of the three lead counts, and a short list of optimisation moves ranked by expected impact.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><b>Usman Gull</b><br>Google Ads and SEO Specialist</div>
+  </div>
+</footer>
+
+</body>
+</html>
