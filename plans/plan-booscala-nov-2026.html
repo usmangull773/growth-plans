@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booscala Meta Ads Audit Plan</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#e9eff6;color:#0b1f36;line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+b,strong{font-weight:700}
+.gold{color:#c8a24a}
+.lgold{color:#e3c77f}
+.hl{background:#f6ecd2;padding:0 4px;border-radius:3px;font-weight:700}
+section{padding:64px 0}
+.light{background:#e9eff6}
+.white{background:#ffffff}
+.dark{background:#0b1f36;color:#ffffff}
+.num{display:inline-block;color:#0f4c81;font-weight:800;font-size:14px;letter-spacing:2px;margin-bottom:8px}
+.dark .num{color:#e3c77f}
+h2{font-size:30px;line-height:1.25;margin-bottom:14px}
+.intro{max-width:760px;font-size:17px;color:#33475e;margin-bottom:32px}
+.dark .intro{color:#c9d6e6}
+
+/* hero */
+.hero{background:#0b1f36;color:#fff;border-bottom:6px solid #c8a24a;padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#9fb3c8;border-bottom:1px solid #1d3a5c;padding-bottom:16px;margin-bottom:44px}
+.label{color:#e3c77f;text-transform:uppercase;letter-spacing:3px;font-size:13px;font-weight:700;margin-bottom:10px}
+.hero h1{font-size:52px;line-height:1.1;margin-bottom:16px}
+.outcome{font-size:21px;max-width:720px;color:#dbe5f0;margin-bottom:22px}
+.meta{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;color:#9fb3c8;margin-bottom:36px}
+.meta span{border-left:3px solid #0f4c81;padding-left:10px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:#12355b;border-radius:10px;padding:22px}
+.kpi .v{font-size:38px;font-weight:800;color:#e3c77f;line-height:1}
+.kpi .t{font-size:14px;color:#c9d6e6;margin-top:10px}
+
+/* findings */
+.cards{display:grid;gap:22px}
+.find{background:#fff;border-radius:10px;padding:26px;box-shadow:0 4px 18px rgba(11,31,54,.08);border-left:6px solid #0f4c81}
+.find.med{border-left-color:#c8a24a}
+.fhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+.find h3{font-size:20px;line-height:1.3}
+.tag{flex-shrink:0;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px;color:#fff;background:#0f4c81}
+.tag.m{background:#c8a24a;color:#0b1f36}
+.find p{color:#33475e;margin-bottom:16px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:8px;overflow:hidden;font-size:14px}
+.cmp div{padding:10px 14px;border-bottom:1px solid #eef2f7}
+.cmp .h{font-weight:700;color:#fff}
+.cmp .hr{background:#b3261e}
+.cmp .hg{background:#1f6f43}
+.cmp .r{background:#fbeceb;color:#5c1612}
+.cmp .g{background:#e8f3ec;color:#123f27}
+table{width:100%;border-collapse:collapse;font-size:14px;border-radius:8px;overflow:hidden}
+th{background:#0b1f36;color:#e3c77f;text-align:left;padding:10px 12px;font-weight:700}
+td{padding:10px 12px;border-bottom:1px solid #e3e9f1;vertical-align:top;color:#33475e}
+tr:nth-child(even) td{background:#f5f8fb}
+.tw{overflow-x:auto}
+
+/* timeline */
+.tl{background:#0b1f36;border-radius:12px;padding:26px;margin-bottom:30px;color:#fff}
+.tl h4{color:#e3c77f;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.row{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center;margin-bottom:12px;font-size:14px}
+.track{background:#12355b;border-radius:6px;height:30px;position:relative}
+.bar{position:absolute;top:0;height:30px;background:#c8a24a;border-radius:6px;color:#0b1f36;font-weight:700;font-size:12px;display:flex;align-items:center;padding:0 10px;white-space:nowrap;overflow:hidden}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;background:#e9eff6;border-radius:10px;padding:20px}
+.step .n{width:44px;height:44px;border-radius:50%;background:#0f4c81;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step h3{font-size:18px;margin-bottom:4px}
+.step p{color:#33475e;font-size:15px}
+.why{display:block;margin-top:6px;font-size:14px;color:#0f4c81;font-weight:600}
+
+/* results */
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rc{background:#12355b;border-radius:10px;padding:24px}
+.rc .k{font-size:13px;color:#9fb3c8;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.rc .big{font-size:40px;font-weight:800;color:#e3c77f;line-height:1.1;margin-bottom:6px}
+.rc .d{font-size:14px;color:#c9d6e6;margin-bottom:18px}
+.cb{margin-bottom:10px}
+.cb .l{display:flex;justify-content:space-between;font-size:13px;color:#c9d6e6;margin-bottom:4px}
+.cb .t{background:#0b1f36;height:14px;border-radius:4px}
+.cb .f{height:14px;background:#c8a24a;border-radius:4px}
+.cb .f.dim{background:#5a6f88}
+
+/* next */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nc{background:#fff;border-radius:10px;padding:24px;border-top:5px solid #c8a24a;box-shadow:0 4px 18px rgba(11,31,54,.06)}
+.nc .s{font-size:13px;color:#0f4c81;font-weight:800;letter-spacing:1px;margin-bottom:6px}
+.nc h3{font-size:18px;margin-bottom:6px}
+.nc p{font-size:15px;color:#33475e}
+
+.cta{background:#c8a24a;padding:48px 0;text-align:center;color:#0b1f36}
+.cta h2{font-size:32px;margin-bottom:8px}
+.cta p{font-size:18px}
+footer{background:#0b1f36;color:#9fb3c8;text-align:center;padding:28px 0;font-size:14px}
+footer b{color:#fff}
+
+@media(max-width:760px){
+.hero h1{font-size:38px}
+.kpis,.res,.next{grid-template-columns:1fr}
+h2{font-size:25px}
+section{padding:48px 0}
+.row{grid-template-columns:1fr;gap:6px}
+.cmp{grid-template-columns:1fr}
+.cmp .hg{order:0}
+}
+@media(max-width:400px){
+.wrap{padding:0 16px}
+.hero h1{font-size:32px}
+.outcome{font-size:18px}
+.kpi .v,.rc .big{font-size:32px}
+.find,.nc,.rc{padding:20px}
+.step{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar"><span>Meta Ads audit and coaching plan</span><span>27 November 2026</span></div>
+    <div class="label">30 day plan prepared for</div>
+    <h1>Booscala</h1>
+    <p class="outcome">A Meta Ads audit that shows what is working, what is not, and <span class="lgold"><b>the reasoning your team can reuse on every K-Beauty account</b></span>.</p>
+    <div class="meta">
+      <span>Shopify DTC and Instagram paid social</span>
+      <span>K-Beauty brands, US, UK and EU</span>
+      <span>Coaching format, step by step</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">8</div><div class="t">audit layers reviewed live, from Pixel and CAPI to creative fatigue</div></div>
+      <div class="kpi"><div class="v">3</div><div class="t">screen share sessions where every recommendation is explained, not just listed</div></div>
+      <div class="kpi"><div class="v">1</div><div class="t">written decision playbook your team keeps after the last session</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="light">
+  <div class="wrap">
+    <span class="num">01</span>
+    <h2>What we found</h2>
+    <p class="intro">You already run Amazon, Shopify, TikTok Shop and Instagram for K-Beauty brands, and your Amazon side is mature. What you are asking for is different from a fix list: <span class="hl">a clear audit of one Meta account plus the reasoning behind each call</span>, so the next decision is made in house with confidence.</p>
+
+    <div class="cards">
+      <div class="find">
+        <div class="fhead"><h3>Amazon logic does not carry over to Meta</h3><span class="tag">High impact</span></div>
+        <p>A team trained on Amazon PPC is used to buying intent: keywords, bids, search terms. Meta works the other way. <b>The creative is the targeting</b>, the algorithm needs clean purchase signals, and short term ROAS swings are normal while it learns. Most Meta accounts that underperform for marketplace teams are being managed with search habits.</p>
+        <div class="cmp">
+          <div class="h hr">Search habit applied to Meta</div>
+          <div class="h hg">How Meta actually rewards you</div>
+          <div class="r">Many small ad sets split by interest</div>
+          <div class="g">Fewer, broader ad sets with enough budget to exit learning</div>
+          <div class="r">Daily bid and budget edits</div>
+          <div class="g">Changes batched weekly, judged on 7 day data</div>
+          <div class="r">Targeting does the work</div>
+          <div class="g">Creative angles do the work, audience stays broad</div>
+          <div class="r">Optimising for clicks or add to cart</div>
+          <div class="g">Optimising for purchase with value passed back</div>
+        </div>
+      </div>
+
+      <div class="find">
+        <div class="fhead"><h3>Decisions are only as good as the purchase signal</h3><span class="tag">High impact</span></div>
+        <p>With Shopify as the checkout, the first question in any Meta audit is whether Meta sees the sales that really happen. <b>If Pixel and Conversions API are not deduplicated, or match quality is low, every other recommendation sits on bad data.</b> This is checked first, before any budget or creative opinion.</p>
+        <div class="tw"><table>
+          <tr><th>Audit layer</th><th>What we check</th><th>Why it matters</th></tr>
+          <tr><td>Tracking</td><td>Pixel plus CAPI, deduplication, event match quality, purchase value</td><td>Bidding learns from these events</td></tr>
+          <tr><td>Attribution</td><td>Meta reported sales against Shopify orders</td><td>Shows how far to trust the dashboard</td></tr>
+          <tr><td>Structure</td><td>Campaign count, budget split, learning status</td><td>Fragmented budget never stabilises</td></tr>
+          <tr><td>Audience</td><td>Advantage+ use, exclusions, existing customer share</td><td>Stops paying again for buyers you already have</td></tr>
+          <tr><td>Creative</td><td>Hook rate, hold rate, frequency, fatigue</td><td>The main lever on Meta</td></tr>
+          <tr><td>Offer and page</td><td>Landing page, bundles, first order offer</td><td>Ads cannot fix a weak product page</td></tr>
+          <tr><td>Budget</td><td>Spend by funnel stage, scaling rules</td><td>Decides when to push and when to hold</td></tr>
+          <tr><td>Reporting</td><td>Which numbers you review and how often</td><td>Turns the audit into a routine</td></tr>
+        </table></div>
+      </div>
+
+      <div class="find med">
+        <div class="fhead"><h3>Your creative engine is ready, Meta needs a testing system for it</h3><span class="tag m">Medium impact</span></div>
+        <p>You already produce AI video, UGC and creator content for K-Beauty. That is the hardest part of Meta solved. <b>What usually goes missing is a simple rule set for testing it</b>: how many angles per round, how long to run them, and which signal retires an ad. K-Beauty sells on ingredients, routines and visible results, so testing by angle beats testing by format.</p>
+        <div class="tw"><table>
+          <tr><th>Signal</th><th>Watch for</th><th>Action</th></tr>
+          <tr><td>Hook rate (3 second views)</td><td>Low against account average</td><td>Rework the first 3 seconds, keep the body</td></tr>
+          <tr><td>Frequency</td><td>Rising while CTR falls</td><td>Rotate in a new angle</td></tr>
+          <tr><td>CPM</td><td>Climbing week on week</td><td>Check audience overlap and fatigue</td></tr>
+          <tr><td>Cost per purchase</td><td>Stable after learning</td><td>Scale budget in steps</td></tr>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <span class="num">02</span>
+    <h2>The 30 day plan</h2>
+    <p class="intro">Built as coaching, not a black box. You see the account through my eyes, then your team makes the calls with me checking them.</p>
+
+    <div class="tl">
+      <h4>Week by week</h4>
+      <div class="row"><span>Week 1</span><div class="track"><div class="bar" style="left:0;width:25%">Access and tracking</div></div></div>
+      <div class="row"><span>Week 1 to 2</span><div class="track"><div class="bar" style="left:12%;width:38%">Live audit sessions</div></div></div>
+      <div class="row"><span>Week 2 to 3</span><div class="track"><div class="bar" style="left:40%;width:35%">Team makes changes</div></div></div>
+      <div class="row"><span>Week 4</span><div class="track"><div class="bar" style="left:75%;width:25%">Review and playbook</div></div></div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h3>Tracking and data check</h3><p>Pixel, CAPI, deduplication, match quality and Meta sales against Shopify orders. You get a short note on how far the numbers can be trusted.</p><span class="why">Every later decision depends on this.</span></div></div>
+      <div class="step"><div class="n">2</div><div><h3>Live audit, session one: structure and spend</h3><p>We walk the account together on screen share. Campaign layout, budget split, learning status, audience setup. For every issue I explain what I see, why it costs money, and what I would change.</p><span class="why">You learn the reasoning, not only the fix.</span></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Live audit, session two: creative and funnel</h3><p>Top and bottom ads by hook rate, hold rate, CTR and cost per purchase, then the product pages they send traffic to. We agree a test plan by angle for your K-Beauty products.</p><span class="why">Creative is where Meta results are won.</span></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Your team makes the changes, I review</h3><p>Your team applies the priority changes. I check the edits and flag anything that would reset learning or split budget too thin.</p><span class="why">Builds in house confidence on real decisions.</span></div></div>
+      <div class="step"><div class="n">5</div><div><h3>Session three: readout and decision playbook</h3><p>We review what moved, then hand over a one page playbook: weekly checks, scaling rules, when to kill an ad, and what to ignore.</p><span class="why">The audit becomes a repeatable routine.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <span class="num">03</span>
+    <h2>Comparable results</h2>
+    <p class="intro">Ten plus years across paid social and search for eCommerce and beauty brands. A few numbers from that work.</p>
+    <div class="res">
+      <div class="rc">
+        <div class="k">eCommerce ad spend managed</div>
+        <div class="big">$15.5M</div>
+        <div class="d">across 977 campaigns over 12 years in eCommerce, with $5.6M verified revenue in 2022</div>
+        <div class="cb"><div class="l"><span>Campaigns</span><span>977</span></div><div class="t"><div class="f" style="width:100%"></div></div></div>
+        <div class="cb"><div class="l"><span>Verified revenue, 2022</span><span>$5.6M</span></div><div class="t"><div class="f" style="width:36%"></div></div></div>
+      </div>
+      <div class="rc">
+        <div class="k">Medical aesthetics, beauty adjacent</div>
+        <div class="big">9.2x</div>
+        <div class="d">peak return on ad spend, with $20,897 conversion value generated</div>
+        <div class="cb"><div class="l"><span>Peak ROAS</span><span>9.2x</span></div><div class="t"><div class="f" style="width:100%"></div></div></div>
+        <div class="cb"><div class="l"><span>Breast augmentation ad group ROAS</span><span>7.42x</span></div><div class="t"><div class="f" style="width:81%"></div></div></div>
+      </div>
+      <div class="rc">
+        <div class="k">Fixing the signal first</div>
+        <div class="big">6.54%</div>
+        <div class="d">conversion rate for a cosmetic surgery clinic after conversions were reclassified so bidding optimised toward confirmed bookings</div>
+        <div class="cb"><div class="l"><span>Before</span><span>1.50%</span></div><div class="t"><div class="f dim" style="width:23%"></div></div></div>
+        <div class="cb"><div class="l"><span>After</span><span>6.54%</span></div><div class="t"><div class="f" style="width:100%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <span class="num">04</span>
+    <h2>What happens next</h2>
+    <p class="intro">Three steps and the first session can run within days.</p>
+    <div class="next">
+      <div class="nc"><div class="s">STEP 1</div><h3>Short intro call</h3><p>15 minutes on which account to audit, the brand, the market and what you most want to understand.</p></div>
+      <div class="nc"><div class="s">STEP 2</div><h3>Read only access</h3><p>Partner access to the ad account through Business Manager, plus Shopify reports if available. No edit rights needed.</p></div>
+      <div class="nc"><div class="s">STEP 3</div><h3>First session in week one</h3><p>Tracking check done before we meet, so session one goes straight into the account with real numbers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Let's have a quick call</h2>
+    <p>Reply to my message with a time that suits you.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
